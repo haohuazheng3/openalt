@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Boxes, Plus, Search } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { ThemeToggle } from '@/components/theme'
 import { SITE } from '@/lib/constants'
 
 export function SiteHeader() {
@@ -41,11 +42,14 @@ export function SiteHeader() {
           </div>
         </form>
 
-        <Button asChild size="sm" className="ml-auto sm:ml-0">
-          <Link href="/submit">
-            <Plus className="size-4" /> Submit
-          </Link>
-        </Button>
+        <div className="ml-auto flex items-center gap-1 sm:ml-0">
+          <ThemeToggle />
+          <Button asChild size="sm">
+            <Link href="/submit">
+              <Plus className="size-4" /> Submit
+            </Link>
+          </Button>
+        </div>
       </div>
     </header>
   )

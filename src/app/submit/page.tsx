@@ -17,7 +17,7 @@ export function generateMetadata(): Metadata {
 export default function SubmitPage({
   searchParams,
 }: {
-  searchParams: { ok?: string; error?: string }
+  searchParams: { ok?: string; error?: string; claim?: string }
 }) {
   return (
     <div className="container max-w-2xl py-12">
@@ -34,6 +34,11 @@ export default function SubmitPage({
         </div>
       )}
 
+      {searchParams.claim && (
+        <div className="mt-5 rounded-lg border border-sky-200 bg-sky-50 p-3 text-sm text-sky-900">
+          You’re claiming <strong>{searchParams.claim}</strong>. Paste its GitHub repo below to load the latest details, then submit your corrections — we’ll review and update the listing.
+        </div>
+      )}
       {searchParams.ok && (
         <div className="mt-5 flex items-center gap-2 rounded-lg border border-emerald-200 bg-emerald-50 p-3 text-sm text-emerald-900">
           <CheckCircle2 className="size-4" /> Thanks! Your submission is in review.

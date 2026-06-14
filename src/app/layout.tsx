@@ -5,6 +5,7 @@ import { JsonLd } from '@/components/json-ld'
 import { PlausibleAnalytics } from '@/components/plausible'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
+import { ThemeScript } from '@/components/theme-script'
 import { SITE } from '@/lib/constants'
 import { env } from '@/lib/env'
 import { ogImageUrl, websiteLd } from '@/lib/seo'
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <AuthProvider>
       <html lang="en" suppressHydrationWarning>
         <body className="min-h-screen bg-background font-sans">
+          <ThemeScript />
           <PlausibleAnalytics />
           <JsonLd data={websiteLd()} />
           <SiteHeader />

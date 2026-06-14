@@ -1,14 +1,17 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import { ArrowRight, ExternalLink, Github, Globe, PlayCircle, Sparkles, TriangleAlert } from 'lucide-react'
+import { ArrowRight, Check, ExternalLink, Github, Globe, PencilLine, PlayCircle, Sparkles, TriangleAlert } from 'lucide-react'
 import { CompareTable } from '@/components/compare-table'
+import { ComparisonTable, type CompareRow } from '@/components/comparison-table'
 import { DeployButtons } from '@/components/deploy-buttons'
 import { DifficultyMeter } from '@/components/difficulty-meter'
+import { Faq } from '@/components/faq'
 import { GoButton } from '@/components/go-button'
 import { JsonLd } from '@/components/json-ld'
 import { ListingCard } from '@/components/listing-card'
 import { Markdown } from '@/components/markdown'
+import { QuickPicks } from '@/components/quick-picks'
 import { RepoStats } from '@/components/repo-stats'
 import { ReplacesBadges } from '@/components/replaces-badges'
 import { Badge } from '@/components/ui/badge'
@@ -32,8 +35,10 @@ import {
   parseAlternativesSlug,
   proprietaryBySlug,
 } from '@/data/proprietary-tools'
-import { breadcrumbLd, buildMetadata, itemListLd, softwareApplicationLd } from '@/lib/seo'
+import { breadcrumbLd, buildMetadata, faqLd, itemListLd, softwareApplicationLd } from '@/lib/seo'
 import { domainFromUrl, stripMarkdown, truncate } from '@/lib/utils'
+import { guideFor } from '@/data/alternative-guides'
+import { extraFor } from '@/data/listing-extras'
 
 export const revalidate = 86400
 
@@ -158,8 +163,25 @@ function AlternativesPage({
   listings: ListingWithCategory[]
 }) {
   const hook = 'priceHook' in tool ? tool.priceHook : null
+  const guide = guideFor(tool.slug)
+  const bySlug = new Map(listings.map((l) => [l.slug, l]))
+  const rows: CompareRow[] = listings.map((l) => ({
+    id: l.id,
+    slug: l.slug,
+    name: l.name,
+    repoUrl: l.repoUrl,
+    stars: l.githubStars,
+    difficulty: l.selfHostDifficulty,
+    deploy: l.deployOptions,
+    managed: l.hasManagedHosting,
+    license: l.license,
+    language: l.language,
+    lastCommitISO: l.lastCommitAt ? new Date(l.lastCommitAt).toISOString() : null,
+    featured: isActivelyFeatured(l),
+  }))
+
   return (
-    <div className="container max-w-4xl py-10">
+    <div className="container max-w-5xl py-10">
       <JsonLd
         data={[
           breadcrumbLd([
@@ -167,6 +189,7 @@ function AlternativesPage({
             { name: `${tool.name} alternatives`, path: `/${alternativesSlug(tool.slug)}` },
           ]),
           itemListLd(listings, `Open-source ${tool.name} alternatives`),
+          ...(guide?.faqs.length ? [faqLd(guide.faqs)] : []),
         ]}
       />
 
@@ -175,38 +198,90 @@ function AlternativesPage({
         <span className="text-foreground">{tool.name} alternatives</span>
       </nav>
 
-      <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+      <h1 className="max-w-3xl text-3xl font-bold tracking-tight sm:text-4xl">
         Best Open-Source {tool.name} Alternatives ({YEAR})
       </h1>
-      <p className="mt-3 max-w-2xl text-lg text-muted-foreground">
+      <p className="mt-3 max-w-3xl text-lg text-muted-foreground">
         {listings.length} self-hostable, open-source {listings.length === 1 ? 'project' : 'projects'} that replace{' '}
         {tool.name}
         {hook ? ` — without ${hook}` : ''}. Each is scored for how hard it is to self-host, with one-click deploy
         options where they exist.
       </p>
+      {guide?.whySwitch && (
+        <p className="mt-3 max-w-3xl text-muted-foreground">{guide.whySwitch}</p>
+      )}
 
       {listings.length === 0 ? (
         <div className="mt-8 rounded-xl border border-dashed p-10 text-center text-muted-foreground">
           No open-source alternatives indexed yet.
         </div>
       ) : (
-        <ol className="mt-8 space-y-4">
-          {listings.map((l, i) => (
-            <li key={l.id}>
-              <AlternativeRow listing={l} rank={i + 1} replacingName={tool.name} />
-            </li>
-          ))}
-        </ol>
-      )}
+        <>
+          {/* Quick picks */}
+          {guide && (
+            <section className="mt-8">
+              <h2 className="mb-3 text-lg font-semibold">Our picks at a glance</h2>
+              <QuickPicks picks={guide.picks} bySlug={bySlug} />
+            </section>
+          )}
 
-      {/* Compare the top two */}
-      {listings.length >= 2 && (
-        <div className="mt-8 rounded-lg border bg-muted/30 p-4 text-sm">
-          Not sure between the top two?{' '}
-          <Link href={`/${versusSlug(listings[0].slug, listings[1].slug)}`} className="font-medium text-primary hover:underline">
-            Compare {listings[0].name} vs {listings[1].name} →
-          </Link>
-        </div>
+          {/* Comparison table */}
+          <section className="mt-10">
+            <div className="mb-3 flex items-end justify-between gap-4">
+              <h2 className="text-lg font-semibold">Compare all {listings.length} alternatives</h2>
+              <span className="hidden text-xs text-muted-foreground sm:inline">Tap a column header to sort</span>
+            </div>
+            <ComparisonTable rows={rows} />
+            {guide?.whatToLookFor && (
+              <p className="mt-3 text-sm text-muted-foreground">
+                <span className="font-medium text-foreground">What to look for: </span>
+                {guide.whatToLookFor}
+              </p>
+            )}
+          </section>
+
+          {/* Detailed reviews */}
+          <section className="mt-10">
+            <h2 className="text-lg font-semibold">The alternatives, reviewed</h2>
+            <ol className="mt-4 space-y-4">
+              {listings.map((l, i) => (
+                <li key={l.id}>
+                  <AlternativeRow listing={l} rank={i + 1} replacingName={tool.name} />
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          {/* Verdict */}
+          {guide?.verdict && (
+            <section className="mt-10">
+              <Card className="border-primary/30 bg-accent/40 p-5">
+                <h2 className="text-base font-semibold">The verdict</h2>
+                <p className="mt-1.5 text-muted-foreground">{guide.verdict}</p>
+              </Card>
+            </section>
+          )}
+
+          {/* Compare top two */}
+          {listings.length >= 2 && (
+            <div className="mt-6 rounded-lg border bg-muted/30 p-4 text-sm">
+              Still deciding?{' '}
+              <Link href={`/${versusSlug(listings[0].slug, listings[1].slug)}`} className="font-medium text-primary hover:underline">
+                Compare {listings[0].name} vs {listings[1].name} side by side →
+              </Link>
+            </div>
+          )}
+
+          {/* FAQ */}
+          {guide?.faqs.length ? (
+            <section className="mt-12">
+              <h2 className="mb-4 text-xl font-semibold">
+                {tool.name} alternatives — frequently asked questions
+              </h2>
+              <Faq items={guide.faqs} />
+            </section>
+          ) : null}
+        </>
       )}
     </div>
   )
@@ -278,6 +353,7 @@ async function ListingDetail({ listing }: { listing: ListingWithCategory }) {
   const featured = isActivelyFeatured(listing)
   const repoDomain = domainFromUrl(listing.repoUrl)
   const primaryReplace = listing.replaces.map((s) => proprietaryBySlug(s)).find(Boolean)
+  const extra = extraFor(listing.slug)
 
   return (
     <div className="container max-w-5xl py-10">
@@ -349,6 +425,37 @@ async function ListingDetail({ listing }: { listing: ListingWithCategory }) {
             </section>
           )}
 
+          {/* Key features */}
+          {extra?.keyFeatures.length ? (
+            <section className="mt-8">
+              <h2 className="text-xl font-semibold">Key features</h2>
+              <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+                {extra.keyFeatures.map((f) => (
+                  <li key={f} className="flex items-start gap-2 text-sm">
+                    <Check className="mt-0.5 size-4 shrink-0 text-emerald-600" />
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
+
+          {/* Editorial review */}
+          {extra?.review && (
+            <section className="mt-8">
+              <h2 className="text-xl font-semibold">Our take</h2>
+              <Card className="mt-3 p-5">
+                <Markdown>{extra.review}</Markdown>
+                {extra.idealFor && (
+                  <p className="mt-3 border-t pt-3 text-sm">
+                    <span className="font-medium text-foreground">Ideal for: </span>
+                    <span className="text-muted-foreground">{extra.idealFor}</span>
+                  </p>
+                )}
+              </Card>
+            </section>
+          )}
+
           {/* Feature gap vs the original */}
           {listing.featureGapMd && (
             <section className="mt-8">
@@ -374,6 +481,28 @@ async function ListingDetail({ listing }: { listing: ListingWithCategory }) {
               </div>
             </section>
           )}
+
+          {/* Maintainer CTA (seller-side) */}
+          <section className="mt-10">
+            <Card className="flex flex-col items-start gap-2 p-5 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <div className="flex items-center gap-2 font-medium">
+                  <PencilLine className="size-4 text-primary" /> Maintain {listing.name}?
+                </div>
+                <p className="mt-0.5 text-sm text-muted-foreground">
+                  Claim this listing to keep it accurate, add a deploy template, or feature it on relevant pages.
+                </p>
+              </div>
+              <div className="flex gap-2">
+                <Link href={`/submit?claim=${listing.slug}`} className="inline-flex h-9 items-center rounded-md border px-3 text-sm font-medium hover:bg-accent">
+                  Claim / suggest an edit
+                </Link>
+                <Link href="/advertise" className="inline-flex h-9 items-center rounded-md bg-primary px-3 text-sm font-medium text-primary-foreground hover:bg-primary/90">
+                  Get featured
+                </Link>
+              </div>
+            </Card>
+          </section>
         </div>
 
         {/* CTA rail */}

@@ -1,12 +1,23 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { Check, Sparkles, TriangleAlert } from 'lucide-react'
+import { Check, Github, Sparkles, Star, TriangleAlert } from 'lucide-react'
+import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { FEATURED, SITE } from '@/lib/constants'
 import { getListingOptions } from '@/lib/db/admin-queries'
 import { isStripeConfigured } from '@/lib/env'
 import { buildMetadata } from '@/lib/seo'
+import { CATEGORIES } from '@/data/categories'
+import { PROPRIETARY_TOOLS } from '@/data/proprietary-tools'
+import { SEED_LISTINGS } from '@/data/seed-listings'
+
+const STATS = [
+  { value: `${SEED_LISTINGS.filter((l) => (l.status ?? 'live') !== 'archived').length}+`, label: 'projects indexed' },
+  { value: `${PROPRIETARY_TOOLS.length}`, label: '“X alternatives” pages' },
+  { value: `${CATEGORIES.length}`, label: 'categories' },
+  { value: 'High', label: 'buyer intent' },
+]
 
 export const dynamic = 'force-dynamic'
 
@@ -37,6 +48,39 @@ export default async function AdvertisePage({
           Our visitors arrive ready to ditch a SaaS and run something they own. Feature your project — or your
           hosting platform — to land at the top of its category and the relevant “alternatives” pages.
         </p>
+      </div>
+
+      {/* Intent / reach stats */}
+      <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
+        {STATS.map((s) => (
+          <Card key={s.label} className="p-4 text-center">
+            <div className="text-2xl font-bold tabular-nums">{s.value}</div>
+            <div className="text-xs text-muted-foreground">{s.label}</div>
+          </Card>
+        ))}
+      </div>
+
+      {/* What featured looks like */}
+      <div className="mt-10">
+        <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">What a featured placement looks like</h2>
+        <Card className="relative mt-3 flex flex-col gap-3 p-5 ring-1 ring-amber-300/70 sm:max-w-sm">
+          <Badge variant="sponsored" className="absolute right-3 top-3 gap-1">
+            <Sparkles className="size-3" /> Sponsored
+          </Badge>
+          <div className="flex items-center gap-3 pr-20">
+            <span className="flex size-10 items-center justify-center rounded-lg border bg-muted text-muted-foreground">
+              <Github className="size-5" />
+            </span>
+            <div>
+              <span className="font-semibold">Your project</span>
+              <div className="text-xs text-muted-foreground">Pinned to the top · highlighted card</div>
+            </div>
+          </div>
+          <p className="text-sm text-muted-foreground">Your tagline, shown above the fold on its category and every “alternatives” page it qualifies for.</p>
+          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+            <Star className="size-3.5 text-amber-500" /> Affiliate-first deploy &amp; visit buttons send buyers straight to you.
+          </div>
+        </Card>
       </div>
 
       {searchParams.canceled && (

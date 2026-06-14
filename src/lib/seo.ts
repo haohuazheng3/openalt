@@ -110,6 +110,18 @@ export function itemListLd(listings: { slug: string; name: string }[], name: str
   }
 }
 
+export function faqLd(items: { q: string; a: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((it) => ({
+      '@type': 'Question',
+      name: it.q,
+      acceptedAnswer: { '@type': 'Answer', text: it.a },
+    })),
+  }
+}
+
 export function websiteLd() {
   return {
     '@context': 'https://schema.org',
