@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 158 64% 38%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 44%;
+    --accent: 158 50% 94%;
+    --accent-foreground: 158 64% 24%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 158 64% 38%;
+    --radius: 0.6rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 47% 8%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 158 64% 44%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 20%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 158 64% 44%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+}
+
+@layer utilities {
+  .hero-grid {
+    background-image: radial-gradient(hsl(var(--primary) / 0.07) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+  .prose-listing {
+    @apply text-[15px] leading-7 text-muted-foreground;
+  }
+  .prose-listing h2 {
+    @apply mt-6 mb-2 text-lg font-semibold text-foreground;
+  }
+  .prose-listing h3 {
+    @apply mt-4 mb-1 font-semibold text-foreground;
+  }
+  .prose-listing p {
+    @apply mb-3;
+  }
+  .prose-listing ul {
+    @apply mb-3 ml-5 list-disc space-y-1;
+  }
+  .prose-listing ol {
+    @apply mb-3 ml-5 list-decimal space-y-1;
+  }
+  .prose-listing a {
+    @apply text-primary underline underline-offset-2;
+  }
+  .prose-listing code {
+    @apply rounded bg-muted px-1 py-0.5 text-[13px];
+  }
+  .prose-listing strong {
+    @apply font-semibold text-foreground;
+  }
+}

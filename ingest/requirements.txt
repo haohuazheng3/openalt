@@ -1,0 +1,13 @@
+# Core (required to run the ingester)
+httpx>=0.27
+psycopg[binary]>=3.1
+python-dotenv>=1.0
+
+# Optional — enables Claude extraction (replaces / difficulty / feature-gap).
+# Without a key the ingester falls back to a deterministic heuristic.
+anthropic>=0.40
+
+# Optional richer crawling of project homepages (Crawl4AI). The README is fetched
+# from the GitHub API by default, so this is not required.
+#   pip install crawl4ai && crawl4ai-setup
+# crawl4ai>=0.4
