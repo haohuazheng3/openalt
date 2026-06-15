@@ -5,6 +5,7 @@ import {
   getAllListingSlugs,
   getCategories,
   getComparePairs,
+  getProprietaryVsPairs,
   getReplacedProprietarySlugs,
 } from '@/lib/db/queries'
 import { env } from '@/lib/env'
@@ -15,9 +16,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = env.appUrl
   const now = new Date()
 
-  const [listingSlugs, comparePairs, categories, propSlugs] = await Promise.all([
+  const [listingSlugs, comparePairs, vsProprietary, categories, propSlugs] = await Promise.all([
     getAllListingSlugs(),
     getComparePairs(3),
+    getProprietaryVsPairs(2),
     getCategories(),
     getReplacedProprietarySlugs(),
   ])
@@ -29,6 +31,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/search`, lastModified: now, changeFrequency: 'weekly', priority: 0.5 },
     { url: `${base}/advertise`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${base}/submit`, lastModified: now, changeFrequency: 'monthly', priority: 0.4 },
+  ]
+
+  // Hub + data-report pages (high-value link targets).
+  const hubPages: MetadataRoute.Sitemap = [
+    { url: `${base}/self-hosted`, lastModified: now, changeFrequency: 'daily', priority: 0.9 },
+    { url: `${base}/open-source-alternatives`, lastModified: now, changeFrequency: 'daily', priority: 0.9 },
+    { url: `${base}/easiest-self-hosted-apps`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${base}/self-hosting-for-beginners`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/self-host-savings-calculator`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/reports/self-host-difficulty-index`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${base}/reports/archived-self-hosted-projects`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${base}/reports/one-click-deploy-apps`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
   ]
 
   // The "X alternatives" pages are the highest-value SEO surface → highest priority.
@@ -51,12 +65,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }))
 
-  const comparePages: MetadataRoute.Sitemap = comparePairs.map((slug) => ({
+  const comparePages: MetadataRoute.Sitemap = [...new Set([...comparePairs, ...vsProprietary])].map((slug) => ({
     url: `${base}/${slug}`,
     lastModified: now,
     changeFrequency: 'monthly',
     priority: 0.6,
   }))
 
-  return [...staticPages, ...alternativesPages, ...categoryPages, ...listingPages, ...comparePages]
+  return [
+    ...staticPages,
+    ...hubPages,
+    ...alternativesPages,
+    ...categoryPages,
+    ...listingPages,
+    ...comparePages,
+  ]
 }

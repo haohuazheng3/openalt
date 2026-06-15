@@ -54,6 +54,26 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Hub band */}
+      <section className="border-b bg-muted/20">
+        <div className="container grid gap-3 py-6 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { href: '/self-hosted', title: 'Self-hosted directory', desc: 'Every app in one sortable table' },
+            { href: '/easiest-self-hosted-apps', title: 'Easiest to self-host', desc: 'Ranked by difficulty score' },
+            { href: '/open-source-alternatives', title: 'Browse by SaaS', desc: '56 “X alternatives” pages' },
+            { href: '/reports/self-host-difficulty-index', title: 'Difficulty index', desc: 'Data report by category' },
+          ].map((h) => (
+            <Link key={h.href} href={h.href} className="group flex items-center justify-between gap-2 rounded-lg border bg-background px-4 py-3 transition-colors hover:border-primary/40">
+              <div>
+                <div className="text-sm font-semibold group-hover:text-primary">{h.title}</div>
+                <div className="text-xs text-muted-foreground">{h.desc}</div>
+              </div>
+              <ArrowRight className="size-4 shrink-0 text-muted-foreground" />
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* Featured */}
       {featured.length > 0 && (
         <section className="container py-14">
@@ -77,11 +97,16 @@ export default async function HomePage() {
       {/* Browse by SaaS — the "X alternatives" entry points */}
       <section id="alternatives" className="scroll-mt-20 border-y bg-muted/30 py-14">
         <div className="container">
-          <div className="mb-6">
-            <h2 className="text-2xl font-bold tracking-tight">Find an alternative to…</h2>
-            <p className="text-sm text-muted-foreground">
-              Pick the product you want to replace. We’ll show every open-source project that does its job.
-            </p>
+          <div className="mb-6 flex items-end justify-between gap-4">
+            <div>
+              <h2 className="text-2xl font-bold tracking-tight">Find an alternative to…</h2>
+              <p className="text-sm text-muted-foreground">
+                Pick the product you want to replace. We’ll show every open-source project that does its job.
+              </p>
+            </div>
+            <Link href="/open-source-alternatives" className="shrink-0 text-sm font-medium text-primary hover:underline">
+              See all →
+            </Link>
           </div>
           {popularSaaS.length > 0 ? (
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">

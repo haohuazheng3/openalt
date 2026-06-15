@@ -16,17 +16,17 @@ export function SiteHeader() {
         </Link>
 
         <nav className="ml-2 hidden items-center gap-1 text-sm text-muted-foreground md:flex">
-          <Link href="/#categories" className="rounded-md px-3 py-2 hover:text-foreground">
-            Categories
+          <Link href="/self-hosted" className="rounded-md px-3 py-2 hover:text-foreground">
+            Self-hosted
           </Link>
-          <Link href="/#alternatives" className="rounded-md px-3 py-2 hover:text-foreground">
+          <Link href="/open-source-alternatives" className="rounded-md px-3 py-2 hover:text-foreground">
             By SaaS
+          </Link>
+          <Link href="/easiest-self-hosted-apps" className="rounded-md px-3 py-2 hover:text-foreground">
+            Easiest
           </Link>
           <Link href="/search" className="rounded-md px-3 py-2 hover:text-foreground">
             All projects
-          </Link>
-          <Link href="/advertise" className="rounded-md px-3 py-2 hover:text-foreground">
-            Advertise
           </Link>
         </nav>
 

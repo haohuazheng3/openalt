@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { ArrowRight, Check, ExternalLink, Github, Globe, PencilLine, PlayCircle, Sparkles, TriangleAlert } from 'lucide-react'
+import { BadgeEmbed } from '@/components/badge-embed'
 import { CompareTable } from '@/components/compare-table'
 import { ComparisonTable, type CompareRow } from '@/components/comparison-table'
 import { DeployButtons } from '@/components/deploy-buttons'
@@ -22,6 +23,7 @@ import {
   getListingBySlug,
   getListingsReplacing,
   getProprietaryToolBySlug,
+  getProprietaryVsPairs,
   getRelatedListings,
   getReplacedProprietarySlugs,
 } from '@/lib/db/queries'
@@ -33,9 +35,12 @@ import {
   ALTERNATIVES_SUFFIX,
   alternativesSlug,
   parseAlternativesSlug,
+  PROPRIETARY_TOOLS,
   proprietaryBySlug,
 } from '@/data/proprietary-tools'
+import { categoryName } from '@/data/categories'
 import { breadcrumbLd, buildMetadata, faqLd, itemListLd, softwareApplicationLd } from '@/lib/seo'
+import { absoluteUrl } from '@/lib/env'
 import { domainFromUrl, stripMarkdown, truncate } from '@/lib/utils'
 import { guideFor } from '@/data/alternative-guides'
 import { extraFor } from '@/data/listing-extras'
@@ -43,12 +48,18 @@ import { extraFor } from '@/data/listing-extras'
 export const revalidate = 86400
 
 export async function generateStaticParams() {
-  const [slugs, propSlugs, pairs] = await Promise.all([
+  const [slugs, propSlugs, pairs, vsPairs] = await Promise.all([
     getAllListingSlugs(),
     getReplacedProprietarySlugs(),
     getComparePairs(3),
+    getProprietaryVsPairs(2),
   ])
-  return [...slugs, ...propSlugs.map((p) => `${p}${ALTERNATIVES_SUFFIX}`), ...pairs].map((slug) => ({ slug }))
+  return [
+    ...slugs,
+    ...propSlugs.map((p) => `${p}${ALTERNATIVES_SUFFIX}`),
+    ...pairs,
+    ...vsPairs,
+  ].map((slug) => ({ slug }))
 }
 
 const YEAR = 2026
@@ -281,9 +292,43 @@ function AlternativesPage({
               <Faq items={guide.faqs} />
             </section>
           ) : null}
+
+          {/* Related / internal links */}
+          <AlternativesRelated toolSlug={tool.slug} />
         </>
       )}
     </div>
+  )
+}
+
+function AlternativesRelated({ toolSlug }: { toolSlug: string }) {
+  const meta = proprietaryBySlug(toolSlug)
+  const catSlug = meta?.categorySlug
+  const siblings = catSlug
+    ? PROPRIETARY_TOOLS.filter((p) => p.categorySlug === catSlug && p.slug !== toolSlug).slice(0, 6)
+    : []
+  return (
+    <section className="mt-12 border-t pt-8">
+      <h2 className="text-base font-semibold">Keep exploring</h2>
+      <div className="mt-3 flex flex-wrap gap-2 text-sm">
+        {catSlug && (
+          <Link href={`/category/${catSlug}`} className="rounded-md border px-3 py-1.5 hover:bg-accent">
+            All {categoryName(catSlug)} →
+          </Link>
+        )}
+        <Link href="/self-hosted" className="rounded-md border px-3 py-1.5 hover:bg-accent">Self-hosted directory →</Link>
+        <Link href="/easiest-self-hosted-apps" className="rounded-md border px-3 py-1.5 hover:bg-accent">Easiest to self-host →</Link>
+      </div>
+      {siblings.length > 0 && (
+        <div className="mt-3 flex flex-wrap gap-2 text-sm">
+          {siblings.map((p) => (
+            <Link key={p.slug} href={`/${alternativesSlug(p.slug)}`} className="rounded-md border px-3 py-1.5 text-muted-foreground hover:bg-accent hover:text-foreground">
+              {p.name} alternatives
+            </Link>
+          ))}
+        </div>
+      )}
+    </section>
   )
 }
 
@@ -502,6 +547,19 @@ async function ListingDetail({ listing }: { listing: ListingWithCategory }) {
                 </Link>
               </div>
             </Card>
+
+            {listing.selfHostDifficulty && (
+              <Card className="mt-4 p-5">
+                <div className="text-sm font-medium">Show off your self-host difficulty score</div>
+                <p className="mb-3 mt-0.5 text-sm text-muted-foreground">
+                  Embed the {listing.name} difficulty badge in your README — it links back here.
+                </p>
+                <BadgeEmbed
+                  badgeUrl={absoluteUrl(`/api/badge/${listing.slug}`)}
+                  snippet={`[![Self-host difficulty](${absoluteUrl(`/api/badge/${listing.slug}`)})](${absoluteUrl(`/${listing.slug}`)})`}
+                />
+              </Card>
+            )}
           </section>
         </div>
 

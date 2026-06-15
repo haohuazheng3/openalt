@@ -22,6 +22,8 @@ export type CompareRow = {
   language: string | null
   lastCommitISO: string | null
   featured: boolean
+  category?: string | null
+  categorySlug?: string | null
 }
 
 type SortKey = 'default' | 'stars' | 'difficulty' | 'updated'
@@ -32,7 +34,7 @@ function logo(repoUrl: string) {
 }
 
 /** Sortable at-a-glance comparison of every alternative on a buyer-guide page. */
-export function ComparisonTable({ rows }: { rows: CompareRow[] }) {
+export function ComparisonTable({ rows, showCategory = false }: { rows: CompareRow[]; showCategory?: boolean }) {
   const [sort, setSort] = useState<SortKey>('default')
 
   const sorted = [...rows]
@@ -59,6 +61,7 @@ export function ComparisonTable({ rows }: { rows: CompareRow[] }) {
         <thead className="border-b bg-muted/40 text-xs uppercase tracking-wide">
           <tr>
             <th className="p-3 text-left font-medium text-muted-foreground">Project</th>
+            {showCategory && <th className="p-3 text-left font-medium text-muted-foreground">Category</th>}
             <Th label="Stars" k="stars" />
             <Th label="Self-host" k="difficulty" />
             <th className="p-3 text-left font-medium text-muted-foreground">Deploy</th>
@@ -86,6 +89,17 @@ export function ComparisonTable({ rows }: { rows: CompareRow[] }) {
                   </div>
                 </div>
               </td>
+              {showCategory && (
+                <td className="whitespace-nowrap p-3">
+                  {r.categorySlug ? (
+                    <Link href={`/category/${r.categorySlug}`} className="text-xs text-muted-foreground hover:text-foreground hover:underline">
+                      {r.category}
+                    </Link>
+                  ) : (
+                    <span className="text-xs text-muted-foreground">{r.category ?? '—'}</span>
+                  )}
+                </td>
+              )}
               <td className="whitespace-nowrap p-3 tabular-nums">{formatStars(r.stars)} ★</td>
               <td className="p-3">
                 {r.difficulty ? (

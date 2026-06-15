@@ -22,7 +22,7 @@ export async function SiteFooter() {
 
   return (
     <footer className="mt-20 border-t bg-muted/30">
-      <div className="container grid gap-10 py-12 md:grid-cols-4">
+      <div className="container grid gap-10 py-12 md:grid-cols-5">
         <div className="md:col-span-1">
           <div className="flex items-center gap-2 font-semibold">
             <span className="flex size-6 items-center justify-center rounded-md bg-primary text-primary-foreground">
@@ -60,9 +60,22 @@ export async function SiteFooter() {
         </div>
 
         <div>
+          <h3 className="mb-3 text-sm font-semibold">Guides &amp; data</h3>
+          <ul className="space-y-2 text-sm text-muted-foreground">
+            <li><Link href="/self-hosted" className="hover:text-foreground">Self-hosted directory</Link></li>
+            <li><Link href="/open-source-alternatives" className="hover:text-foreground">Open-source alternatives</Link></li>
+            <li><Link href="/easiest-self-hosted-apps" className="hover:text-foreground">Easiest to self-host</Link></li>
+            <li><Link href="/self-hosting-for-beginners" className="hover:text-foreground">For beginners</Link></li>
+            <li><Link href="/reports/self-host-difficulty-index" className="hover:text-foreground">Difficulty index</Link></li>
+          </ul>
+        </div>
+
+        <div>
           <h3 className="mb-3 text-sm font-semibold">Directory</h3>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li><Link href="/search" className="hover:text-foreground">All projects</Link></li>
+            <li><Link href="/reports/one-click-deploy-apps" className="hover:text-foreground">One-click deploy</Link></li>
+            <li><Link href="/reports/archived-self-hosted-projects" className="hover:text-foreground">Projects to avoid</Link></li>
             <li><Link href="/submit" className="hover:text-foreground">Submit a project</Link></li>
             <li><Link href="/advertise" className="hover:text-foreground">Get featured</Link></li>
           </ul>

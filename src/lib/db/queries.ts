@@ -363,6 +363,27 @@ export async function getListingsForCompare(
   return { a, b }
 }
 
+/**
+ * Canonical "open-source-tool vs proprietary-SaaS" comparison slugs — e.g.
+ * appflowy-vs-notion. For each proprietary tool we pair its top `perTool`
+ * alternatives. High-intent, AI-cited "X vs Y" pages.
+ */
+export async function getProprietaryVsPairs(perTool = 2): Promise<string[]> {
+  try {
+    const tools = await getProprietaryToolsWithCounts()
+    const pairs = new Set<string>()
+    for (const t of tools) {
+      if (t.count === 0) continue
+      const alts = await getListingsReplacing(t.slug, 'stars', perTool)
+      for (const a of alts) pairs.add(versusSlug(a.slug, t.slug))
+    }
+    return [...pairs]
+  } catch (err) {
+    console.error('[queries.getProprietaryVsPairs]', err)
+    return []
+  }
+}
+
 /** Record an outbound click. Best-effort: never throws into the redirect path. */
 export async function recordClick(listingId: number, ref?: string | null): Promise<void> {
   if (!isDatabaseConfigured()) return
