@@ -8,7 +8,16 @@ const hasClerk =
 const isProtectedRoute = createRouteMatcher(['/submit(.*)', '/admin(.*)'])
 
 const withClerk = clerkMiddleware(async (auth, req) => {
-  if (isProtectedRoute(req)) await auth.protect()
+  if (isProtectedRoute(req)) {
+    const { userId } = await auth()
+    if (!userId) {
+      // Redirect signed-out users to our sign-in page (instead of a 404),
+      // preserving where they were headed.
+      const signIn = new URL('/sign-in', req.url)
+      signIn.searchParams.set('redirect_url', req.url)
+      return NextResponse.redirect(signIn)
+    }
+  }
 })
 
 export default function middleware(req: NextRequest, event: NextFetchEvent) {
