@@ -96,18 +96,34 @@ Organization · WebSite+SearchAction · BreadcrumbList · ItemList · SoftwareAp
 
 ---
 
-## 4. 留给你的手动项（共 1 项，且**非阻塞**）
+## 4. 凭据更新（2026-06-17，你统一放入 `.env.local`）
 
-> 宪法规定不替你做需登录/验证码/付费/真实身份授权的事。本轮**仅 1 个可选项**，其余全自主完成：
+你按模板补齐了凭据，逐一核验结果：
 
-1. **（可选，低优先级）Cloudflare Analytics token** — 若想开启"真实爬虫命中监控（H）"，给我一个带 `Zone Analytics:Read` 的 CF token 即可；脚本已就绪，跑 `CF_TOKEN=… CF_ZONE=89ea4e148f6eb0fd59809e91b32165d4 node scripts/cf-bot-crawl.mjs`。**新站近 0 爬虫数据，不急**——可等有流量后再给。
+| 凭据 | 状态 | 影响 |
+|---|---|---|
+| `VERCEL_TOKEN`（新） | ✅ 有效（`haohuazheng3`） | CLI 部署恢复（git 自动部署仍是默认链路） |
+| `GOOGLE_SERVICE_ACCOUNT_B64` | ✅ 解出同一 SEO 账号 `seo-api-499507` | GSC 脚本已统一改读此变量（见下） |
+| `CLOUDFLARE_API_TOKEN`（新） | ⚠️ `active` 但**仍缺 `Zone Analytics:Read`** | item H 仍未通——见下方唯一手动项 |
+| `gh`（系统绑定，`GITHUB_TOKEN` 留空） | ✅ `haohuazheng3`，push 正常 | 无需填 token |
+| `NEON_API_KEY` / `STRIPE_SECRET_KEY` | ✅ 已在（同前） | DB/支付按需启用，非本轮 |
+| `RESEND_API_KEY` | ✅ 已在，**暂未接线** | 可用于"提交项目"通知邮件，待启用 /submit 时接 |
+| `ANTHROPIC_API_KEY` | ⬜ 留空（按你要求暂停 Claude 采集） | 周更采集器继续暂停 |
+| `APP_DOMAIN` | ⬜ 留空 | 脚本内已默认 `openreplace.com`，不阻塞 |
 
-> 其它无需你做：GSC 你已是所有者、git 自动部署已通、IndexNow 已 200。
-> （Vercel CLI token 已失效，但不影响——部署走 git 自动链路。若你日后想恢复 CLI 部署，可在 Vercel 控制台重新生成 token，但**非必需**。）
+**代码动作**：GSC 脚本（`gsc-setup.mjs` / `gsc-report.mjs`）原先用脆弱的"切 `{…}`"方式读 `.env.local` 里的裸 JSON；你换成 `GOOGLE_SERVICE_ACCOUNT_B64` 后那种方式会失效。已抽出共享加载器 `scripts/lib/google-creds.mjs`，按 **B64 → JSON env → .env.local** 优先级读取，本地与 CI（GitHub Action 仍用 `GOOGLE_SERVICE_ACCOUNT_JSON` secret）都通。已本地实跑 `gsc-report.mjs` 验证：鉴权成功、GSC 已挂载（sitemap 已读 415 条、0 收录——3 天新站正常）。
+
+## 5. 留给你的手动项（仅 1 项，**非阻塞**）
+
+> 宪法规定不替你做需登录/验证码/付费/真实身份授权的事。
+
+1. **（唯一项，低优先级）给 Cloudflare token 加一个权限** — 当前 token 只有 DNS 编辑、缺 `Zone Analytics:Read`，所以"真实爬虫命中监控（H）"仍跑不了。到 Cloudflare → My Profile → API Tokens → 编辑该 token → 加 **Zone · Analytics · Read**（含 openreplace.com 区域）即可。脚本已就绪：`CF_TOKEN=… CF_ZONE=89ea4e148f6eb0fd59809e91b32165d4 node scripts/cf-bot-crawl.mjs`。**新站近 0 爬虫数据,不急**——可等有流量后再加。
+
+> 其它无需你做：GSC 你已是所有者、Vercel 部署已通（git + CLI 双通）、IndexNow 已 200。
 
 ---
 
-## 5. 成败指标 & 下一步
+## 6. 成败指标 & 下一步
 - **唯一成败指标**：GSC 曝光趋势。本轮把"可被抓取、可被理解、信号不打架"的技术底座铺平——曝光是后续内容轮次的函数，本轮负责"地基不漏水"。
 - **可立即观察**：1–3 天内 GSC「页面/Sitemap」应显示 413 条被发现、逐步编入索引；IndexNow 已主动推送给 Bing/Yandex。
 - **下一轮（待你发指令）**：第二轮通常是**内容/实体深度**（每页决策数据加厚、实体消歧、E-E-A-T 信号、对比页扩面）——届时再出《作战方案》经你确认后落地。

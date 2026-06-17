@@ -5,28 +5,17 @@
  *   3. Search Console: add sc-domain property → submit sitemap
  *
  * Run: node scripts/gsc-setup.mjs
- * Env: CF_TOKEN, CF_ZONE (Cloudflare). Service account read from ../.env.local.
+ * Env: CF_TOKEN, CF_ZONE (Cloudflare). Service account via GOOGLE_SERVICE_ACCOUNT_B64/_JSON or .env.local.
  */
-import { readFileSync } from 'node:fs'
 import { createSign } from 'node:crypto'
-import { fileURLToPath } from 'node:url'
-import { dirname, join } from 'node:path'
+import { loadServiceAccount } from './lib/google-creds.mjs'
 
-const __dir = dirname(fileURLToPath(import.meta.url))
 const DOMAIN = 'openreplace.com'
 const SITEMAP = `https://${DOMAIN}/sitemap.xml`
 const CF_TOKEN = process.env.CF_TOKEN
 const CF_ZONE = process.env.CF_ZONE
 
 const b64url = (buf) => Buffer.from(buf).toString('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '')
-
-function loadServiceAccount() {
-  const raw = readFileSync(join(__dir, '..', '.env.local'), 'utf8')
-  const start = raw.indexOf('{')
-  const end = raw.lastIndexOf('}')
-  if (start < 0 || end < 0) throw new Error('No service-account JSON found in .env.local')
-  return JSON.parse(raw.slice(start, end + 1))
-}
 
 async function getAccessToken(sa) {
   const now = Math.floor(Date.now() / 1000)

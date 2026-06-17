@@ -5,26 +5,18 @@
  *   • impressions but weak rank  → build/strengthen a dedicated page
  *   • sitemap errors             → fix/alert
  *
- * Auth: GOOGLE_SERVICE_ACCOUNT_JSON env (CI) or ../.env.local (local).
+ * Auth: GOOGLE_SERVICE_ACCOUNT_B64/_JSON env (CI) or ../.env.local (local).
  * Output: markdown to stdout (and $GITHUB_STEP_SUMMARY in CI).
  */
-import { readFileSync, appendFileSync } from 'node:fs'
+import { appendFileSync } from 'node:fs'
 import { createSign } from 'node:crypto'
-import { fileURLToPath } from 'node:url'
-import { dirname, join } from 'node:path'
+import { loadServiceAccount } from './lib/google-creds.mjs'
 
-const __dir = dirname(fileURLToPath(import.meta.url))
 const DOMAIN = 'openreplace.com'
 const PROP = `sc-domain:${DOMAIN}`
 const SITEMAP = `https://${DOMAIN}/sitemap.xml`
 
 const b64url = (b) => Buffer.from(b).toString('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '')
-
-function loadSA() {
-  if (process.env.GOOGLE_SERVICE_ACCOUNT_JSON) return JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON)
-  const raw = readFileSync(join(__dir, '..', '.env.local'), 'utf8')
-  return JSON.parse(raw.slice(raw.indexOf('{'), raw.lastIndexOf('}') + 1))
-}
 
 async function token(sa) {
   const now = Math.floor(Date.now() / 1000)
@@ -40,7 +32,7 @@ async function token(sa) {
 const iso = (d) => d.toISOString().slice(0, 10)
 
 async function main() {
-  const sa = loadSA()
+  const sa = loadServiceAccount()
   const tok = await token(sa)
   const auth = { authorization: `Bearer ${tok}`, 'content-type': 'application/json' }
   const end = new Date(Date.now() - 2 * 86400000) // GSC data lags ~2 days
