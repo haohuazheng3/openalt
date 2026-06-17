@@ -8,7 +8,7 @@ import { SiteHeader } from '@/components/site-header'
 import { ThemeScript } from '@/components/theme-script'
 import { SITE } from '@/lib/constants'
 import { env } from '@/lib/env'
-import { ogImageUrl, websiteLd } from '@/lib/seo'
+import { ogImageUrl, organizationLd, websiteLd } from '@/lib/seo'
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.appUrl),
@@ -40,10 +40,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <AuthProvider>
       <html lang="en" suppressHydrationWarning>
+        <head>
+          {/* Logos load from these hosts — preconnect shaves latency. */}
+          <link rel="preconnect" href="https://github.com" />
+          <link rel="preconnect" href="https://www.google.com" />
+        </head>
         <body className="min-h-screen bg-background font-sans">
           <ThemeScript />
           <PlausibleAnalytics />
-          <JsonLd data={websiteLd()} />
+          <JsonLd data={[websiteLd(), organizationLd()]} />
           <SiteHeader />
           <main className="min-h-[60vh]">{children}</main>
           <SiteFooter />

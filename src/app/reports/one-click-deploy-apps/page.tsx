@@ -4,7 +4,7 @@ import { ComparisonTable } from '@/components/comparison-table'
 import { Faq } from '@/components/faq'
 import { JsonLd } from '@/components/json-ld'
 import { getListings } from '@/lib/db/queries'
-import { breadcrumbLd, buildMetadata, faqLd, itemListLd } from '@/lib/seo'
+import { breadcrumbLd, buildMetadata, datasetLd, faqLd, itemListLd } from '@/lib/seo'
 import { toCompareRows } from '@/lib/rows'
 import { formatDate } from '@/lib/utils'
 
@@ -40,6 +40,11 @@ export default async function OneClickReport() {
             { name: 'One-click deploy apps', path: '/reports/one-click-deploy-apps' },
           ]),
           itemListLd(listings, 'Self-hosted apps with one-click deploy'),
+          datasetLd({
+            name: 'Self-hosted apps with one-click deploy',
+            description: `${listings.length} open-source apps that deploy in one click via Railway, Render, PikaPods and more, with self-host difficulty scores.`,
+            path: '/reports/one-click-deploy-apps',
+          }),
           faqLd(FAQS),
         ]}
       />

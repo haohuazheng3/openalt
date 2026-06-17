@@ -5,7 +5,7 @@ import { JsonLd } from '@/components/json-ld'
 import { Card } from '@/components/ui/card'
 import { getListings } from '@/lib/db/queries'
 import { difficultyInfo } from '@/lib/difficulty'
-import { breadcrumbLd, buildMetadata, faqLd } from '@/lib/seo'
+import { breadcrumbLd, buildMetadata, datasetLd, faqLd } from '@/lib/seo'
 import { formatDate } from '@/lib/utils'
 
 export const revalidate = 86400
@@ -68,6 +68,11 @@ export default async function DifficultyIndexReport() {
             { name: 'Reports', path: '/self-hosted' },
             { name: 'Self-host difficulty index', path: '/reports/self-host-difficulty-index' },
           ]),
+          datasetLd({
+            name: 'The Self-Host Difficulty Index',
+            description: `Average self-host difficulty (1–5) and one-click-deploy share per category across ${listings.length} open-source projects.`,
+            path: '/reports/self-host-difficulty-index',
+          }),
           faqLd(faqs),
         ]}
       />

@@ -8,7 +8,7 @@ import { JsonLd } from '@/components/json-ld'
 import { Card } from '@/components/ui/card'
 import { CATEGORIES } from '@/data/categories'
 import { getCategoriesWithCounts, getListings } from '@/lib/db/queries'
-import { breadcrumbLd, buildMetadata, faqLd, itemListLd } from '@/lib/seo'
+import { breadcrumbLd, buildMetadata, datasetLd, faqLd, itemListLd } from '@/lib/seo'
 import { toCompareRows } from '@/lib/rows'
 import { formatDate } from '@/lib/utils'
 
@@ -23,7 +23,7 @@ const FAQS = [
 
 export function generateMetadata(): Metadata {
   return buildMetadata({
-    title: 'Self-Hosted Software Directory — Every App, Scored & Ready to Deploy',
+    title: 'Self-Hosted Software Directory',
     description: 'The complete directory of open-source, self-hostable software — each project scored 1–5 for self-host difficulty, with one-click deploy options, live GitHub freshness, and feature-gap comparisons. Sort and compare every app in one table.',
     path: '/self-hosted',
     ogSubtitle: 'Difficulty-scored · deploy-ready · always fresh',
@@ -56,6 +56,11 @@ export default async function SelfHostedHub() {
             { name: 'Self-hosted directory', path: '/self-hosted' },
           ]),
           itemListLd(listings, 'Self-hosted open-source software'),
+          datasetLd({
+            name: 'Self-hosted software directory',
+            description: `${listings.length} open-source, self-hostable projects with self-host difficulty scores, deploy options, GitHub stars and freshness.`,
+            path: '/self-hosted',
+          }),
           faqLd(FAQS),
         ]}
       />

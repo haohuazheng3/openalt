@@ -16,7 +16,7 @@ const FAQS = [
 
 export function generateMetadata(): Metadata {
   return buildMetadata({
-    title: 'Self-Hosting Savings Calculator — How Much Would You Save?',
+    title: 'Self-Hosting Savings Calculator',
     description: 'Pick the SaaS you pay for and see how much you’d save each year by switching to its open-source, self-hostable alternative — with the recommended project, its self-host difficulty, and a one-click deploy.',
     path: '/self-host-savings-calculator',
     ogSubtitle: 'See your annual savings in seconds',

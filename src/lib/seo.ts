@@ -70,15 +70,47 @@ export function softwareApplicationLd(listing: ListingWithCategory) {
     ...(listing.license ? { license: listing.license } : {}),
     // Open-source: the software itself is free (managed hosting may cost extra).
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-    ...(listing.githubStars
-      ? {
-          aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: '4.8',
-            ratingCount: String(Math.max(1, Math.round(listing.githubStars / 100))),
-          },
-        }
-      : {}),
+    // NOTE: no aggregateRating — we have no real review data, and fabricating it
+    // violates Google's structured-data policy.
+  }
+}
+
+/** Organization JSON-LD for the site (rendered once in the root layout). */
+export function organizationLd() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: SITE.name,
+    url: env.appUrl,
+    logo: absoluteUrl('/logo.png'),
+    description: SITE.description,
+    sameAs: ['https://github.com/haohuazheng3/openalt'],
+  }
+}
+
+/** Dataset JSON-LD for the data-report pages (linkable data assets). */
+export function datasetLd(args: { name: string; description: string; path: string; dateModified?: string }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: args.name,
+    description: args.description,
+    url: absoluteUrl(args.path),
+    isAccessibleForFree: true,
+    creator: { '@type': 'Organization', name: SITE.name, url: env.appUrl },
+    license: 'https://creativecommons.org/licenses/by/4.0/',
+    dateModified: args.dateModified ?? new Date().toISOString().slice(0, 10),
+  }
+}
+
+/** HowTo JSON-LD (e.g. the self-hosting guide steps). */
+export function howToLd(args: { name: string; description: string; steps: { name: string; text: string }[] }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: args.name,
+    description: args.description,
+    step: args.steps.map((s, i) => ({ '@type': 'HowToStep', position: i + 1, name: s.name, text: s.text })),
   }
 }
 

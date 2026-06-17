@@ -28,9 +28,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: base, lastModified: now, changeFrequency: 'daily', priority: 1 },
-    { url: `${base}/search`, lastModified: now, changeFrequency: 'weekly', priority: 0.5 },
+    // NOTE: /search (noindex) and /submit (auth-gated → redirects for crawlers)
+    // are intentionally excluded for signal consistency.
     { url: `${base}/advertise`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${base}/submit`, lastModified: now, changeFrequency: 'monthly', priority: 0.4 },
   ]
 
   // Hub + data-report pages (high-value link targets).

@@ -9,7 +9,7 @@ import { Card } from '@/components/ui/card'
 import { getListings } from '@/lib/db/queries'
 import type { ListingWithCategory } from '@/lib/db/schema'
 import { proprietaryBySlug } from '@/data/proprietary-tools'
-import { breadcrumbLd, buildMetadata, faqLd } from '@/lib/seo'
+import { breadcrumbLd, buildMetadata, datasetLd, faqLd } from '@/lib/seo'
 import { formatDate, relativeFromNow } from '@/lib/utils'
 
 export const revalidate = 86400
@@ -50,6 +50,11 @@ export default async function ArchivedReport() {
             { name: 'Self-hosted', path: '/self-hosted' },
             { name: 'Archived projects to avoid', path: '/reports/archived-self-hosted-projects' },
           ]),
+          datasetLd({
+            name: 'Archived / abandoned self-hosted projects',
+            description: 'Open-source self-hosted projects that are archived or long-abandoned, with a maintained alternative for each.',
+            path: '/reports/archived-self-hosted-projects',
+          }),
           faqLd(faqs),
         ]}
       />

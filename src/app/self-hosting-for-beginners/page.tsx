@@ -7,7 +7,7 @@ import { ListingCard } from '@/components/listing-card'
 import { Card } from '@/components/ui/card'
 import { DIFFICULTY_OPTIONS, difficultyInfo } from '@/lib/difficulty'
 import { getCategories, getListings } from '@/lib/db/queries'
-import { breadcrumbLd, buildMetadata, faqLd } from '@/lib/seo'
+import { breadcrumbLd, buildMetadata, faqLd, howToLd } from '@/lib/seo'
 import { absoluteUrl } from '@/lib/env'
 import { formatDate } from '@/lib/utils'
 
@@ -57,6 +57,15 @@ export default async function SelfHostingForBeginners() {
             { name: 'For beginners', path: '/self-hosting-for-beginners' },
           ]),
           faqLd(FAQS),
+          howToLd({
+            name: 'How to start self-hosting open-source software',
+            description: 'Read the difficulty score, pick a deploy method, and start with a beginner-friendly app.',
+            steps: [
+              { name: 'Read the difficulty score', text: 'Every app is scored 1–5. As a beginner, stick to 1–2: one-click/managed or a single docker run.' },
+              { name: 'Pick a deploy method', text: 'Use a one-click platform (Railway, Render, PikaPods) for zero terminal, or a $5/mo VPS with Docker for more control.' },
+              { name: 'Start with a low-effort app', text: 'Choose a difficulty ≤2 pick from the list below and deploy it; scale up to harder apps once comfortable.' },
+            ],
+          }),
           {
             '@context': 'https://schema.org',
             '@type': 'Article',

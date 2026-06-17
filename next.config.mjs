@@ -8,7 +8,11 @@ const nextConfig = {
   images: {
     // Logos come from third-party hosts (GitHub avatars, Google favicons, vendor CDNs).
     remotePatterns: [{ protocol: 'https', hostname: '**' }],
+    // Serve modern formats and cache optimized images for a day.
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 86400,
   },
+  compress: true,
   async headers() {
     return [
       {

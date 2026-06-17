@@ -89,7 +89,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       160,
     )
     return buildMetadata({
-      title: `${listing.name} — Self-Hosting Guide, Difficulty & Alternatives`,
+      title: `${listing.name} — Self-Host Guide & Difficulty`,
       description,
       path: `/${listing.slug}`,
       ogSubtitle: listing.tagline ?? undefined,
@@ -248,6 +248,17 @@ function AlternativesPage({
                 <span className="font-medium text-foreground">What to look for: </span>
                 {guide.whatToLookFor}
               </p>
+            )}
+            {/* Head-to-head: each top alternative vs the proprietary tool */}
+            {listings.length > 0 && (
+              <div className="mt-4 flex flex-wrap items-center gap-2 text-sm">
+                <span className="text-muted-foreground">Head-to-head:</span>
+                {listings.slice(0, 5).map((l) => (
+                  <Link key={l.id} href={`/${versusSlug(l.slug, tool.slug)}`} className="rounded-md border px-2.5 py-1 text-muted-foreground hover:bg-accent hover:text-foreground">
+                    {l.name} vs {tool.name}
+                  </Link>
+                ))}
+              </div>
             )}
           </section>
 
