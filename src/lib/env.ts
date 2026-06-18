@@ -49,7 +49,17 @@ export const env = {
   },
 }
 
-export const isDatabaseConfigured = () => Boolean(env.databaseUrl)
+/**
+ * Whether public pages read from the database. We force STATIC mode — read the
+ * curated `seed-listings.ts` directly via the in-memory store — when
+ * USE_STATIC_DATA=1, even if a DATABASE_URL is present. Vercel's Neon
+ * integration re-injects DATABASE_URL, so deleting the env alone isn't reliable;
+ * this switch makes the static catalogue the single source of truth, so every
+ * seed update (weekly refresh, bulk expansion) goes live on the next deploy with
+ * no DB re-seed. Flip it off (or unset) to go back to the database.
+ */
+export const isDatabaseConfigured = () =>
+  process.env.USE_STATIC_DATA === '1' ? false : Boolean(env.databaseUrl)
 
 export const isClerkConfigured = () =>
   Boolean(env.clerkPublishableKey) && Boolean(env.clerkSecretKey)
