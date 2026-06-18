@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next'
 import { CATEGORY_SLUGS } from '@/data/categories'
 import { ALTERNATIVES_SUFFIX, PROPRIETARY_SLUGS } from '@/data/proprietary-tools'
+import { FEATURED_VS } from '@/data/featured-comparisons'
+import { versusSlug } from '@/lib/slug'
 import {
   getAllListingSlugs,
   getCategories,
@@ -43,6 +45,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/reports/self-host-difficulty-index`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${base}/reports/archived-self-hosted-projects`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${base}/reports/one-click-deploy-apps`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${base}/self-hosted-paas`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${base}/one-click-self-host`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${base}/methodology`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
   ]
 
   // The "X alternatives" pages are the highest-value SEO surface → highest priority.
@@ -65,7 +70,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }))
 
-  const comparePages: MetadataRoute.Sitemap = [...new Set([...comparePairs, ...vsProprietary])].map((slug) => ({
+  const featuredVs = FEATURED_VS.map((v) => versusSlug(v.a, v.b))
+  const comparePages: MetadataRoute.Sitemap = [...new Set([...comparePairs, ...vsProprietary, ...featuredVs])].map((slug) => ({
     url: `${base}/${slug}`,
     lastModified: now,
     changeFrequency: 'monthly',

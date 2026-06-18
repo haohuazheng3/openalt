@@ -1,0 +1,38 @@
+name: Refresh catalogue data
+
+# Weekly GitHub-API freshness pass over src/data/seed-listings.ts.
+# Keeps stars / last-commit / archived true on the static (no-DB) site, then
+# commits the diff — pushing to main auto-deploys via the Vercel git integration.
+# No database and no LLM key needed; uses the Action's built-in GITHUB_TOKEN.
+
+on:
+  schedule:
+    - cron: '0 6 * * 1' # Mondays 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Refresh from GitHub API
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/refresh-listings.mjs
+      - name: Commit if changed
+        run: |
+          if ! git diff --quiet src/data/seed-listings.ts; then
+            git config user.name "openalt-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add src/data/seed-listings.ts
+            git commit -m "chore(data): weekly GitHub freshness refresh"
+            git push
+          else
+            echo "No changes this week."
+          fi

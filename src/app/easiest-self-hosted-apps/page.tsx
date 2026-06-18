@@ -7,6 +7,7 @@ import { Faq } from '@/components/faq'
 import { GoButton } from '@/components/go-button'
 import { JsonLd } from '@/components/json-ld'
 import { ReplacesBadges } from '@/components/replaces-badges'
+import { Tldr } from '@/components/tldr'
 import { Card } from '@/components/ui/card'
 import { getListings } from '@/lib/db/queries'
 import { breadcrumbLd, buildMetadata, faqLd, itemListLd } from '@/lib/seo'
@@ -58,6 +59,11 @@ export default async function EasiestSelfHostedApps() {
       <h1 className="max-w-3xl text-3xl font-bold tracking-tight sm:text-4xl">
         The Easiest Self-Hosted Apps to Run (2026)
       </h1>
+      <Tldr updated={formatDate(new Date())} sources="GitHub API (stars, last commit); difficulty scored against our rubric">
+        The easiest open-source apps to self-host are scored <strong>difficulty 1</strong> — a free one-click deploy or
+        official managed hosting, running in minutes with no server skills. Difficulty 2 needs only a single{' '}
+        <code>docker run</code>. Every app below is ranked by our strict 1–5 score, easiest first.
+      </Tldr>
       <p className="mt-3 max-w-3xl text-lg text-muted-foreground">
         Every other “easiest” list throws adjectives at you. We score it. Below is every self-hostable app
         ranked by a strict <strong className="text-foreground">1–5 difficulty score</strong>, easiest first —

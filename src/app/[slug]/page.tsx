@@ -41,9 +41,11 @@ import {
 import { categoryName } from '@/data/categories'
 import { breadcrumbLd, buildMetadata, faqLd, itemListLd, softwareApplicationLd } from '@/lib/seo'
 import { absoluteUrl } from '@/lib/env'
-import { domainFromUrl, stripMarkdown, truncate } from '@/lib/utils'
+import { domainFromUrl, formatDate, stripMarkdown, truncate } from '@/lib/utils'
 import { guideFor } from '@/data/alternative-guides'
 import { extraFor } from '@/data/listing-extras'
+import { Tldr } from '@/components/tldr'
+import { FEATURED_VS } from '@/data/featured-comparisons'
 
 export const revalidate = 86400
 
@@ -54,12 +56,14 @@ export async function generateStaticParams() {
     getComparePairs(3),
     getProprietaryVsPairs(2),
   ])
-  return [
+  const all = [
     ...slugs,
     ...propSlugs.map((p) => `${p}${ALTERNATIVES_SUFFIX}`),
     ...pairs,
     ...vsPairs,
-  ].map((slug) => ({ slug }))
+    ...FEATURED_VS.map((v) => versusSlug(v.a, v.b)),
+  ]
+  return [...new Set(all)].map((slug) => ({ slug }))
 }
 
 const YEAR = 2026
@@ -671,32 +675,107 @@ function Fact({ label, value }: { label: string; value?: string | null }) {
 
 function CompareView({ a, b }: { a: Side; b: Side }) {
   const canonical = versusSlug(slugOf(a), slugOf(b))
-  // open-source vs open-source → full comparison table
+  // open-source vs open-source → full head-to-head
   if (a.kind === 'listing' && b.kind === 'listing') {
+    const la = a.listing
+    const lb = b.listing
+    const da = la.selfHostDifficulty ?? null
+    const db = lb.selfHostDifficulty ?? null
+    const easier = da != null && db != null && da !== db ? (da < db ? la : lb) : null
+    const other = (x: ListingWithCategory) => (x === la ? lb : la)
+    const morePopular = la.githubStars === lb.githubStars ? null : la.githubStars > lb.githubStars ? la : lb
+    const fresher =
+      la.lastCommitAt && lb.lastCommitAt && +new Date(la.lastCommitAt) !== +new Date(lb.lastCommitAt)
+        ? +new Date(la.lastCommitAt) > +new Date(lb.lastCommitAt)
+          ? la
+          : lb
+        : null
+    const faqs = [
+      {
+        q: `Is ${la.name} or ${lb.name} easier to self-host?`,
+        a: easier
+          ? `${easier.name} is easier to self-host — ${difficultyInfo(easier.selfHostDifficulty)?.label.toLowerCase()} (difficulty ${easier.selfHostDifficulty}/5) versus ${other(easier).selfHostDifficulty}/5 for ${other(easier).name}.`
+          : `${la.name} and ${lb.name} score the same on our self-host difficulty scale (${da ?? '—'}/5), so neither has a clear setup advantage.`,
+      },
+      {
+        q: `Which has more momentum, ${la.name} or ${lb.name}?`,
+        a: `${morePopular ? `${morePopular.name} has more GitHub stars (${morePopular.githubStars.toLocaleString()} vs ${other(morePopular).githubStars.toLocaleString()})` : 'Both have similar GitHub stars'}${fresher ? `, and ${fresher.name} has been committed to more recently` : ''}.`,
+      },
+    ]
     return (
       <div className="container max-w-4xl py-10">
         <JsonLd
-          data={breadcrumbLd([
-            { name: 'Home', path: '/' },
-            { name: `${a.name} vs ${b.name}`, path: `/${canonical}` },
-          ])}
+          data={[
+            breadcrumbLd([
+              { name: 'Home', path: '/' },
+              { name: `${a.name} vs ${b.name}`, path: `/${canonical}` },
+            ]),
+            faqLd(faqs),
+          ]}
         />
         <nav className="mb-3 text-sm text-muted-foreground">
           <Link href="/" className="hover:text-foreground">Home</Link> /{' '}
           <span className="text-foreground">Compare</span>
         </nav>
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{a.name} vs {b.name}</h1>
-        <p className="mt-3 max-w-2xl text-lg text-muted-foreground">
-          A side-by-side comparison of {a.name} and {b.name} — stars, license, self-host difficulty, deploy options,
-          and what each replaces.
-        </p>
-        <div className="mt-8"><CompareTable a={a.listing} b={b.listing} /></div>
+        <Tldr updated={formatDate(new Date())} sources="GitHub API (stars, last commit); difficulty scored against our rubric">
+          {easier ? (
+            <>{easier.name} is easier to self-host (difficulty {easier.selfHostDifficulty}/5 vs {other(easier).selfHostDifficulty}/5)</>
+          ) : (
+            <>{la.name} and {lb.name} are a similar lift to self-host</>
+          )}
+          {morePopular ? (
+            <>, while {morePopular.name} has more GitHub stars ({morePopular.githubStars.toLocaleString()})</>
+          ) : (
+            <>, with comparable GitHub traction</>
+          )}
+          . Full side-by-side on difficulty, deploy options, license and freshness below.
+        </Tldr>
+        <div className="mt-6"><CompareTable a={la} b={lb} /></div>
+
+        {(la.featureGapMd || lb.featureGapMd) && (
+          <section className="mt-10">
+            <h2 className="text-xl font-semibold">Where each falls short</h2>
+            <p className="mt-1 text-sm text-muted-foreground">
+              The honest trade-offs — what you give up with each, versus the proprietary tools they replace.
+            </p>
+            <div className="mt-3 grid gap-4 sm:grid-cols-2">
+              {[la, lb].map((l) => (
+                <Card key={l.id} className="border-amber-200 bg-amber-50/40 p-5">
+                  <div className="font-semibold">{l.name}</div>
+                  {l.featureGapMd ? (
+                    <div className="mt-2 text-sm"><Markdown>{l.featureGapMd}</Markdown></div>
+                  ) : (
+                    <p className="mt-2 text-sm text-muted-foreground">No major gaps documented.</p>
+                  )}
+                </Card>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <section className="mt-10">
+          <Card className="border-primary/30 bg-accent/40 p-5">
+            <h2 className="text-base font-semibold">Bottom line</h2>
+            <p className="mt-1.5 text-sm text-muted-foreground">
+              {easier ? `Choose ${easier.name} if you want the lower-effort setup` : `Both are a similar lift to self-host`}
+              {morePopular ? `; choose ${morePopular.name} for the larger community and ecosystem` : ''}.
+              {fresher ? ` ${fresher.name} has seen more recent development.` : ''} Open each guide below for deploy steps and the full feature gap.
+            </p>
+          </Card>
+        </section>
+
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          {[a.listing, b.listing].map((l) => (
+          {[la, lb].map((l) => (
             <Card key={l.id} className="p-5">
               <Link href={`/${l.slug}`} className="text-lg font-semibold hover:underline">{l.name}</Link>
               {l.tagline && <p className="mt-2 text-sm text-muted-foreground">{l.tagline}</p>}
-              <div className="mt-3"><GoButton id={l.id} to="repo" label="View repo" icon={Github} size="sm" /></div>
+              <div className="mt-3 flex items-center gap-3">
+                <GoButton id={l.id} to="repo" label="View repo" icon={Github} size="sm" />
+                <Link href={`/${l.slug}`} className="inline-flex items-center gap-1 text-xs text-primary hover:underline">
+                  Full guide <ArrowRight className="size-3.5" />
+                </Link>
+              </div>
             </Card>
           ))}
         </div>
