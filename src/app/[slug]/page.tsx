@@ -18,9 +18,9 @@ import { ReplacesBadges } from '@/components/replaces-badges'
 import { Badge } from '@/components/ui/badge'
 import { Card } from '@/components/ui/card'
 import {
-  getAllListingSlugs,
   getComparePairs,
   getListingBySlug,
+  getListings,
   getListingsReplacing,
   getProprietaryToolBySlug,
   getProprietaryVsPairs,
@@ -50,12 +50,16 @@ import { FEATURED_VS } from '@/data/featured-comparisons'
 export const revalidate = 86400
 
 export async function generateStaticParams() {
-  const [slugs, propSlugs, pairs, vsPairs] = await Promise.all([
-    getAllListingSlugs(),
+  // status:'all' so archived projects keep a (statically generated) detail page
+  // showing the "Archived" warning — the site's dead-project signal stays true.
+  // The sitemap still lists live-only, so we don't actively push dead projects.
+  const [allListings, propSlugs, pairs, vsPairs] = await Promise.all([
+    getListings({ status: 'all', limit: 1000 }),
     getReplacedProprietarySlugs(),
     getComparePairs(3),
     getProprietaryVsPairs(2),
   ])
+  const slugs = allListings.map((l) => l.slug)
   const all = [
     ...slugs,
     ...propSlugs.map((p) => `${p}${ALTERNATIVES_SUFFIX}`),
