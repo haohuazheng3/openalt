@@ -108,6 +108,37 @@ export const PROPRIETARY_TOOLS: ProprietaryToolSeed[] = [
   { slug: 'vercel', name: 'Vercel', categorySlug: 'paas-deploy', website: 'https://vercel.com', blurb: 'Frontend / serverless hosting.', priceHook: 'bandwidth and function overage bills' },
   { slug: 'netlify', name: 'Netlify', categorySlug: 'paas-deploy', website: 'https://www.netlify.com', blurb: 'Jamstack hosting and functions.', priceHook: 'surprise bandwidth overages' },
   { slug: 'render', name: 'Render', categorySlug: 'paas-deploy', website: 'https://render.com', blurb: 'Cloud app hosting.', priceHook: 'usage-based costs as you grow' },
+
+  // ── Media Servers & Streaming ────────────────────────────────────────────
+  { slug: 'plex', name: 'Plex', categorySlug: 'media-server', website: 'https://www.plex.tv', blurb: 'Media server for movies, TV, and music.', priceHook: 'a Plex Pass subscription and cloud-account lock-in' },
+  { slug: 'spotify', name: 'Spotify', categorySlug: 'media-server', website: 'https://www.spotify.com', blurb: 'Music streaming.', priceHook: 'monthly fees and no ownership of your library' },
+  { slug: 'netflix', name: 'Netflix', categorySlug: 'media-server', website: 'https://www.netflix.com', blurb: 'Video streaming.', priceHook: 'rising prices and a catalog that changes under you' },
+
+  // ── Photo Management ─────────────────────────────────────────────────────
+  { slug: 'google-photos', name: 'Google Photos', categorySlug: 'photos', website: 'https://photos.google.com', blurb: 'Cloud photo backup and library.', priceHook: 'storage upsells and your photos on Google’s servers' },
+  { slug: 'icloud-photos', name: 'iCloud Photos', categorySlug: 'photos', website: 'https://www.icloud.com', blurb: 'Apple cloud photo library.', priceHook: 'iCloud storage fees and Apple lock-in' },
+
+  // ── Blogging & CMS ───────────────────────────────────────────────────────
+  { slug: 'wordpress-com', name: 'WordPress.com', categorySlug: 'blog-cms', website: 'https://wordpress.com', blurb: 'Hosted WordPress blogging.', priceHook: 'plan limits and upsells for basic features' },
+  { slug: 'medium', name: 'Medium', categorySlug: 'blog-cms', website: 'https://medium.com', blurb: 'Publishing platform.', priceHook: 'paywalls and zero ownership of your audience' },
+  { slug: 'substack', name: 'Substack', categorySlug: 'blog-cms', website: 'https://substack.com', blurb: 'Newsletter publishing.', priceHook: 'a 10% cut of your subscription revenue' },
+  { slug: 'squarespace', name: 'Squarespace', categorySlug: 'blog-cms', website: 'https://www.squarespace.com', blurb: 'Website builder.', priceHook: 'monthly fees and a closed platform' },
+  { slug: 'contentful', name: 'Contentful', categorySlug: 'blog-cms', website: 'https://www.contentful.com', blurb: 'Headless CMS.', priceHook: 'steep pricing past the free tier' },
+
+  // ── Feeds & Read-Later ───────────────────────────────────────────────────
+  { slug: 'feedly', name: 'Feedly', categorySlug: 'read-later-feeds', website: 'https://feedly.com', blurb: 'RSS feed reader.', priceHook: 'pro fees for basic features and source limits' },
+  { slug: 'pocket', name: 'Pocket', categorySlug: 'read-later-feeds', website: 'https://getpocket.com', blurb: 'Read-it-later service.', priceHook: 'shut down by Mozilla — saved articles at risk' },
+  { slug: 'instapaper', name: 'Instapaper', categorySlug: 'read-later-feeds', website: 'https://www.instapaper.com', blurb: 'Save articles to read later.', priceHook: 'premium fees and uncertain longevity' },
+  { slug: 'raindrop', name: 'Raindrop.io', categorySlug: 'read-later-feeds', website: 'https://raindrop.io', blurb: 'Bookmark manager.', priceHook: 'pro subscription for full-text search and backups' },
+
+  // ── AI & LLM Tools ───────────────────────────────────────────────────────
+  { slug: 'chatgpt', name: 'ChatGPT', categorySlug: 'ai-llm', website: 'https://chat.openai.com', blurb: 'Hosted AI chat assistant.', priceHook: 'monthly fees and your prompts leaving your machine' },
+  { slug: 'openai-api', name: 'OpenAI API', categorySlug: 'ai-llm', website: 'https://openai.com', blurb: 'Hosted LLM API.', priceHook: 'per-token billing and data sent to a third party' },
+
+  // ── Finance & Budgeting ──────────────────────────────────────────────────
+  { slug: 'mint', name: 'Mint', categorySlug: 'finance-budget', website: 'https://mint.intuit.com', blurb: 'Personal budgeting (discontinued).', priceHook: 'shut down by Intuit — your data went with it' },
+  { slug: 'ynab', name: 'YNAB', categorySlug: 'finance-budget', website: 'https://www.ynab.com', blurb: 'You Need A Budget.', priceHook: 'a yearly subscription that keeps climbing' },
+  { slug: 'quickbooks', name: 'QuickBooks', categorySlug: 'finance-budget', website: 'https://quickbooks.intuit.com', blurb: 'Small-business accounting.', priceHook: 'per-seat Intuit pricing and lock-in' },
 ]
 
 export const PROPRIETARY_SLUGS = PROPRIETARY_TOOLS.map((p) => p.slug)

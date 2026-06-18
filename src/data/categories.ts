@@ -143,6 +143,54 @@ export const CATEGORIES: CategorySeed[] = [
     selfHostHeadline: 'Self-Hosted Heroku & PaaS Alternatives',
     sortOrder: 160,
   },
+  {
+    slug: 'media-server',
+    name: 'Media Servers & Streaming',
+    description:
+      'Self-hosted alternatives to Plex, Spotify, and Netflix — stream your own movies, music, and shows from a server you own.',
+    selfHostHeadline: 'Self-Hosted Plex & Media Server Alternatives',
+    sortOrder: 170,
+  },
+  {
+    slug: 'photos',
+    name: 'Photo Management',
+    description:
+      'Open-source Google Photos and iCloud Photos alternatives — back up, organize, and browse your photo library on your own server.',
+    selfHostHeadline: 'Self-Hosted Google Photos Alternatives',
+    sortOrder: 180,
+  },
+  {
+    slug: 'blog-cms',
+    name: 'Blogging & CMS',
+    description:
+      'Self-hosted alternatives to WordPress.com, Medium, and Substack — blogs, websites, and headless content management you own.',
+    selfHostHeadline: 'Self-Hosted WordPress & CMS Alternatives',
+    sortOrder: 190,
+  },
+  {
+    slug: 'read-later-feeds',
+    name: 'Feeds & Read-Later',
+    description:
+      'Open-source Feedly, Pocket, and Instapaper alternatives — RSS readers, bookmark managers, and read-it-later you control.',
+    selfHostHeadline: 'Self-Hosted Feedly & RSS Reader Alternatives',
+    sortOrder: 200,
+  },
+  {
+    slug: 'ai-llm',
+    name: 'AI & LLM Tools',
+    description:
+      'Self-hosted ChatGPT alternatives — local LLM chat UIs and AI tools that keep your prompts and data private.',
+    selfHostHeadline: 'Self-Hosted ChatGPT & LLM Alternatives',
+    sortOrder: 205,
+  },
+  {
+    slug: 'finance-budget',
+    name: 'Finance & Budgeting',
+    description:
+      'Open-source alternatives to Mint, YNAB, and QuickBooks — budgeting, accounting, and money management on your own server.',
+    selfHostHeadline: 'Self-Hosted Budgeting & Finance Alternatives',
+    sortOrder: 210,
+  },
 ]
 
 export const CATEGORY_SLUGS = CATEGORIES.map((c) => c.slug)
