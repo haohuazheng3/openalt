@@ -25,6 +25,16 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/refresh-listings.mjs
+      - name: Sync to database (production reads the DB, so static edits must reach it)
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          if git diff --quiet src/data/seed-listings.ts; then
+            echo "No data change; skipping DB sync."
+          else
+            npm ci --no-audit --no-fund
+            npx tsx src/lib/db/setup-http.ts
+          fi
       - name: Commit if changed
         run: |
           if ! git diff --quiet src/data/seed-listings.ts; then
