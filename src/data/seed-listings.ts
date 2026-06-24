@@ -4125,7 +4125,8 @@ export const SEED_LISTINGS: SeedListing[] = [
     "categorySlug": "team-chat",
     "replaces": [
       "slack",
-      "microsoft-teams"
+      "microsoft-teams",
+      "discord"
     ],
     "license": "MIT",
     "language": "TypeScript",
@@ -4167,7 +4168,8 @@ export const SEED_LISTINGS: SeedListing[] = [
     "categorySlug": "team-chat",
     "replaces": [
       "slack",
-      "microsoft-teams"
+      "microsoft-teams",
+      "discord"
     ],
     "license": "MIT",
     "language": "Go",
@@ -4326,7 +4328,8 @@ export const SEED_LISTINGS: SeedListing[] = [
     "categorySlug": "team-chat",
     "replaces": [
       "slack",
-      "microsoft-teams"
+      "microsoft-teams",
+      "discord"
     ],
     "license": "AGPL-3.0",
     "language": "TypeScript",
@@ -4403,7 +4406,8 @@ export const SEED_LISTINGS: SeedListing[] = [
     "categorySlug": "team-chat",
     "replaces": [
       "slack",
-      "microsoft-teams"
+      "microsoft-teams",
+      "discord"
     ],
     "license": "AGPL-3.0",
     "language": "Python",
@@ -12663,9 +12667,9 @@ export const SEED_LISTINGS: SeedListing[] = [
     "logoUrl": null,
     "categorySlug": "project-management",
     "replaces": [
-      "jira",
-      "linear",
-      "trello"
+      "github",
+      "gitlab",
+      "jira"
     ],
     "license": "MIT",
     "language": "Go",
@@ -12705,9 +12709,8 @@ export const SEED_LISTINGS: SeedListing[] = [
     "logoUrl": null,
     "categorySlug": "project-management",
     "replaces": [
-      "jira",
-      "linear",
-      "trello"
+      "github",
+      "gitlab"
     ],
     "license": "MIT",
     "language": "Go",

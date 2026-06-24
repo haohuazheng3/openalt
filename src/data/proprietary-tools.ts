@@ -139,6 +139,10 @@ export const PROPRIETARY_TOOLS: ProprietaryToolSeed[] = [
   { slug: 'mint', name: 'Mint', categorySlug: 'finance-budget', website: 'https://mint.intuit.com', blurb: 'Personal budgeting (discontinued).', priceHook: 'shut down by Intuit — your data went with it' },
   { slug: 'ynab', name: 'YNAB', categorySlug: 'finance-budget', website: 'https://www.ynab.com', blurb: 'You Need A Budget.', priceHook: 'a yearly subscription that keeps climbing' },
   { slug: 'quickbooks', name: 'QuickBooks', categorySlug: 'finance-budget', website: 'https://quickbooks.intuit.com', blurb: 'Small-business accounting.', priceHook: 'per-seat Intuit pricing and lock-in' },
+
+  // ── Git Hosting & Dev (head competitors with real search volume) ─────────
+  { slug: 'github', name: 'GitHub', categorySlug: 'project-management', website: 'https://github.com', blurb: 'Git hosting, code review, issues, and CI/CD.', priceHook: 'per-seat pricing for private orgs and Microsoft ownership' },
+  { slug: 'gitlab', name: 'GitLab', categorySlug: 'project-management', website: 'https://gitlab.com', blurb: 'DevOps platform with Git hosting and CI/CD.', priceHook: 'steep per-user tiers for advanced features' },
 ]
 
 export const PROPRIETARY_SLUGS = PROPRIETARY_TOOLS.map((p) => p.slug)
