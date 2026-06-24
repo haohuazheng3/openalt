@@ -18,7 +18,6 @@ import { ReplacesBadges } from '@/components/replaces-badges'
 import { Badge } from '@/components/ui/badge'
 import { Card } from '@/components/ui/card'
 import {
-  getComparePairs,
   getListingBySlug,
   getListings,
   getListingsReplacing,
@@ -53,17 +52,18 @@ export async function generateStaticParams() {
   // status:'all' so archived projects keep a (statically generated) detail page
   // showing the "Archived" warning — the site's dead-project signal stays true.
   // The sitemap still lists live-only, so we don't actively push dead projects.
-  const [allListings, propSlugs, pairs, vsPairs] = await Promise.all([
+  // Pruned: random within-category OSS-vs-OSS pairs (low search intent, dilutes
+  // focus) are no longer pre-rendered or sitemapped. We keep only intent-matched
+  // comparisons — OSS-vs-proprietary ("X vs Notion") + curated FEATURED_VS.
+  const [allListings, propSlugs, vsPairs] = await Promise.all([
     getListings({ status: 'all', limit: 1000 }),
     getReplacedProprietarySlugs(),
-    getComparePairs(3),
     getProprietaryVsPairs(2),
   ])
   const slugs = allListings.map((l) => l.slug)
   const all = [
     ...slugs,
     ...propSlugs.map((p) => `${p}${ALTERNATIVES_SUFFIX}`),
-    ...pairs,
     ...vsPairs,
     ...FEATURED_VS.map((v) => versusSlug(v.a, v.b)),
   ]

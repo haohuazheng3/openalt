@@ -6,7 +6,6 @@ import { versusSlug } from '@/lib/slug'
 import {
   getAllListingSlugs,
   getCategories,
-  getComparePairs,
   getProprietaryVsPairs,
   getReplacedProprietarySlugs,
 } from '@/lib/db/queries'
@@ -18,9 +17,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = env.appUrl
   const now = new Date()
 
-  const [listingSlugs, comparePairs, vsProprietary, categories, propSlugs] = await Promise.all([
+  const [listingSlugs, vsProprietary, categories, propSlugs] = await Promise.all([
     getAllListingSlugs(),
-    getComparePairs(3),
     getProprietaryVsPairs(2),
     getCategories(),
     getReplacedProprietarySlugs(),
@@ -71,7 +69,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }))
 
   const featuredVs = FEATURED_VS.map((v) => versusSlug(v.a, v.b))
-  const comparePages: MetadataRoute.Sitemap = [...new Set([...comparePairs, ...vsProprietary, ...featuredVs])].map((slug) => ({
+  const comparePages: MetadataRoute.Sitemap = [...new Set([...vsProprietary, ...featuredVs])].map((slug) => ({
     url: `${base}/${slug}`,
     lastModified: now,
     changeFrequency: 'monthly',

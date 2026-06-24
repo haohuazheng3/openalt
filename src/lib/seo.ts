@@ -114,6 +114,21 @@ export function howToLd(args: { name: string; description: string; steps: { name
   }
 }
 
+/** Article JSON-LD for editorial guide / pillar pages (author + dates). */
+export function articleLd(args: { headline: string; description: string; path: string; datePublished?: string; dateModified?: string }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: args.headline,
+    description: args.description,
+    author: { '@type': 'Organization', name: SITE.name, url: env.appUrl },
+    publisher: { '@type': 'Organization', name: SITE.name, logo: { '@type': 'ImageObject', url: absoluteUrl('/logo.png') } },
+    mainEntityOfPage: absoluteUrl(args.path),
+    datePublished: args.datePublished ?? '2026-06-19',
+    dateModified: args.dateModified ?? new Date().toISOString().slice(0, 10),
+  }
+}
+
 export function breadcrumbLd(items: { name: string; path: string }[]) {
   return {
     '@context': 'https://schema.org',
