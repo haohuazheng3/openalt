@@ -11,6 +11,7 @@ import { Card } from '@/components/ui/card'
 import { CATEGORIES, CATEGORY_SLUGS } from '@/data/categories'
 import { PROPRIETARY_TOOLS, alternativesSlug } from '@/data/proprietary-tools'
 import { guideForCategory } from '@/data/category-guides'
+import { imageForCategory } from '@/data/category-images'
 import { getCategoryBySlug, getListings } from '@/lib/db/queries'
 import { articleLd, breadcrumbLd, buildMetadata, faqLd, itemListLd } from '@/lib/seo'
 import { difficultyInfo } from '@/lib/difficulty'
@@ -47,6 +48,7 @@ export default async function SelfHostedCategoryPillar({ params }: { params: { c
 
   const headline = headlineFor(params.category, category.name)
   const guide = guideForCategory(params.category)
+  const image = imageForCategory(params.category)
   const listings = await getListings({ categorySlug: params.category, sort: 'easiest', limit: 60 })
   const bySlug = new Map(listings.map((l) => [l.slug, l]))
   const saas = PROPRIETARY_TOOLS.filter((p) => p.categorySlug === params.category)
@@ -82,6 +84,18 @@ export default async function SelfHostedCategoryPillar({ params }: { params: { c
         <Server className="size-6 text-primary" />
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{headline} (2026)</h1>
       </div>
+
+      {image && (
+        <figure className="mt-4 overflow-hidden rounded-xl border">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={image.url} alt={image.alt} width={940} height={400} className="h-44 w-full object-cover sm:h-56" />
+          <figcaption className="bg-muted/40 px-3 py-1.5 text-[11px] text-muted-foreground">
+            Photo by{' '}
+            <a href={image.photographerUrl} target="_blank" rel="nofollow noopener" className="hover:underline">{image.photographer}</a>{' '}
+            on <a href={image.pexelsUrl} target="_blank" rel="nofollow noopener" className="hover:underline">Pexels</a>
+          </figcaption>
+        </figure>
+      )}
 
       {guide ? (
         <>

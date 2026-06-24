@@ -43,6 +43,7 @@ import { absoluteUrl } from '@/lib/env'
 import { domainFromUrl, formatDate, stripMarkdown, truncate } from '@/lib/utils'
 import { guideFor } from '@/data/alternative-guides'
 import { extraFor } from '@/data/listing-extras'
+import { imageForCategory } from '@/data/category-images'
 import { Tldr } from '@/components/tldr'
 import { FEATURED_VS } from '@/data/featured-comparisons'
 
@@ -183,6 +184,7 @@ function AlternativesPage({
 }) {
   const hook = 'priceHook' in tool ? tool.priceHook : null
   const guide = guideFor(tool.slug)
+  const image = imageForCategory(proprietaryBySlug(tool.slug)?.categorySlug ?? '')
   const bySlug = new Map(listings.map((l) => [l.slug, l]))
   const rows: CompareRow[] = listings.map((l) => ({
     id: l.id,
@@ -228,6 +230,18 @@ function AlternativesPage({
       </p>
       {guide?.whySwitch && (
         <p className="mt-3 max-w-3xl text-muted-foreground">{guide.whySwitch}</p>
+      )}
+
+      {image && (
+        <figure className="mt-6 overflow-hidden rounded-xl border">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={image.url} alt={image.alt} width={940} height={400} className="h-40 w-full object-cover sm:h-52" />
+          <figcaption className="bg-muted/40 px-3 py-1.5 text-[11px] text-muted-foreground">
+            Photo by{' '}
+            <a href={image.photographerUrl} target="_blank" rel="nofollow noopener" className="hover:underline">{image.photographer}</a>{' '}
+            on <a href={image.pexelsUrl} target="_blank" rel="nofollow noopener" className="hover:underline">Pexels</a>
+          </figcaption>
+        </figure>
       )}
 
       {listings.length === 0 ? (
