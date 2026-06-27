@@ -16550,7 +16550,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "dbeaver-ce",
+    "slug": "dbeaver-community",
     "name": "DBeaver Community",
     "tagline": "Universal database tool for developers — SQL editor, ERD, and data browser",
     "descriptionMd": "DBeaver Community Edition is a free, open-source, cross-platform database tool that supports over 80 databases via JDBC. It provides a full SQL editor with auto-completion, ER diagram generation, data import/export in CSV/Excel/JSON, and a visual data browser with inline editing. Runs as a desktop Eclipse RCP application on Windows, macOS, and Linux.",
@@ -16628,7 +16628,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "nocodb-forms-placeholder",
+    "slug": "querybook",
     "name": "Querybook",
     "tagline": "Pinterest's open-source big data query notebook for collaborative SQL analytics",
     "descriptionMd": "Querybook is an open-source data analysis and exploration platform built by Pinterest that combines a SQL query editor, scheduling, result visualizations, and data documentation in a single collaborative notebook interface. It supports Hive, Presto, Spark, BigQuery, and more via pluggable engines. Deployed with Docker Compose backed by MySQL and Elasticsearch.",
@@ -16668,7 +16668,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "metaplane-no-skip",
+    "slug": "franchise",
     "name": "Franchise",
     "tagline": "Notebook-style SQL client that runs entirely in the browser with DuckDB",
     "descriptionMd": "Franchise is a lightweight, notebook-style SQL client that runs entirely in the browser using DuckDB-WASM, requiring zero server setup. Users can query local CSV/JSON files, connect to PostgreSQL or MySQL via an optional relay server, and build charts inline. Distributed as a single HTML file or a tiny Node.js server for teams.",
@@ -16787,7 +16787,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "conductor-oss",
+    "slug": "conductor-netflix",
     "name": "Conductor (Netflix)",
     "tagline": "Microservice workflow orchestration engine open-sourced by Netflix",
     "descriptionMd": "Netflix Conductor is a platform for orchestrating microservices and long-running workflows at scale. Workflows are defined as JSON/YAML task graphs and executed by polyglot workers written in any language. It supports complex branching, parallel execution, and human task steps, and was battle-tested at Netflix before being open-sourced via conductor-oss.",
@@ -17028,7 +17028,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "monica-crm",
+    "slug": "monica",
     "name": "Monica",
     "tagline": "Personal CRM to remember important details about your contacts",
     "descriptionMd": "Monica is a personal relationship management (PRM) application that helps individuals remember significant details about their contacts — birthdays, conversation notes, activities, and life events. It is designed for personal use rather than businesses, offering a clean web UI and a REST API. Monica can be self-hosted on any PHP server with MySQL or PostgreSQL.",
@@ -17267,7 +17267,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "zurmo",
+    "slug": "zurmo-crm",
     "name": "Zurmo CRM",
     "tagline": "Gamified open-source CRM with built-in achievements and workflow engine",
     "descriptionMd": "Zurmo is a gamified open-source CRM built on the Yii PHP framework that adds achievement badges, leaderboards, and points to CRM activities to drive user adoption. It covers contacts, accounts, opportunities, campaigns, and products, plus a configurable workflow engine for automating follow-up tasks and notifications.",
@@ -17345,7 +17345,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "fathom-analytics-lite",
+    "slug": "shynet",
     "name": "Shynet",
     "tagline": "Privacy-first web analytics with no cookies and no tracking scripts",
     "descriptionMd": "Shynet is a self-hosted analytics platform that tracks visitor behavior without cookies or JavaScript by default, making it GDPR-friendly out of the box. It provides page views, session duration, referrer tracking, and geographic data in a clean dashboard. Designed for small to medium sites where simplicity and privacy matter more than deep funnel analysis.",
@@ -17384,7 +17384,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "fathom-cabin",
+    "slug": "cabin",
     "name": "Cabin",
     "tagline": "Carbon-aware, privacy-respecting web analytics for the climate-conscious",
     "descriptionMd": "Cabin is an open-source analytics tool focused on privacy and minimal environmental impact, measuring carbon emissions alongside visitor metrics. It uses no cookies and collects only aggregated data, making it compliant with GDPR and CCPA without a consent banner. Particularly suited for teams that want to report on both traffic and website sustainability.",
@@ -17422,7 +17422,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "offen-analytics",
+    "slug": "offen",
     "name": "Offen",
     "tagline": "Fair web analytics that lets users access and delete their own data",
     "descriptionMd": "Offen is a self-hosted analytics platform built on the principle of data fairness — visitors can log in to see, download, or delete the data collected about them. It runs as a single lightweight binary with an embedded SQLite or PostgreSQL database, making deployment simple. Ideal for developers and publishers who want transparency as a competitive differentiator.",
@@ -17461,7 +17461,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "pirsch-oss",
+    "slug": "pirsch",
     "name": "Pirsch",
     "tagline": "Cookie-free server-side analytics with a clean Go-based architecture",
     "descriptionMd": "Pirsch is a lightweight, cookie-free analytics solution that processes events server-side, avoiding ad-blockers entirely. It stores data in ClickHouse for high-throughput sites and exposes a simple REST API for custom integrations. The open-source core covers all essential metrics; a managed SaaS tier adds team collaboration and extended data retention.",
@@ -17538,7 +17538,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "fauna-analytics-open",
+    "slug": "mixpost",
     "name": "Mixpost",
     "tagline": "Self-hosted social media analytics and scheduling in one platform",
     "descriptionMd": "Mixpost is a Laravel-based self-hosted tool that combines social media post scheduling with per-channel analytics (impressions, engagement, reach). It supports multiple accounts across Twitter/X, Facebook, Instagram, LinkedIn, and Pinterest under a single dashboard. Ideal for agencies and content teams that want ownership of both their scheduling workflow and their performance data.",
@@ -17577,7 +17577,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "wide-eyes-analytics",
+    "slug": "prisme-analytics",
     "name": "Prisme Analytics",
     "tagline": "Event-stream analytics built on ClickHouse for developer teams",
     "descriptionMd": "Prisme Analytics is a self-hosted, open-source event analytics platform that ingests arbitrary JSON events and stores them in ClickHouse, providing SQL-powered dashboards and retention analysis. It is schema-free, meaning teams can track any product event without pre-defining a schema. Designed for engineering-led teams comfortable writing SQL to define their own custom metrics.",
@@ -17616,7 +17616,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "counter-analytics",
+    "slug": "counter",
     "name": "Counter",
     "tagline": "Minimalist self-hosted hit counter and page-view tracker",
     "descriptionMd": "Counter is an extremely lightweight Go service that records page hits and unique visitor counts with near-zero setup — a single binary backed by SQLite. It exposes a simple HTTP API and an embeddable badge for README files or websites. Best suited for personal projects, GitHub repositories, or open-source libraries that want basic traffic insight without a full analytics stack.",
@@ -17655,7 +17655,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "buttercup-password-manager",
+    "slug": "buttercup",
     "name": "Buttercup",
     "tagline": "Modern, open-source password manager with a beautiful cross-platform UI",
     "descriptionMd": "Buttercup is a free, open-source password manager available as desktop apps (Linux, macOS, Windows), a browser extension, and a mobile app. Vaults are stored as encrypted BCUP files that can be synced via Dropbox, Google Drive, WebDAV, or any self-hosted Nextcloud instance. The codebase is fully JavaScript/TypeScript, making it easy for contributors to audit or extend.",
@@ -17693,7 +17693,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "lesspass-oss",
+    "slug": "lesspass",
     "name": "LessPass",
     "tagline": "Stateless password manager that derives passwords instead of storing them",
     "descriptionMd": "LessPass is a stateless password manager that generates deterministic passwords from a master password, site, and login — no vault file is ever stored or synced. This makes it immune to server-side breaches because there is no database of secrets to steal. A self-hosted server component is available for storing site profiles (not passwords), and the entire stack is open-source.",
@@ -17731,7 +17731,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "spectre-passwords",
+    "slug": "spectre-master-password",
     "name": "Spectre / Master Password",
     "tagline": "Algorithm-based stateless password generation with no sync required",
     "descriptionMd": "Spectre (formerly Master Password) is an open algorithm and suite of apps that generate site-specific passwords from a name, master password, and site identifier — completely offline with no network or storage dependency. Implementations exist for iOS, Android, macOS, Linux, and the web. Because no vault is stored anywhere, there is nothing to breach, backup, or sync.",
@@ -17769,7 +17769,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "authelia-secrets",
+    "slug": "authelia",
     "name": "Authelia",
     "tagline": "Self-hosted authentication server with TOTP, WebAuthn, and SSO",
     "descriptionMd": "Authelia is an open-source authentication and authorization server that acts as a companion to reverse proxies like Nginx or Traefik, providing two-factor authentication and single sign-on for self-hosted applications. While primarily an identity gateway rather than a password vault, it manages user credentials, TOTP secrets, and WebAuthn device registrations centrally. Teams use it as the authentication backbone that other self-hosted tools integrate with.",
@@ -17809,7 +17809,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "gopass-oss",
+    "slug": "gopass",
     "name": "gopass",
     "tagline": "Team-oriented CLI password manager built on GPG and Git",
     "descriptionMd": "gopass is a re-implementation of the Unix `pass` password store in Go, designed for teams sharing secrets via GPG-encrypted files in a Git repository. Each secret is a GPG-encrypted file committed to a shared Git repo, giving teams a full audit trail of who changed what and when. It integrates with browsers via the gopassbridge extension and supports multiple password stores for separating personal from team secrets.",
@@ -17847,7 +17847,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "secret-server-oss",
+    "slug": "passky",
     "name": "Passky",
     "tagline": "Lightweight self-hosted password manager with a clean web UI",
     "descriptionMd": "Passky is a simple, fast, open-source password manager with a PHP backend and a Vue.js web client that can be self-hosted on any web server. It supports browser extensions for Chrome and Firefox, a desktop client, and a mobile app, making it a credible all-devices alternative to commercial vaults. The server is deliberately minimal — SQLite or MySQL, no heavy dependencies — so it runs on shared hosting or a small VPS.",
@@ -17963,7 +17963,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "mailman3",
+    "slug": "mailman-3",
     "name": "Mailman 3",
     "tagline": "Classic GNU mailing list manager modernized with a web interface",
     "descriptionMd": "Mailman 3 is the GNU project's flagship mailing list manager, redesigned with a REST API core and a modern web UI called Postorius. It supports mailing lists, digests, archiving via Hyperkitty, moderation queues, and DKIM. It is widely used by open-source projects and academic institutions.",
@@ -18587,7 +18587,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "storj",
+    "slug": "storj-uplink-storj-node",
     "name": "Storj (Uplink / Storj Node)",
     "tagline": "Decentralized, end-to-end encrypted cloud object storage network",
     "descriptionMd": "Storj provides a decentralized S3-compatible object storage network where data is encrypted client-side, erasure-coded, and distributed across thousands of independent storage nodes worldwide. You can run your own storage node to contribute capacity, or use the Storj network as a highly available backend for your applications. The open-source satellite software lets organizations run private Storj networks.",
@@ -18666,7 +18666,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "minio-operator",
+    "slug": "juicefs",
     "name": "JuiceFS",
     "tagline": "Cloud-native distributed file system built on object storage backends",
     "descriptionMd": "JuiceFS is a POSIX-compatible distributed file system that uses object storage (S3, MinIO, etc.) as its data layer and a metadata engine (Redis, TiKV, MySQL, etc.) for the namespace. Applications can mount JuiceFS via FUSE and interact with it like a local filesystem while benefiting from infinite object storage scalability. It is widely used as persistent storage for Kubernetes workloads.",
@@ -18707,7 +18707,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "headscale",
+    "slug": "gokapi",
     "name": "Gokapi",
     "tagline": "Lightweight self-hosted file sharing with expiry links and password protection",
     "descriptionMd": "Gokapi is a self-hosted file-sharing server similar to Firefox Send that allows uploading files and generating shareable download links that expire after a set number of downloads or a time limit. It stores files locally or on S3-compatible backends and provides a clean admin web interface. No user accounts are needed for recipients, making sharing friction-free.",
@@ -18747,7 +18747,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "matrix-conduit",
+    "slug": "conduit",
     "name": "Conduit",
     "tagline": "Blazing fast Matrix homeserver written in Rust for small communities",
     "descriptionMd": "Conduit is a lightweight, resource-efficient Matrix homeserver implemented in Rust that is designed for small to medium communities wanting Matrix federation without the heavy resource requirements of Synapse. It uses a sled or rocksdb embedded database, requiring no external PostgreSQL server. A single binary with minimal configuration is sufficient to join the federated Matrix network.",
@@ -18946,7 +18946,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "rallly-chat",
+    "slug": "jam",
     "name": "Jam",
     "tagline": "Open-source audio/video room server with no account required",
     "descriptionMd": "Jam is a lightweight, Clubhouse-style audio and video room server that runs entirely in the browser with no downloads or accounts required for participants. Rooms can be created instantly with a shareable link and support screen sharing, chat, and speaker queues. It is built on WebRTC and can be self-hosted with a single Docker command.",
@@ -18986,7 +18986,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "matrix-sliding-sync",
+    "slug": "stalwart-xmpp",
     "name": "Stalwart XMPP",
     "tagline": "Modern all-in-one XMPP server with web admin panel written in Rust",
     "descriptionMd": "Stalwart XMPP is a modern, standards-compliant XMPP server written in Rust that bundles an admin web interface, HTTP file upload, push notifications, and TURN relay into a single binary. It supports the latest XMPP extensions required for feature-rich mobile clients and emphasizes security with built-in rate limiting and abuse prevention. Configuration can be done through the web UI without editing config files.",
@@ -19064,7 +19064,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "formio",
+    "slug": "form-io",
     "name": "Form.io",
     "tagline": "Open-source form and data management platform with drag-and-drop builder and REST API",
     "descriptionMd": "Form.io is a combined form builder and data management platform that provides a drag-and-drop form designer alongside auto-generated REST APIs for every form. It supports complex field types including nested forms, data grids, and conditional logic, and ships with SDKs for Angular, React, and Vue. The community edition is fully self-hostable with Node.js and MongoDB, making it suitable for enterprise applications that need programmatic form management.",
@@ -19145,7 +19145,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "rallly-forms",
+    "slug": "nextcloud-forms",
     "name": "Nextcloud Forms",
     "tagline": "Privacy-respecting form and survey builder integrated directly into your Nextcloud instance",
     "descriptionMd": "Nextcloud Forms is an official Nextcloud app that allows users to create surveys, polls, and questionnaires stored entirely on their own Nextcloud server. Forms support multiple question types, share links without requiring login, and store all responses in the Nextcloud database with CSV export. As a native Nextcloud app, it benefits from Nextcloud's authentication, permissions, and file integration with no additional infrastructure.",
@@ -19225,7 +19225,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "tally",
+    "slug": "getform",
     "name": "Getform",
     "tagline": "Lightweight form backend that receives HTML form submissions without backend code",
     "descriptionMd": "Getform is an open-source form backend service you can self-host to collect HTML form submissions from any static website without writing server-side code. It receives POST requests from standard HTML forms, stores responses, and can forward them via email or webhook. It is ideal for JAMstack and static site setups where the developer wants a simple managed endpoint rather than a full form-builder application.",
@@ -19264,7 +19264,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "modoboa-forms",
+    "slug": "webforms",
     "name": "Webforms",
     "tagline": "Simple Python/Django open-source form builder for self-hosted data collection",
     "descriptionMd": "Webforms (django-webforms) is a lightweight Django application for creating and managing web forms with an admin-driven builder. It stores responses in a relational database, supports file uploads, and sends email notifications on submission. Designed for organizations that already run Django applications and want to add simple contact or data-collection forms without adopting a heavy external platform.",
@@ -19501,7 +19501,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "erxes-helpdesk",
+    "slug": "tiledesk",
     "name": "Tiledesk",
     "tagline": "Open-source live chat and chatbot platform for customer support with omnichannel inbox",
     "descriptionMd": "Tiledesk is a self-hostable open-source customer engagement platform that combines live chat, AI chatbots, and a multi-channel shared inbox into one system. It supports real-time web chat, WhatsApp, Facebook Messenger, and email channels, with a visual chatbot designer for automated flows. The platform is built on Node.js and Angular and designed for support teams that need modern omnichannel capabilities without a per-agent SaaS fee.",
@@ -19542,7 +19542,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "requesttracker",
+    "slug": "request-tracker-rt",
     "name": "Request Tracker (RT)",
     "tagline": "Battle-tested enterprise-grade ticketing system used by universities and government agencies",
     "descriptionMd": "Request Tracker (RT) is one of the oldest and most mature open-source ticketing systems, with a development history dating to 1996. It provides a powerful email-driven workflow, flexible queue management, custom fields, full-text search, scripted automation via Scrips, and extensive REST and CLI APIs. RT is widely deployed in higher education, government, and large enterprises that need a highly customizable and reliable support system.",
@@ -19697,7 +19697,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "nocodb-dashboard",
+    "slug": "grafana-loki-faro",
     "name": "Grafana Loki + Faro",
     "tagline": "Open-source frontend observability stack with real user monitoring",
     "descriptionMd": "Grafana Faro is the open-source SDK for real user monitoring (RUM) that feeds session traces, errors, and performance metrics into Grafana dashboards backed by Loki or Tempo. It captures Web Vitals, JS errors, and custom events from browsers, giving teams visibility into user-facing performance without Datadog RUM. The stack is fully self-hostable alongside existing Grafana deployments.",
@@ -19980,7 +19980,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "netdata-parent",
+    "slug": "checkmk",
     "name": "Checkmk",
     "tagline": "Enterprise-grade infrastructure monitoring for servers, networks, and cloud",
     "descriptionMd": "Checkmk is a mature open-source IT monitoring system with auto-discovery, agent-based and agentless checks, and a built-in web UI. The Raw edition (fully open-source) covers server health, network devices, cloud services, and applications out of the box with over 2,000 check plugins. It is a strong self-hosted alternative to Zabbix with a more modern interface.",
@@ -20020,7 +20020,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "loki",
+    "slug": "grafana-loki",
     "name": "Grafana Loki",
     "tagline": "Horizontally scalable log aggregation system designed to work with Grafana",
     "descriptionMd": "Grafana Loki is an open-source log aggregation system inspired by Prometheus. Unlike Elasticsearch, it indexes only metadata labels rather than full log content, making it dramatically cheaper to operate at scale. Promtail or the OpenTelemetry Collector ships logs to Loki, and Grafana queries them with LogQL for correlated log-and-metrics dashboards.",
@@ -20060,7 +20060,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "statsd",
+    "slug": "beszel",
     "name": "Beszel",
     "tagline": "Lightweight server monitoring hub with SSH-based agents and beautiful UI",
     "descriptionMd": "Beszel is a minimal self-hosted server monitoring solution that uses SSH tunnels instead of open ports, making it firewall-friendly and simple to deploy on homelabs and VPS fleets. The hub collects CPU, memory, disk, and network metrics from lightweight Go agents and displays them in a clean real-time web interface with alerting support.",
@@ -20101,7 +20101,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "pagerduty-alternative-keep",
+    "slug": "keep",
     "name": "Keep",
     "tagline": "Open-source alert management platform to correlate and deduplicate noisy alerts",
     "descriptionMd": "Keep is an open-source AIOps-style alert management platform that ingests alerts from Grafana, Prometheus, PagerDuty, Datadog, and dozens of other sources, then deduplicates and correlates them using rule-based or AI-assisted workflows. Teams use it to reduce alert fatigue across heterogeneous monitoring stacks without switching to a fully commercial observability platform.",
@@ -20142,7 +20142,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "cal-dav-server",
+    "slug": "nextcloud-calendar",
     "name": "Nextcloud Calendar",
     "tagline": "Full-featured CalDAV calendar server built into Nextcloud with sharing and scheduling",
     "descriptionMd": "Nextcloud Calendar is a CalDAV-based scheduling application that runs as a Nextcloud app, providing event creation, invitations, resource booking, and free/busy lookups. It supports iCal feeds, attendee management, and integrates tightly with Nextcloud Contacts for people-aware scheduling. A solid self-hosted replacement for Google Calendar with familiar UX.",
@@ -20260,7 +20260,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "mosparo",
+    "slug": "openslots",
     "name": "OpenSlots",
     "tagline": "Minimalist appointment slot booking system with email confirmation",
     "descriptionMd": "OpenSlots is a lightweight self-hosted appointment slot manager that allows service providers to define available time blocks which clients can claim directly from a public URL. It sends email confirmations and supports basic calendar export. Designed for small clinics, tutors, and individual professionals who need a no-frills booking page without SaaS subscription costs.",
@@ -20610,7 +20610,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "caprover-community",
+    "slug": "caprover-apps",
     "name": "CapRover Apps",
     "tagline": "100+ one-click deployable apps for CapRover via the community app store",
     "descriptionMd": "The CapRover community app store is a curated repository of ready-to-deploy application templates (caprover-one-click-apps) that extends CapRover's built-in catalog. Users can deploy databases, tools, and web apps with a single form submission. It is a critical complement to the CapRover platform and is referenced by the main CapRover documentation.",
@@ -20690,7 +20690,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "koyeb-engine",
+    "slug": "space-cloud",
     "name": "Space Cloud",
     "tagline": "Open-source serverless backend for deploying microservices with GraphQL and REST",
     "descriptionMd": "Space Cloud is an open-source serverless platform that gives teams a GraphQL and REST API layer over databases while also handling service deployment, event triggers, and file storage. It lets you deploy backends to your own Kubernetes cluster with built-in auth, caching, and routing, positioning itself as a Hasura-plus-deployment-platform hybrid.",
@@ -21084,7 +21084,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "coppermine",
+    "slug": "coppermine-photo-gallery",
     "name": "Coppermine Photo Gallery",
     "tagline": "Feature-rich PHP photo gallery with albums, user management, and comments",
     "descriptionMd": "Coppermine is a long-running self-hosted photo gallery application built in PHP that supports albums, nested categories, user registration, comments, and e-cards. It provides a traditional web gallery experience with thumbnail generation, watermarking, and extensive admin controls. Suitable for photographers wanting a public-facing portfolio site.",
@@ -21159,7 +21159,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "chevereto",
+    "slug": "chevereto-free",
     "name": "Chevereto Free",
     "tagline": "Self-hosted image hosting and sharing platform with public/private albums",
     "descriptionMd": "Chevereto Free is the open-source edition of the Chevereto image hosting platform, offering unlimited image uploads, public and private albums, user registration, and an embed API for sharing images across the web. It supports multiple storage backends including local, Amazon S3, and compatible services. The free version is a solid choice for running a community image board.",
@@ -21272,7 +21272,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "photoview-alt",
+    "slug": "homegallery",
     "name": "HomeGallery",
     "tagline": "Self-hosted photo gallery with automatic face and object recognition",
     "descriptionMd": "HomeGallery is a lightweight self-hosted photo and video gallery that runs entirely in the browser after a one-time index build. It uses local AI models for face clustering and object tagging, supports geo-location browsing, and keeps all processing on your own hardware. The single-binary design makes it easy to run on a NAS or Raspberry Pi.",
@@ -21432,7 +21432,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "netlify-cms-decap",
+    "slug": "decap-cms",
     "name": "Decap CMS",
     "tagline": "Git-based open-source CMS for static site generators",
     "descriptionMd": "Decap CMS (formerly Netlify CMS) is an open-source content management system that stores content directly in your Git repository. It provides a web-based editorial UI layered on top of static site generators like Hugo, Jekyll, or Eleventy, enabling non-developers to edit content without touching code. Configuration is a single YAML file.",
@@ -21593,7 +21593,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "tt-rss",
+    "slug": "tiny-tiny-rss",
     "name": "Tiny Tiny RSS",
     "tagline": "Web-based news feed reader and aggregator with powerful filtering",
     "descriptionMd": "Tiny Tiny RSS (TT-RSS) is a long-standing, feature-rich self-hosted RSS aggregator with a Gmail-inspired web UI. It supports plugins, labels, filters, starred articles, full-text search, and multi-user deployments. Mobile apps (Fever API compatible) and a first-party Android app extend its reach.",
@@ -21788,7 +21788,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "nunux-keeper",
+    "slug": "cubox-hoarder",
     "name": "Cubox (Hoarder)",
     "tagline": "AI-powered self-hosted bookmarking and read-it-later with automatic tagging",
     "descriptionMd": "Hoarder (formerly called Karakeep in some contexts) is a self-hosted bookmarking app that uses a local LLM to automatically tag and summarize saved links, articles, and notes. It supports browser extensions, mobile apps, full-text search, and RSS integration, providing a Raindrop.io alternative with AI features under your control.",
@@ -21867,7 +21867,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "lm-studio",
+    "slug": "jan",
     "name": "Jan",
     "tagline": "Offline-first, privacy-focused desktop app to run LLMs locally on any hardware",
     "descriptionMd": "Jan is an open-source, cross-platform desktop application that lets users download and run LLMs entirely offline. It bundles llama.cpp as its inference engine and provides a clean chat UI along with an OpenAI-compatible local API server. Models are downloaded from the built-in Hub or imported manually from Hugging Face.",
@@ -22022,7 +22022,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "opendevin",
+    "slug": "openhands",
     "name": "OpenHands",
     "tagline": "Open-source AI software engineer agent that writes, runs, and debugs code autonomously",
     "descriptionMd": "OpenHands (formerly OpenDevin) is a self-hostable platform for AI-powered software development agents that can browse the web, write code, run terminals, and interact with files inside a sandboxed Docker environment. It supports multiple LLM backends including local models via Ollama and all major APIs. Designed for coding tasks, bug fixes, and automated PR workflows.",
@@ -22061,7 +22061,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "stable-diffusion-webui",
+    "slug": "automatic1111-stable-diffusion-webui",
     "name": "AUTOMATIC1111 Stable Diffusion WebUI",
     "tagline": "The most widely used web interface for running Stable Diffusion image generation locally",
     "descriptionMd": "AUTOMATIC1111's Stable Diffusion web UI is the de-facto standard self-hosted frontend for AI image generation. It supports txt2img, img2img, inpainting, ControlNet, LoRA fine-tuning, upscalers, and an extensive extensions ecosystem. Runs on consumer GPUs (NVIDIA, AMD via ROCm, Apple Silicon) and can be accessed remotely via its built-in web server.",
@@ -22177,7 +22177,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "maybe-finance",
+    "slug": "maybe",
     "name": "Maybe",
     "tagline": "Modern open-source personal finance and net-worth tracking app you can self-host",
     "descriptionMd": "Maybe is a polished open-source personal finance application originally built as a commercial SaaS that was later open-sourced. It provides net-worth tracking, investment portfolio views, and transaction management with a beautiful React/Rails UI. Self-hosted via Docker Compose with a PostgreSQL backend.",
@@ -22254,7 +22254,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "openbb",
+    "slug": "openbb-terminal",
     "name": "OpenBB Terminal",
     "tagline": "Open-source investment research platform with data from dozens of financial providers",
     "descriptionMd": "OpenBB is a free, open-source investment research terminal that aggregates stock, crypto, forex, macro, and alternative data from numerous providers (Yahoo Finance, FRED, Polygon, Intrinio, etc.). It features an extensible plugin architecture, a Python SDK, and a web-based Workspace UI for building research dashboards and running quantitative analysis.",
@@ -22292,7 +22292,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "sparkseer-lnbook",
+    "slug": "beancount",
     "name": "Beancount",
     "tagline": "Plain-text double-entry bookkeeping language and toolkit for financial data analysis",
     "descriptionMd": "Beancount is a mature plain-text, double-entry bookkeeping system designed for personal and business accounting. All transactions are stored in a human-readable ledger file; its Python-based toolchain parses and validates the ledger and provides a Fava web UI for interactive reports, balance sheets, income statements, and visual charts.",
@@ -22331,7 +22331,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "siyuangnon-budge",
+    "slug": "budge-kresus",
     "name": "Budge (Kresus)",
     "tagline": "Self-hosted personal finance manager with automatic bank sync and rich analytics",
     "descriptionMd": "Kresus is a self-hosted open-source personal finance application that connects to banks via the Woob/Weboob library to automatically import transactions. It provides automatic categorization, budget tracking, alert rules, and visual spending analytics. Runs as a Node.js server and is packaged for YunoHost and Docker.",
@@ -22370,7 +22370,7 @@ export const SEED_LISTINGS: SeedListing[] = [
     "source": "curated:knowledge"
   },
   {
-    "slug": "debitoor-alt-manager",
+    "slug": "manager",
     "name": "Manager",
     "tagline": "Free desktop and server-based accounting software for small businesses",
     "descriptionMd": "Manager is a full-featured double-entry accounting application available as a free desktop edition and a paid cloud/server edition. The desktop version is completely free and covers accounts payable/receivable, payroll, inventory, fixed assets, and financial statements. The server edition enables multi-user access via a web browser on your own infrastructure.",
