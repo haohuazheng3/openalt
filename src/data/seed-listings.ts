@@ -16075,5 +16075,6337 @@ export const SEED_LISTINGS: SeedListing[] = [
     "featuredRank": null,
     "status": "live",
     "source": "awesome-selfhosted"
+  },
+  {
+    "slug": "zettlr",
+    "name": "Zettlr",
+    "tagline": "Markdown editor built for academics with Zettelkasten and citation support",
+    "descriptionMd": "Zettlr is an open-source Markdown editor designed for researchers and writers, featuring built-in Zettelkasten workflows, Pandoc-powered export, and Zotero/BibTeX citation management. It stores notes as plain Markdown files on your filesystem with no proprietary database. Ships as a desktop Electron app for Windows, macOS, and Linux.",
+    "repoUrl": "https://github.com/Zettlr/Zettlr",
+    "websiteUrl": "https://www.zettlr.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "notes-docs",
+    "replaces": [
+      "notion",
+      "obsidian"
+    ],
+    "license": "GPL-3.0",
+    "language": "TypeScript",
+    "githubStars": 10500,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 1,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No mobile app; desktop-only experience limits on-the-go access\n- No real-time collaboration or multi-user sync; single-user only\n- Cloud sync relies entirely on third-party tools (Dropbox, Syncthing, etc.)",
+    "tags": [
+      "markdown",
+      "zettelkasten",
+      "academic",
+      "notes",
+      "desktop"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "notesnook",
+    "name": "Notesnook",
+    "tagline": "End-to-end encrypted note-taking app with cross-platform clients",
+    "descriptionMd": "Notesnook is a privacy-first, end-to-end encrypted note-taking application with clients for web, desktop, iOS, and Android. The server component can be self-hosted using Docker Compose, giving full data sovereignty. Notes support rich text, notebooks, tags, and reminders, with zero-knowledge encryption enforced throughout.",
+    "repoUrl": "https://github.com/streetwriters/notesnook",
+    "websiteUrl": "https://notesnook.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "notes-docs",
+    "replaces": [
+      "evernote",
+      "notion"
+    ],
+    "license": "GPL-3.0",
+    "language": "TypeScript",
+    "githubStars": 10200,
+    "lastCommitAt": "2026-05-25",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Self-hosted server documentation is still maturing and can be tricky to set up\n- No built-in AI writing assistant unlike Notion AI\n- Offline-first mobile sync occasionally has edge-case conflicts on initial vault load",
+    "tags": [
+      "notes",
+      "encryption",
+      "privacy",
+      "cross-platform",
+      "self-hosted"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "foam",
+    "name": "Foam",
+    "tagline": "VS Code extension for personal knowledge management inspired by Roam Research",
+    "descriptionMd": "Foam is a VS Code extension that turns your local Markdown files into a personal knowledge graph with backlinks, graph visualizations, and daily note templates. All data lives as plain `.md` files in your filesystem; there is no server to run. It integrates seamlessly with Git for version-controlled knowledge bases.",
+    "repoUrl": "https://github.com/foambubble/foam",
+    "websiteUrl": "https://foambubble.github.io/foam",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "notes-docs",
+    "replaces": [
+      "notion",
+      "obsidian"
+    ],
+    "license": "MIT",
+    "language": "TypeScript",
+    "githubStars": 15200,
+    "lastCommitAt": "2026-04-10",
+    "selfHostDifficulty": 1,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Entirely dependent on VS Code; not usable on mobile or without the editor\n- No real-time multi-user collaboration features\n- Plugin ecosystem is much smaller than Obsidian; fewer community extensions",
+    "tags": [
+      "knowledge-management",
+      "markdown",
+      "backlinks",
+      "vscode",
+      "notes"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "cryptpad",
+    "name": "CryptPad",
+    "tagline": "Encrypted, real-time collaborative office suite you can self-host",
+    "descriptionMd": "CryptPad is a fully encrypted, real-time collaborative office suite including rich text documents, spreadsheets, code pads, whiteboards, and forms — all with zero-knowledge encryption. The Node.js server can be deployed via Docker or manually, and the hosted version at cryptpad.fr is operated by the developers. Data is encrypted client-side before hitting the server.",
+    "repoUrl": "https://github.com/cryptpad/cryptpad",
+    "websiteUrl": "https://cryptpad.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "notes-docs",
+    "replaces": [
+      "notion",
+      "confluence",
+      "evernote"
+    ],
+    "license": "AGPL-3.0",
+    "language": "JavaScript",
+    "githubStars": 5900,
+    "lastCommitAt": "2026-05-30",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Real-time performance degrades noticeably with large documents or many simultaneous editors\n- No native mobile apps; browser-only experience on phones is suboptimal\n- Admin management UI is rudimentary compared to Confluence or Google Workspace admin consoles",
+    "tags": [
+      "encryption",
+      "collaboration",
+      "office-suite",
+      "privacy",
+      "notes"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "xwiki",
+    "name": "XWiki",
+    "tagline": "Enterprise wiki platform with structured data, scripting, and extensibility",
+    "descriptionMd": "XWiki is a mature, Java-based enterprise wiki that goes beyond simple page editing — pages can contain structured data, queries, and Groovy/Velocity scripts making it a hybrid wiki-application platform. It supports multi-tenant installations, granular access control, and a rich extension marketplace. Deployed via WAR file on Tomcat or as a Docker image.",
+    "repoUrl": "https://github.com/xwiki/xwiki-platform",
+    "websiteUrl": "https://www.xwiki.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "notes-docs",
+    "replaces": [
+      "confluence",
+      "notion"
+    ],
+    "license": "LGPL-2.1",
+    "language": "Java",
+    "githubStars": 1100,
+    "lastCommitAt": "2026-05-28",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- JVM memory footprint is heavy; needs 1-2 GB RAM minimum for comfortable operation\n- UI feels dated compared to modern Confluence or Notion interfaces\n- Initial setup and Tomcat configuration have a steep learning curve for non-Java admins",
+    "tags": [
+      "wiki",
+      "enterprise",
+      "structured-data",
+      "java",
+      "collaboration"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "mediawiki",
+    "name": "MediaWiki",
+    "tagline": "The battle-tested wiki engine powering Wikipedia, built for scale",
+    "descriptionMd": "MediaWiki is the open-source PHP wiki software that powers Wikipedia and thousands of other wikis worldwide. It provides wikitext editing, version history, category trees, templates, and an extensive extension ecosystem. Deployable as a Docker container or traditional LAMP stack, it scales from personal wikis to billion-page encyclopedias.",
+    "repoUrl": "https://github.com/wikimedia/mediawiki",
+    "websiteUrl": "https://www.mediawiki.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "notes-docs",
+    "replaces": [
+      "confluence",
+      "notion"
+    ],
+    "license": "GPL-2.0",
+    "language": "PHP",
+    "githubStars": 4200,
+    "lastCommitAt": "2026-06-01",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Wikitext markup is unfamiliar to most users; modern WYSIWYG editing via VisualEditor requires extra setup\n- No built-in real-time collaboration; concurrent edits require manual conflict resolution\n- No native mobile editor app; mobile experience is read-optimised only",
+    "tags": [
+      "wiki",
+      "encyclopedia",
+      "php",
+      "collaboration",
+      "documentation"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "mkdocs-material",
+    "name": "MkDocs Material",
+    "tagline": "Beautiful, feature-rich static documentation site generator from Markdown",
+    "descriptionMd": "MkDocs Material is a popular theme and plugin ecosystem for MkDocs that turns Markdown files into polished static documentation websites with search, navigation tabs, admonitions, diagrams, and dark mode. It is used by thousands of open-source projects and companies. Deployable anywhere static files can be served; CI/CD pipelines typically publish to GitHub Pages or S3.",
+    "repoUrl": "https://github.com/squidfunk/mkdocs-material",
+    "websiteUrl": "https://squidfunk.github.io/mkdocs-material",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "notes-docs",
+    "replaces": [
+      "confluence",
+      "notion"
+    ],
+    "license": "MIT",
+    "language": "Python",
+    "githubStars": 21000,
+    "lastCommitAt": "2026-06-05",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Manual",
+      "Docker"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Static output only; no in-browser editing or real-time collaborative authoring\n- Content management requires Git knowledge; non-technical editors cannot contribute easily\n- Insider (paid) tier gates some of the most useful features like social cards and offline search",
+    "tags": [
+      "documentation",
+      "static-site",
+      "markdown",
+      "python",
+      "developer-docs"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "docusaurus",
+    "name": "Docusaurus",
+    "tagline": "React-powered static site generator optimised for documentation portals",
+    "descriptionMd": "Docusaurus is a Facebook/Meta open-source static site generator specifically designed for documentation websites, featuring MDX support, versioned docs, i18n, pluggable theming, and a built-in blog. It builds a fast React SPA deployable to any static host. Used by React, Babel, Jest, and hundreds of major open-source projects.",
+    "repoUrl": "https://github.com/facebook/docusaurus",
+    "websiteUrl": "https://docusaurus.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "notes-docs",
+    "replaces": [
+      "confluence",
+      "notion"
+    ],
+    "license": "MIT",
+    "language": "TypeScript",
+    "githubStars": 56000,
+    "lastCommitAt": "2026-06-08",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Manual",
+      "Docker"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Static build; no CMS-style in-browser editing for non-developers\n- Versioning system adds complexity for teams not already using Git workflows\n- No built-in search without configuring Algolia DocSearch or a local plugin",
+    "tags": [
+      "documentation",
+      "static-site",
+      "react",
+      "mdx",
+      "developer-docs"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "pocketbase",
+    "name": "PocketBase",
+    "tagline": "Single-file open-source backend: SQLite database, auth, file storage, realtime",
+    "descriptionMd": "PocketBase is an open-source backend packaged as a single Go executable that bundles an SQLite database, REST and JS APIs, realtime subscriptions, authentication, and file storage — all in one sub-30 MB binary. It ships an admin dashboard UI for managing collections like a spreadsheet. Ideal for small-to-medium apps that need a quick self-hosted data layer.",
+    "repoUrl": "https://github.com/pocketbase/pocketbase",
+    "websiteUrl": "https://pocketbase.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "database-spreadsheet",
+    "replaces": [
+      "airtable",
+      "google-sheets",
+      "retool"
+    ],
+    "license": "MIT",
+    "language": "Go",
+    "githubStars": 43000,
+    "lastCommitAt": "2026-05-28",
+    "selfHostDifficulty": 1,
+    "deployOptions": [
+      "Manual",
+      "Docker"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- SQLite single-file storage is not suitable for high write-concurrency production workloads\n- No built-in spreadsheet-style grid view for non-developers; admin UI is developer-focused\n- Horizontal scaling requires additional infrastructure; no native clustering support",
+    "tags": [
+      "backend",
+      "sqlite",
+      "database",
+      "realtime",
+      "go"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "supabase",
+    "name": "Supabase",
+    "tagline": "Open-source Firebase alternative built on PostgreSQL with realtime and auth",
+    "descriptionMd": "Supabase is an open-source backend platform providing a hosted PostgreSQL database, auto-generated REST and GraphQL APIs, realtime subscriptions, row-level security, authentication, storage, and edge functions. The entire stack can be self-hosted using Docker Compose with a single configuration file. It targets the same audience as Firebase but uses standard SQL.",
+    "repoUrl": "https://github.com/supabase/supabase",
+    "websiteUrl": "https://supabase.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "database-spreadsheet",
+    "replaces": [
+      "airtable",
+      "google-sheets",
+      "retool"
+    ],
+    "license": "Apache-2.0",
+    "language": "TypeScript",
+    "githubStars": 78000,
+    "lastCommitAt": "2026-06-10",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Kubernetes"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Self-hosted Docker Compose stack is complex: 8+ services including Kong, GoTrue, PostgREST, Realtime\n- Studio table editor is less polished than Airtable UX for non-technical users\n- Edge Functions are limited to Deno; no Node.js runtime in the self-hosted edition",
+    "tags": [
+      "postgresql",
+      "backend",
+      "realtime",
+      "auth",
+      "firebase-alternative"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "dbgate",
+    "name": "DbGate",
+    "tagline": "Cross-platform database manager for MySQL, PostgreSQL, MongoDB, SQLite and more",
+    "descriptionMd": "DbGate is an open-source database client and manager that supports MySQL, PostgreSQL, MSSQL, MongoDB, SQLite, Redis, and more — available as a desktop app or self-hosted web application. It features a visual query builder, schema editor, data import/export, and a scriptable data pipeline. The web version runs as a Node.js Docker container accessible by the whole team.",
+    "repoUrl": "https://github.com/dbgate/dbgate",
+    "websiteUrl": "https://dbgate.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "database-spreadsheet",
+    "replaces": [
+      "retool",
+      "smartsheet"
+    ],
+    "license": "MIT",
+    "language": "JavaScript",
+    "githubStars": 6100,
+    "lastCommitAt": "2026-05-20",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No spreadsheet-style formula engine; it is a database manager, not a spreadsheet replacement\n- Multi-user team collaboration features are limited; primarily designed for individual use\n- BI/visualization capabilities are basic compared to dedicated tools like Metabase",
+    "tags": [
+      "database",
+      "sql",
+      "mongodb",
+      "admin",
+      "cross-platform"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "cube",
+    "name": "Cube",
+    "tagline": "Semantic layer and headless BI for building data apps on any database",
+    "descriptionMd": "Cube (formerly Cube.js) is an open-source semantic layer that sits between your database and any frontend BI or data app. It provides a schema-driven data model, automatic caching with pre-aggregations, multi-tenant access control, and REST/GraphQL/SQL APIs. Deployed as a Node.js service via Docker, it connects to Postgres, BigQuery, Snowflake, DuckDB, and dozens more.",
+    "repoUrl": "https://github.com/cube-js/cube",
+    "websiteUrl": "https://cube.dev",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "database-spreadsheet",
+    "replaces": [
+      "retool",
+      "smartsheet",
+      "google-sheets"
+    ],
+    "license": "Apache-2.0",
+    "language": "TypeScript",
+    "githubStars": 17500,
+    "lastCommitAt": "2026-06-05",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Kubernetes"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Not an end-user spreadsheet; requires developer effort to define data models in YAML or JavaScript\n- No built-in visual grid editor; intended to power custom-built frontends, not replace Airtable directly\n- Pre-aggregation setup for large datasets requires careful tuning and database-specific knowledge",
+    "tags": [
+      "semantic-layer",
+      "bi",
+      "database",
+      "api",
+      "analytics"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "dbeaver-ce",
+    "name": "DBeaver Community",
+    "tagline": "Universal database tool for developers — SQL editor, ERD, and data browser",
+    "descriptionMd": "DBeaver Community Edition is a free, open-source, cross-platform database tool that supports over 80 databases via JDBC. It provides a full SQL editor with auto-completion, ER diagram generation, data import/export in CSV/Excel/JSON, and a visual data browser with inline editing. Runs as a desktop Eclipse RCP application on Windows, macOS, and Linux.",
+    "repoUrl": "https://github.com/dbeaver/dbeaver",
+    "websiteUrl": "https://dbeaver.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "database-spreadsheet",
+    "replaces": [
+      "retool",
+      "smartsheet"
+    ],
+    "license": "Apache-2.0",
+    "language": "Java",
+    "githubStars": 40000,
+    "lastCommitAt": "2026-06-10",
+    "selfHostDifficulty": 1,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Desktop-only; no web or team-sharing capabilities in the Community Edition\n- Collaboration features (shared connections, team queries) require the paid Enterprise Edition\n- Heavy JVM startup time and memory footprint compared to newer database tools",
+    "tags": [
+      "database",
+      "sql",
+      "erd",
+      "developer-tools",
+      "jdbc"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "rowy",
+    "name": "Rowy",
+    "tagline": "Spreadsheet UI over Firestore or PostgreSQL with built-in cloud function automations",
+    "descriptionMd": "Rowy provides an Airtable-like spreadsheet interface on top of Google Firestore or PostgreSQL, with column types, row-level automations, cloud functions, and access control. It deploys to your own Firebase project or a self-hosted PostgreSQL instance. The React frontend can be hosted on any static host and connects directly to the configured backend.",
+    "repoUrl": "https://github.com/rowyio/rowy",
+    "websiteUrl": "https://www.rowy.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "database-spreadsheet",
+    "replaces": [
+      "airtable",
+      "google-sheets",
+      "retool"
+    ],
+    "license": "Apache-2.0",
+    "language": "TypeScript",
+    "githubStars": 6200,
+    "lastCommitAt": "2025-12-01",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Manual",
+      "Docker"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Primary backend is Google Firestore; self-hosted PostgreSQL support is less mature\n- No offline mode; requires live database connection at all times\n- Automation and cloud function execution is tightly coupled to Google Cloud Functions for the Firestore path",
+    "tags": [
+      "spreadsheet",
+      "firestore",
+      "database",
+      "no-code",
+      "airtable-alternative"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "nocodb-forms-placeholder",
+    "name": "Querybook",
+    "tagline": "Pinterest's open-source big data query notebook for collaborative SQL analytics",
+    "descriptionMd": "Querybook is an open-source data analysis and exploration platform built by Pinterest that combines a SQL query editor, scheduling, result visualizations, and data documentation in a single collaborative notebook interface. It supports Hive, Presto, Spark, BigQuery, and more via pluggable engines. Deployed with Docker Compose backed by MySQL and Elasticsearch.",
+    "repoUrl": "https://github.com/pinterest/querybook",
+    "websiteUrl": "https://www.querybook.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "database-spreadsheet",
+    "replaces": [
+      "retool",
+      "google-sheets",
+      "smartsheet"
+    ],
+    "license": "Apache-2.0",
+    "language": "Python",
+    "githubStars": 1800,
+    "lastCommitAt": "2025-09-01",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Primarily designed for big data query engines (Hive, Presto); poor fit for everyday OLTP databases\n- No spreadsheet-style formula editing; purely a SQL notebook tool\n- Requires Elasticsearch and Celery workers, adding significant infrastructure overhead",
+    "tags": [
+      "sql",
+      "notebook",
+      "big-data",
+      "analytics",
+      "collaboration"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "metaplane-no-skip",
+    "name": "Franchise",
+    "tagline": "Notebook-style SQL client that runs entirely in the browser with DuckDB",
+    "descriptionMd": "Franchise is a lightweight, notebook-style SQL client that runs entirely in the browser using DuckDB-WASM, requiring zero server setup. Users can query local CSV/JSON files, connect to PostgreSQL or MySQL via an optional relay server, and build charts inline. Distributed as a single HTML file or a tiny Node.js server for teams.",
+    "repoUrl": "https://github.com/nicholasstephan/franchise",
+    "websiteUrl": null,
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "database-spreadsheet",
+    "replaces": [
+      "retool",
+      "google-sheets"
+    ],
+    "license": "MIT",
+    "language": "JavaScript",
+    "githubStars": 4200,
+    "lastCommitAt": "2022-06-01",
+    "selfHostDifficulty": 1,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Project has had minimal maintenance since 2022; compatibility with modern browsers may degrade\n- Remote database connections require a separately hosted relay proxy to avoid CORS issues\n- No user authentication, access control, or saved query sharing for teams",
+    "tags": [
+      "sql",
+      "browser",
+      "notebook",
+      "duckdb",
+      "lightweight"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "prefect",
+    "name": "Prefect",
+    "tagline": "Modern Python workflow orchestration for data pipelines and automation",
+    "descriptionMd": "Prefect is a workflow orchestration platform that lets teams build, schedule, and monitor data pipelines in Python. It provides a rich UI, automatic retries, and full observability for every flow run. The self-hosted Prefect Server runs on Postgres and can be deployed with a single Docker Compose file.",
+    "repoUrl": "https://github.com/PrefectHQ/prefect",
+    "websiteUrl": "https://www.prefect.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "automation",
+    "replaces": [
+      "zapier",
+      "make"
+    ],
+    "license": "Apache-2.0",
+    "language": "Python",
+    "githubStars": 18000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Kubernetes",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Workflows are defined entirely in Python code; no drag-and-drop canvas for non-developers\n- Self-hosted server lacks some cloud-tier features like SLA alerts and log streaming\n- Trigger-based SaaS integrations require custom code rather than ready-made connectors",
+    "tags": [
+      "workflow",
+      "data-pipeline",
+      "orchestration",
+      "python",
+      "scheduling"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "temporal",
+    "name": "Temporal",
+    "tagline": "Durable execution engine for resilient long-running business workflows",
+    "descriptionMd": "Temporal is an open-source durable execution platform originally developed at Uber that lets developers write resilient workflows in Go, Java, Python, or TypeScript. It handles retries, timeouts, and state persistence automatically so workflows survive process crashes. It is widely used by companies like Netflix and Stripe for complex microservice orchestration.",
+    "repoUrl": "https://github.com/temporalio/temporal",
+    "websiteUrl": "https://temporal.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "automation",
+    "replaces": [
+      "zapier",
+      "workato"
+    ],
+    "license": "MIT",
+    "language": "Go",
+    "githubStars": 12000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Docker Compose",
+      "Kubernetes",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- No visual no-code editor; all workflows must be written by developers in a supported SDK language\n- Production deployment requires Cassandra or PostgreSQL plus Elasticsearch — significant infrastructure\n- Self-hosted Web UI has limited analytics compared to Temporal Cloud",
+    "tags": [
+      "workflow",
+      "durable-execution",
+      "microservices",
+      "orchestration",
+      "go"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "conductor-oss",
+    "name": "Conductor (Netflix)",
+    "tagline": "Microservice workflow orchestration engine open-sourced by Netflix",
+    "descriptionMd": "Netflix Conductor is a platform for orchestrating microservices and long-running workflows at scale. Workflows are defined as JSON/YAML task graphs and executed by polyglot workers written in any language. It supports complex branching, parallel execution, and human task steps, and was battle-tested at Netflix before being open-sourced via conductor-oss.",
+    "repoUrl": "https://github.com/conductor-oss/conductor",
+    "websiteUrl": "https://conductor-oss.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "automation",
+    "replaces": [
+      "zapier",
+      "workato"
+    ],
+    "license": "Apache-2.0",
+    "language": "Java",
+    "githubStars": 9500,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Kubernetes",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Workflow logic defined in JSON/YAML; no drag-and-drop canvas for non-technical users\n- Requires Elasticsearch and a relational DB for production — non-trivial infrastructure\n- Community edition lacks built-in RBAC available in the commercial Orkes Cloud offering",
+    "tags": [
+      "workflow",
+      "microservices",
+      "orchestration",
+      "java",
+      "netflix"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "rundeck",
+    "name": "Rundeck",
+    "tagline": "Job scheduler and runbook automation for operations and DevOps teams",
+    "descriptionMd": "Rundeck is an open-source runbook automation platform that lets operations teams schedule and execute jobs across any infrastructure. It features role-based access control, detailed execution history, webhooks, and integrations with common DevOps tools. The Community Edition is fully self-hosted and free.",
+    "repoUrl": "https://github.com/rundeck/rundeck",
+    "websiteUrl": "https://www.rundeck.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "automation",
+    "replaces": [
+      "zapier",
+      "make"
+    ],
+    "license": "Apache-2.0",
+    "language": "Java",
+    "githubStars": 5400,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Primarily designed for infrastructure/ops automation, not general business workflow automation\n- UI feels dated compared to modern SaaS tools; limited visual flow design\n- Community edition lacks enterprise features like SSO, secrets management, and advanced audit logs",
+    "tags": [
+      "runbook",
+      "devops",
+      "scheduler",
+      "operations",
+      "java"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "redpanda-connect",
+    "name": "Redpanda Connect",
+    "tagline": "Declarative stream processor and data pipeline tool with 200+ connectors",
+    "descriptionMd": "Redpanda Connect (formerly Benthos) is a high-performance declarative stream processor that connects data sources and sinks via YAML configuration. It supports over 200 built-in components including Kafka, HTTP endpoints, AWS S3, SQL databases, and transformation processors. It ships as a single Go binary ideal for high-throughput, low-latency pipelines.",
+    "repoUrl": "https://github.com/redpanda-data/connect",
+    "websiteUrl": "https://redpanda.com/connect",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "automation",
+    "replaces": [
+      "zapier",
+      "tray-io"
+    ],
+    "license": "Apache-2.0",
+    "language": "Go",
+    "githubStars": 8200,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Kubernetes",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No graphical UI; all pipeline configuration is done in YAML, requiring developer involvement\n- No support for human-in-the-loop or approval workflow steps\n- Monitoring requires pairing with external tools like Prometheus and Grafana",
+    "tags": [
+      "stream-processing",
+      "data-pipeline",
+      "go",
+      "connectors",
+      "etl"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "camunda-platform-7",
+    "name": "Camunda Platform 7",
+    "tagline": "BPMN 2.0 workflow and decision automation engine for Java applications",
+    "descriptionMd": "Camunda Platform 7 is an open-source workflow and decision automation platform based on BPMN 2.0 and DMN standards. It embeds directly into Java applications or runs standalone, with a visual modeler, process engine REST API, and Cockpit UI for monitoring running instances. Widely used in financial services for complex, human-in-the-loop business processes.",
+    "repoUrl": "https://github.com/camunda/camunda-bpm-platform",
+    "websiteUrl": "https://camunda.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "automation",
+    "replaces": [
+      "workato",
+      "tray-io"
+    ],
+    "license": "Apache-2.0",
+    "language": "Java",
+    "githubStars": 3900,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Kubernetes",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- BPMN modeling has a steep learning curve for business users unfamiliar with the standard\n- Community Edition lacks Optimize analytics, identity management, and premium connectors\n- Java-centric architecture makes non-JVM worker deployments more complex",
+    "tags": [
+      "bpmn",
+      "workflow",
+      "process-automation",
+      "java",
+      "enterprise"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "beehive",
+    "name": "Beehive",
+    "tagline": "Self-hosted event and agent automation system inspired by IFTTT",
+    "descriptionMd": "Beehive is a lightweight self-hosted event automation system that connects services using 'bees' — small agents that react to events and trigger actions on other services. It supports RSS, email, Twitter, Slack, and more, enabling IFTTT-style automations without a cloud dependency. Written in Go, it runs as a single binary with a web-based configuration UI.",
+    "repoUrl": "https://github.com/muesli/beehive",
+    "websiteUrl": null,
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "automation",
+    "replaces": [
+      "zapier",
+      "make"
+    ],
+    "license": "AGPL-3.0",
+    "language": "Go",
+    "githubStars": 6300,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Much smaller connector library than Zapier or Make; many popular SaaS integrations are missing\n- Web UI is basic with minimal workflow visualization and no scheduling UI\n- Project maintenance has slowed; some connector implementations may be stale",
+    "tags": [
+      "event-automation",
+      "ifttt",
+      "go",
+      "self-hosted",
+      "agents"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "apache-camel",
+    "name": "Apache Camel",
+    "tagline": "Enterprise integration framework implementing 300+ EIPs and connectors",
+    "descriptionMd": "Apache Camel is a mature Java-based integration framework implementing over 300 Enterprise Integration Patterns with connectors for hundreds of protocols and systems. Routing logic is expressed via a concise DSL in Java, XML, Groovy, or Kotlin. It is widely used in enterprise middleware to connect heterogeneous systems, message queues, databases, and REST APIs.",
+    "repoUrl": "https://github.com/apache/camel",
+    "websiteUrl": "https://camel.apache.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "automation",
+    "replaces": [
+      "workato",
+      "tray-io"
+    ],
+    "license": "Apache-2.0",
+    "language": "Java",
+    "githubStars": 5700,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Docker",
+      "Kubernetes",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No GUI; all integrations are defined via code or XML, requiring developer expertise\n- No built-in workflow monitoring dashboard without pairing with Hawtio or Camel Karavan\n- Configuration and deployment complexity is high compared to modern no-code SaaS tools",
+    "tags": [
+      "integration",
+      "enterprise",
+      "java",
+      "eda",
+      "connectors"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "monica-crm",
+    "name": "Monica",
+    "tagline": "Personal CRM to remember important details about your contacts",
+    "descriptionMd": "Monica is a personal relationship management (PRM) application that helps individuals remember significant details about their contacts — birthdays, conversation notes, activities, and life events. It is designed for personal use rather than businesses, offering a clean web UI and a REST API. Monica can be self-hosted on any PHP server with MySQL or PostgreSQL.",
+    "repoUrl": "https://github.com/monicahq/monica",
+    "websiteUrl": "https://www.monicahq.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "crm",
+    "replaces": [
+      "hubspot",
+      "pipedrive"
+    ],
+    "license": "AGPL-3.0",
+    "language": "PHP",
+    "githubStars": 21000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Designed for personal use only; lacks sales pipeline management, forecasting, and team collaboration\n- No built-in email marketing, lead scoring, or workflow automation\n- REST API coverage is limited compared to business-grade CRM platforms",
+    "tags": [
+      "personal-crm",
+      "relationships",
+      "contacts",
+      "php",
+      "privacy"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "corteza",
+    "name": "Corteza",
+    "tagline": "Low-code platform with a built-in CRM app and workflow automation",
+    "descriptionMd": "Corteza is an open-source low-code platform that ships with a complete CRM application covering contacts, accounts, leads, and opportunity pipelines. Built with Go microservices and a Vue.js frontend, it provides a visual app builder, no-code workflow automation, a messaging module, and a REST API. All data stays on your own infrastructure.",
+    "repoUrl": "https://github.com/cortezaproject/corteza",
+    "websiteUrl": "https://cortezaproject.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "crm",
+    "replaces": [
+      "salesforce",
+      "hubspot",
+      "pipedrive"
+    ],
+    "license": "Apache-2.0",
+    "language": "Go",
+    "githubStars": 1600,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Kubernetes",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Documentation and community ecosystem are thin compared to SuiteCRM or Odoo\n- App builder requires significant configuration effort beyond the default CRM template\n- No managed cloud hosting; you must operate and maintain your own deployment",
+    "tags": [
+      "low-code",
+      "crm",
+      "go",
+      "workflow",
+      "self-hosted"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "yetiforce-crm",
+    "name": "YetiForce CRM",
+    "tagline": "Enterprise open-source CRM with 100+ modules and advanced permission engine",
+    "descriptionMd": "YetiForce CRM is a community-driven, feature-rich CRM system with over 100 modules covering sales, customer support, projects, inventory, and HR. It provides a highly configurable RBAC permission engine and a modern responsive UI. Actively maintained by the Yetiforce company, it runs on a standard LAMP stack and is widely used by organizations across Europe.",
+    "repoUrl": "https://github.com/YetiForceCompany/YetiForceCRM",
+    "websiteUrl": "https://yetiforce.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "crm",
+    "replaces": [
+      "salesforce",
+      "hubspot",
+      "pipedrive"
+    ],
+    "license": "YetiForce Public License",
+    "language": "PHP",
+    "githubStars": 2600,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Installation and upgrade process is complex and requires careful manual server configuration\n- English documentation is less comprehensive than the Polish docs; smaller international community\n- UI can be overwhelming due to the sheer number of modules and settings",
+    "tags": [
+      "crm",
+      "enterprise",
+      "php",
+      "erp",
+      "sales"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "vtiger-crm",
+    "name": "vtiger CRM",
+    "tagline": "Full-featured open-source CRM for sales, marketing, and support teams",
+    "descriptionMd": "vtiger CRM Community Edition is a modular, open-source CRM covering sales pipeline, email marketing campaigns, help desk ticketing, and inventory management. Originally forked from SugarCRM, it has evolved into an independent product with its own extension marketplace. The self-hosted version runs on a standard LAMP stack.",
+    "repoUrl": "https://github.com/vtiger-crm/vtigercrm",
+    "websiteUrl": "https://www.vtiger.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "crm",
+    "replaces": [
+      "salesforce",
+      "hubspot",
+      "pipedrive"
+    ],
+    "license": "VTPL-1.1",
+    "language": "PHP",
+    "githubStars": 580,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Community edition lags significantly behind the commercial cloud version in new features\n- Mobile experience is limited; dedicated mobile apps target only the cloud offering\n- Smaller and less active community than SuiteCRM; fewer third-party extensions",
+    "tags": [
+      "crm",
+      "sales",
+      "php",
+      "helpdesk",
+      "marketing"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "tryton",
+    "name": "Tryton",
+    "tagline": "Modular ERP platform with CRM, sales, accounting, and inventory",
+    "descriptionMd": "Tryton is a three-tier, general-purpose application platform written in Python, providing CRM, sales, invoicing, accounting, inventory, and project management as composable modules. It uses a client-server model with a web client and REST API and is also the upstream of the GNU Health medical information system.",
+    "repoUrl": "https://github.com/tryton/tryton",
+    "websiteUrl": "https://www.tryton.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "crm",
+    "replaces": [
+      "salesforce",
+      "hubspot"
+    ],
+    "license": "GPL-3.0",
+    "language": "Python",
+    "githubStars": 530,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- ERP-first design makes simple CRM use cases feel heavyweight and over-engineered\n- Web client is still maturing; historically relied on a GTK desktop client\n- Smaller ecosystem and fewer third-party integrations than Odoo",
+    "tags": [
+      "erp",
+      "crm",
+      "python",
+      "accounting",
+      "open-source"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "opencrx",
+    "name": "openCRX",
+    "tagline": "Mature enterprise CRM with calendar, email integration and REST API",
+    "descriptionMd": "openCRX is a Java-based enterprise CRM platform that has been actively maintained for over 20 years. It covers contact and account management, opportunity tracking, activity and calendar management, e-mail integration, and exposes both REST and SOAP APIs. It runs on standard Java EE application servers such as WildFly and TomEE.",
+    "repoUrl": "https://github.com/opencrx/opencrx",
+    "websiteUrl": "https://www.opencrx.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "crm",
+    "replaces": [
+      "salesforce",
+      "pipedrive"
+    ],
+    "license": "BSD-2-Clause",
+    "language": "Java",
+    "githubStars": 270,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 5,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Deployment requires a Java EE application server and significant manual configuration\n- UI is dated and considerably less intuitive than modern CRM tools\n- Small community; limited third-party plugin and integration ecosystem",
+    "tags": [
+      "crm",
+      "java",
+      "enterprise",
+      "email",
+      "self-hosted"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "zurmo",
+    "name": "Zurmo CRM",
+    "tagline": "Gamified open-source CRM with built-in achievements and workflow engine",
+    "descriptionMd": "Zurmo is a gamified open-source CRM built on the Yii PHP framework that adds achievement badges, leaderboards, and points to CRM activities to drive user adoption. It covers contacts, accounts, opportunities, campaigns, and products, plus a configurable workflow engine for automating follow-up tasks and notifications.",
+    "repoUrl": "https://github.com/zurmo/zurmo",
+    "websiteUrl": "http://zurmo.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "crm",
+    "replaces": [
+      "salesforce",
+      "hubspot"
+    ],
+    "license": "AGPL-3.0",
+    "language": "PHP",
+    "githubStars": 640,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Project is largely unmaintained; last meaningful release is several years old\n- Gamification layer can feel gimmicky in serious sales environments\n- Limited modern integrations; REST API coverage is narrow compared to active CRM projects",
+    "tags": [
+      "crm",
+      "gamification",
+      "php",
+      "sales",
+      "workflow"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "bitrix24-community",
+    "name": "Bitrix24 Community",
+    "tagline": "All-in-one collaboration suite with CRM, tasks, HR, and website builder",
+    "descriptionMd": "Bitrix24 Community Edition is a free self-hosted suite that combines CRM, project management, team chat, HR tools, and a website builder in a single platform. It targets small to mid-sized businesses needing an all-in-one solution and runs on Linux with MySQL/MariaDB. The on-premise edition is free with a capped user count.",
+    "repoUrl": "https://github.com/bitrix-tools/b24-docker",
+    "websiteUrl": "https://www.bitrix24.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "crm",
+    "replaces": [
+      "salesforce",
+      "hubspot",
+      "pipedrive"
+    ],
+    "license": "Bitrix Framework License",
+    "language": "PHP",
+    "githubStars": 390,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- License is not OSI-approved open-source; source-available terms restrict redistribution\n- Community edition has feature caps vs the cloud version: limited users and storage quotas\n- Upgrade path between on-premise versions can be complex and error-prone",
+    "tags": [
+      "crm",
+      "collaboration",
+      "php",
+      "hr",
+      "all-in-one"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "fathom-analytics-lite",
+    "name": "Shynet",
+    "tagline": "Privacy-first web analytics with no cookies and no tracking scripts",
+    "descriptionMd": "Shynet is a self-hosted analytics platform that tracks visitor behavior without cookies or JavaScript by default, making it GDPR-friendly out of the box. It provides page views, session duration, referrer tracking, and geographic data in a clean dashboard. Designed for small to medium sites where simplicity and privacy matter more than deep funnel analysis.",
+    "repoUrl": "https://github.com/milesmcc/shynet",
+    "websiteUrl": null,
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "analytics",
+    "replaces": [
+      "google-analytics",
+      "hotjar"
+    ],
+    "license": "Apache-2.0",
+    "language": "Python",
+    "githubStars": 2900,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No funnel or cohort analysis; purely page-level metrics\n- No JavaScript event tracking without custom integration\n- No built-in alerting or anomaly detection",
+    "tags": [
+      "privacy",
+      "cookieless",
+      "web-analytics",
+      "gdpr"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "fathom-cabin",
+    "name": "Cabin",
+    "tagline": "Carbon-aware, privacy-respecting web analytics for the climate-conscious",
+    "descriptionMd": "Cabin is an open-source analytics tool focused on privacy and minimal environmental impact, measuring carbon emissions alongside visitor metrics. It uses no cookies and collects only aggregated data, making it compliant with GDPR and CCPA without a consent banner. Particularly suited for teams that want to report on both traffic and website sustainability.",
+    "repoUrl": "https://github.com/nicholasgasior/cabin",
+    "websiteUrl": null,
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "analytics",
+    "replaces": [
+      "google-analytics",
+      "amplitude"
+    ],
+    "license": "MIT",
+    "language": "JavaScript",
+    "githubStars": 800,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Minimal real-time view; data updates on a delay\n- No user-level session replay or heatmaps\n- Limited integrations compared to commercial tools",
+    "tags": [
+      "privacy",
+      "carbon-aware",
+      "cookieless",
+      "sustainability"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "offen-analytics",
+    "name": "Offen",
+    "tagline": "Fair web analytics that lets users access and delete their own data",
+    "descriptionMd": "Offen is a self-hosted analytics platform built on the principle of data fairness — visitors can log in to see, download, or delete the data collected about them. It runs as a single lightweight binary with an embedded SQLite or PostgreSQL database, making deployment simple. Ideal for developers and publishers who want transparency as a competitive differentiator.",
+    "repoUrl": "https://github.com/offen/offen",
+    "websiteUrl": "https://www.offen.dev",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "analytics",
+    "replaces": [
+      "google-analytics",
+      "mixpanel"
+    ],
+    "license": "Apache-2.0",
+    "language": "Go",
+    "githubStars": 880,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 1,
+    "deployOptions": [
+      "One-Click",
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Limited metrics scope: no heatmaps, funnels, or A/B testing\n- No multi-site roll-up view in a single dashboard\n- Visitor self-service portal adds UX complexity for non-technical audiences",
+    "tags": [
+      "privacy",
+      "fair-analytics",
+      "gdpr",
+      "transparent"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "pirsch-oss",
+    "name": "Pirsch",
+    "tagline": "Cookie-free server-side analytics with a clean Go-based architecture",
+    "descriptionMd": "Pirsch is a lightweight, cookie-free analytics solution that processes events server-side, avoiding ad-blockers entirely. It stores data in ClickHouse for high-throughput sites and exposes a simple REST API for custom integrations. The open-source core covers all essential metrics; a managed SaaS tier adds team collaboration and extended data retention.",
+    "repoUrl": "https://github.com/pirsch-analytics/pirsch",
+    "websiteUrl": "https://pirsch.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "analytics",
+    "replaces": [
+      "google-analytics",
+      "mixpanel"
+    ],
+    "license": "AGPL-3.0",
+    "language": "Go",
+    "githubStars": 1200,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- ClickHouse dependency raises the infrastructure bar considerably\n- No built-in session replay or heatmap features\n- Team/org management requires the commercial SaaS tier",
+    "tags": [
+      "server-side",
+      "cookieless",
+      "clickhouse",
+      "go"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "swetrix",
+    "name": "Swetrix",
+    "tagline": "Open-source alternative to Google Analytics with custom events and funnels",
+    "descriptionMd": "Swetrix provides a full-featured self-hosted analytics suite including page views, custom events, error tracking, and funnel analysis without relying on cookies. The backend is written in Node.js and stores data in ClickHouse for fast aggregation across large data volumes. A managed hosted tier is available for teams that do not want to run their own infrastructure.",
+    "repoUrl": "https://github.com/Swetrix/swetrix",
+    "websiteUrl": "https://swetrix.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "analytics",
+    "replaces": [
+      "google-analytics",
+      "mixpanel",
+      "amplitude"
+    ],
+    "license": "AGPL-3.0",
+    "language": "JavaScript",
+    "githubStars": 600,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- ClickHouse is required; no SQLite fallback for small deployments\n- Session replay not yet available in the self-hosted build\n- Documentation for self-hosting is less mature than for the managed service",
+    "tags": [
+      "cookieless",
+      "funnels",
+      "custom-events",
+      "clickhouse"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "fauna-analytics-open",
+    "name": "Mixpost",
+    "tagline": "Self-hosted social media analytics and scheduling in one platform",
+    "descriptionMd": "Mixpost is a Laravel-based self-hosted tool that combines social media post scheduling with per-channel analytics (impressions, engagement, reach). It supports multiple accounts across Twitter/X, Facebook, Instagram, LinkedIn, and Pinterest under a single dashboard. Ideal for agencies and content teams that want ownership of both their scheduling workflow and their performance data.",
+    "repoUrl": "https://github.com/inovector/mixpost",
+    "websiteUrl": "https://mixpost.app",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "analytics",
+    "replaces": [
+      "google-analytics",
+      "mixpanel"
+    ],
+    "license": "MIT",
+    "language": "PHP",
+    "githubStars": 1500,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Analytics are social-channel-only; no website traffic measurement\n- Limited historical data range for free API tiers on each social network\n- No cross-channel attribution or funnel views",
+    "tags": [
+      "social-media",
+      "scheduling",
+      "analytics",
+      "laravel"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "wide-eyes-analytics",
+    "name": "Prisme Analytics",
+    "tagline": "Event-stream analytics built on ClickHouse for developer teams",
+    "descriptionMd": "Prisme Analytics is a self-hosted, open-source event analytics platform that ingests arbitrary JSON events and stores them in ClickHouse, providing SQL-powered dashboards and retention analysis. It is schema-free, meaning teams can track any product event without pre-defining a schema. Designed for engineering-led teams comfortable writing SQL to define their own custom metrics.",
+    "repoUrl": "https://github.com/prismelabs/analytics",
+    "websiteUrl": null,
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "analytics",
+    "replaces": [
+      "google-analytics",
+      "mixpanel",
+      "amplitude"
+    ],
+    "license": "AGPL-3.0",
+    "language": "Go",
+    "githubStars": 430,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No no-code dashboard builder; requires SQL knowledge for custom reports\n- ClickHouse dependency increases minimum infrastructure footprint\n- No session replay, heatmaps, or A/B testing modules",
+    "tags": [
+      "event-tracking",
+      "clickhouse",
+      "sql",
+      "product-analytics"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "counter-analytics",
+    "name": "Counter",
+    "tagline": "Minimalist self-hosted hit counter and page-view tracker",
+    "descriptionMd": "Counter is an extremely lightweight Go service that records page hits and unique visitor counts with near-zero setup — a single binary backed by SQLite. It exposes a simple HTTP API and an embeddable badge for README files or websites. Best suited for personal projects, GitHub repositories, or open-source libraries that want basic traffic insight without a full analytics stack.",
+    "repoUrl": "https://github.com/ihucos/counter.dev",
+    "websiteUrl": "https://counter.dev",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "analytics",
+    "replaces": [
+      "google-analytics",
+      "hotjar"
+    ],
+    "license": "MIT",
+    "language": "Go",
+    "githubStars": 2000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 1,
+    "deployOptions": [
+      "One-Click",
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- No funnel, cohort, or retention analysis whatsoever\n- No custom event tracking beyond page hits\n- Data aggregation is coarse; no drill-down by browser, OS, or campaign",
+    "tags": [
+      "minimalist",
+      "hit-counter",
+      "lightweight",
+      "sqlite"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "buttercup-password-manager",
+    "name": "Buttercup",
+    "tagline": "Modern, open-source password manager with a beautiful cross-platform UI",
+    "descriptionMd": "Buttercup is a free, open-source password manager available as desktop apps (Linux, macOS, Windows), a browser extension, and a mobile app. Vaults are stored as encrypted BCUP files that can be synced via Dropbox, Google Drive, WebDAV, or any self-hosted Nextcloud instance. The codebase is fully JavaScript/TypeScript, making it easy for contributors to audit or extend.",
+    "repoUrl": "https://github.com/buttercup/buttercup-desktop",
+    "websiteUrl": "https://buttercup.pw",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "password-manager",
+    "replaces": [
+      "1password",
+      "lastpass",
+      "dashlane"
+    ],
+    "license": "GPL-3.0",
+    "language": "TypeScript",
+    "githubStars": 4000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 1,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No native server component; vault sync relies on third-party storage providers\n- No emergency access or vault recovery mechanism built in\n- Team sharing and organizational features are absent",
+    "tags": [
+      "desktop",
+      "cross-platform",
+      "webdav",
+      "nextcloud"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "lesspass-oss",
+    "name": "LessPass",
+    "tagline": "Stateless password manager that derives passwords instead of storing them",
+    "descriptionMd": "LessPass is a stateless password manager that generates deterministic passwords from a master password, site, and login — no vault file is ever stored or synced. This makes it immune to server-side breaches because there is no database of secrets to steal. A self-hosted server component is available for storing site profiles (not passwords), and the entire stack is open-source.",
+    "repoUrl": "https://github.com/lesspass/lesspass",
+    "websiteUrl": "https://lesspass.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "password-manager",
+    "replaces": [
+      "1password",
+      "lastpass"
+    ],
+    "license": "GPL-3.0",
+    "language": "JavaScript",
+    "githubStars": 5500,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- If the master password is compromised, all generated passwords are at risk simultaneously\n- Cannot store arbitrary secrets such as credit cards, notes, or SSH keys\n- Changing a generated password requires incrementing a counter, which can be confusing",
+    "tags": [
+      "stateless",
+      "deterministic",
+      "no-vault",
+      "privacy"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "spectre-passwords",
+    "name": "Spectre / Master Password",
+    "tagline": "Algorithm-based stateless password generation with no sync required",
+    "descriptionMd": "Spectre (formerly Master Password) is an open algorithm and suite of apps that generate site-specific passwords from a name, master password, and site identifier — completely offline with no network or storage dependency. Implementations exist for iOS, Android, macOS, Linux, and the web. Because no vault is stored anywhere, there is nothing to breach, backup, or sync.",
+    "repoUrl": "https://github.com/spectre-app/cli",
+    "websiteUrl": "https://spectre.app",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "password-manager",
+    "replaces": [
+      "1password",
+      "lastpass",
+      "dashlane"
+    ],
+    "license": "GPL-3.0",
+    "language": "C",
+    "githubStars": 500,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 1,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No vault means no ability to store free-form secure notes or non-password credentials\n- Regenerating a password after a site breach requires manually tracking version counters\n- No browser extension with auto-fill in the official CLI implementation",
+    "tags": [
+      "stateless",
+      "offline",
+      "algorithm-based",
+      "cli"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "authelia-secrets",
+    "name": "Authelia",
+    "tagline": "Self-hosted authentication server with TOTP, WebAuthn, and SSO",
+    "descriptionMd": "Authelia is an open-source authentication and authorization server that acts as a companion to reverse proxies like Nginx or Traefik, providing two-factor authentication and single sign-on for self-hosted applications. While primarily an identity gateway rather than a password vault, it manages user credentials, TOTP secrets, and WebAuthn device registrations centrally. Teams use it as the authentication backbone that other self-hosted tools integrate with.",
+    "repoUrl": "https://github.com/authelia/authelia",
+    "websiteUrl": "https://www.authelia.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "password-manager",
+    "replaces": [
+      "1password",
+      "hashicorp-vault"
+    ],
+    "license": "Apache-2.0",
+    "language": "Go",
+    "githubStars": 23000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Kubernetes",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Not a password vault; does not store or generate passwords for websites\n- Requires a reverse proxy to function; no standalone mode\n- LDAP/AD integration configuration is complex for non-enterprise users",
+    "tags": [
+      "2fa",
+      "sso",
+      "webauthn",
+      "reverse-proxy"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "gopass-oss",
+    "name": "gopass",
+    "tagline": "Team-oriented CLI password manager built on GPG and Git",
+    "descriptionMd": "gopass is a re-implementation of the Unix `pass` password store in Go, designed for teams sharing secrets via GPG-encrypted files in a Git repository. Each secret is a GPG-encrypted file committed to a shared Git repo, giving teams a full audit trail of who changed what and when. It integrates with browsers via the gopassbridge extension and supports multiple password stores for separating personal from team secrets.",
+    "repoUrl": "https://github.com/gopasspw/gopass",
+    "websiteUrl": "https://www.gopass.pw",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "password-manager",
+    "replaces": [
+      "1password",
+      "lastpass",
+      "hashicorp-vault"
+    ],
+    "license": "MIT",
+    "language": "Go",
+    "githubStars": 6000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- GPG key management is a significant operational burden, especially for team onboarding\n- No web UI or mobile app; CLI-only unless paired with third-party frontends\n- Revoking access for a departing team member requires re-encrypting all shared secrets",
+    "tags": [
+      "cli",
+      "gpg",
+      "git",
+      "team-secrets"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "secret-server-oss",
+    "name": "Passky",
+    "tagline": "Lightweight self-hosted password manager with a clean web UI",
+    "descriptionMd": "Passky is a simple, fast, open-source password manager with a PHP backend and a Vue.js web client that can be self-hosted on any web server. It supports browser extensions for Chrome and Firefox, a desktop client, and a mobile app, making it a credible all-devices alternative to commercial vaults. The server is deliberately minimal — SQLite or MySQL, no heavy dependencies — so it runs on shared hosting or a small VPS.",
+    "repoUrl": "https://github.com/Rabbit-Company/Passky-Server",
+    "websiteUrl": "https://passky.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "password-manager",
+    "replaces": [
+      "1password",
+      "lastpass",
+      "dashlane"
+    ],
+    "license": "GPL-3.0",
+    "language": "PHP",
+    "githubStars": 900,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- No emergency access or secure sharing between users on the same server\n- Audit log and reporting features are basic compared to enterprise vaults\n- Community and ecosystem are small; long-term maintenance is less certain",
+    "tags": [
+      "php",
+      "web-ui",
+      "browser-extension",
+      "lightweight"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "phplist",
+    "name": "phpList",
+    "tagline": "Battle-tested open-source newsletter and email marketing platform",
+    "descriptionMd": "phpList is one of the oldest and most widely deployed self-hosted email list managers, powering newsletters for millions of subscribers worldwide. It provides subscriber management, bounce handling, campaign analytics, and plugin support. The PHP/MySQL stack makes it deployable on virtually any shared host or VPS.",
+    "repoUrl": "https://github.com/phpList/phplist3",
+    "websiteUrl": "https://www.phplist.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "email-newsletter",
+    "replaces": [
+      "mailchimp",
+      "convertkit"
+    ],
+    "license": "AGPL-3.0",
+    "language": "PHP",
+    "githubStars": 800,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- UI feels dated compared to modern SaaS tools\n- No native drag-and-drop email builder; requires third-party plugins\n- Automation/drip sequences require community plugins and are limited",
+    "tags": [
+      "newsletter",
+      "email-marketing",
+      "php",
+      "list-management"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "sendportal",
+    "name": "SendPortal",
+    "tagline": "Self-hosted email marketing platform built on Laravel",
+    "descriptionMd": "SendPortal is a modern open-source email marketing application built with Laravel. It supports multiple email sending providers (AWS SES, Mailgun, Postmark, SendGrid, SMTP), subscriber segmentation, campaign analytics, and API access. The clean UI and Laravel ecosystem make it approachable for PHP developers.",
+    "repoUrl": "https://github.com/mettle/sendportal",
+    "websiteUrl": "https://sendportal.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "email-newsletter",
+    "replaces": [
+      "mailchimp",
+      "sendgrid",
+      "convertkit"
+    ],
+    "license": "AGPL-3.0",
+    "language": "PHP",
+    "githubStars": 1500,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No visual drag-and-drop email builder included\n- Automation workflows are not yet implemented\n- Limited built-in template library",
+    "tags": [
+      "newsletter",
+      "email-marketing",
+      "laravel",
+      "php"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "mailman3",
+    "name": "Mailman 3",
+    "tagline": "Classic GNU mailing list manager modernized with a web interface",
+    "descriptionMd": "Mailman 3 is the GNU project's flagship mailing list manager, redesigned with a REST API core and a modern web UI called Postorius. It supports mailing lists, digests, archiving via Hyperkitty, moderation queues, and DKIM. It is widely used by open-source projects and academic institutions.",
+    "repoUrl": "https://github.com/mailman/mailman",
+    "websiteUrl": "https://list.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "email-newsletter",
+    "replaces": [
+      "mailchimp",
+      "gmail"
+    ],
+    "license": "GPL-3.0",
+    "language": "Python",
+    "githubStars": 900,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Focused on discussion lists, not marketing newsletters\n- No campaign analytics or click tracking by design\n- Setup of the three-component stack (core, Postorius, Hyperkitty) is non-trivial",
+    "tags": [
+      "mailing-list",
+      "newsletter",
+      "gnu",
+      "python"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "sympa",
+    "name": "Sympa",
+    "tagline": "Scalable multilingual mailing list manager for large organizations",
+    "descriptionMd": "Sympa is an enterprise-grade open-source mailing list server that handles thousands of lists and millions of subscribers. It supports fine-grained access control, list families, LDAP/AD integration, S/MIME, and a full-featured web interface. Used by universities and national research networks across Europe.",
+    "repoUrl": "https://github.com/sympa-community/sympa",
+    "websiteUrl": "https://www.sympa.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "email-newsletter",
+    "replaces": [
+      "mailchimp",
+      "gmail"
+    ],
+    "license": "GPL-2.0",
+    "language": "Perl",
+    "githubStars": 300,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Perl stack and complex config make setup challenging\n- No modern marketing analytics or A/B testing\n- Web UI is functional but not modern by current standards",
+    "tags": [
+      "mailing-list",
+      "enterprise",
+      "perl",
+      "ldap"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "acymailing",
+    "name": "AcyMailing",
+    "tagline": "Joomla and WordPress newsletter plugin with automation",
+    "descriptionMd": "AcyMailing is an email marketing extension for Joomla (with a WordPress variant) that supports campaign creation, list segmentation, autoresponders, and follow-up sequences. The community edition is open source and deployable inside any existing Joomla installation.",
+    "repoUrl": "https://github.com/acymailing/acymailing",
+    "websiteUrl": "https://www.acymailing.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "email-newsletter",
+    "replaces": [
+      "mailchimp",
+      "convertkit"
+    ],
+    "license": "GPL-3.0",
+    "language": "PHP",
+    "githubStars": 200,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Tightly coupled to Joomla/WordPress ecosystem\n- Advanced automation features gated behind paid plans\n- No standalone deployment outside a CMS",
+    "tags": [
+      "newsletter",
+      "joomla",
+      "wordpress",
+      "email-marketing"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "mailtrain",
+    "name": "Mailtrain",
+    "tagline": "Self-hosted newsletter app built on Node.js with advanced list management",
+    "descriptionMd": "Mailtrain is a Node.js newsletter application that offers subscriber list management, custom fields, campaign scheduling, and detailed tracking. Version 2 introduced a modular architecture with support for multiple SMTP/SES providers. It is designed to send high-volume campaigns from your own infrastructure.",
+    "repoUrl": "https://github.com/Mailtrain-org/mailtrain",
+    "websiteUrl": "https://mailtrain.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "email-newsletter",
+    "replaces": [
+      "mailchimp",
+      "sendgrid",
+      "convertkit"
+    ],
+    "license": "GPL-3.0",
+    "language": "JavaScript",
+    "githubStars": 5400,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Development activity has slowed considerably in recent years\n- No built-in drag-and-drop email builder (relies on GrapesJS plugin)\n- Documentation is sparse for v2 features",
+    "tags": [
+      "newsletter",
+      "email-marketing",
+      "nodejs",
+      "self-hosted"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "sendy",
+    "name": "Sendy",
+    "tagline": "Self-hosted email newsletter app that sends via Amazon SES",
+    "descriptionMd": "Sendy is a PHP-based newsletter application specifically designed to leverage Amazon SES for bulk email delivery at very low cost. It supports list management, autoresponders, custom fields, and per-brand accounts. Note: Sendy itself is a paid one-time-purchase app, but it is self-hosted.",
+    "repoUrl": "https://github.com/nicholaswilde/sendy",
+    "websiteUrl": "https://sendy.co",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "email-newsletter",
+    "replaces": [
+      "mailchimp",
+      "sendgrid"
+    ],
+    "license": "Proprietary",
+    "language": "PHP",
+    "githubStars": 100,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Requires paid one-time license fee; not truly open source\n- Tightly coupled to AWS SES, limiting provider flexibility\n- No built-in visual email builder; limited automation",
+    "tags": [
+      "newsletter",
+      "aws-ses",
+      "php",
+      "email-marketing"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "phabricator",
+    "name": "Phabricator",
+    "tagline": "Comprehensive software development platform with tasks, code review, and wikis",
+    "descriptionMd": "Phabricator was a full-stack engineering collaboration suite from Phacility, covering Maniphest (task tracker), Differential (code review), Diffusion (repository browser), Phriction (wiki), and more. Although Phacility shut down in 2021, the codebase remains available and community forks continue development.",
+    "repoUrl": "https://github.com/phacility/phabricator",
+    "websiteUrl": null,
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "project-management",
+    "replaces": [
+      "jira",
+      "github",
+      "gitlab"
+    ],
+    "license": "Apache-2.0",
+    "language": "PHP",
+    "githubStars": 12500,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Original maintainer (Phacility) shut down; primarily community-maintained now\n- No native Gantt chart or timeline view\n- Modern integrations (Slack, CI/CD) require custom webhooks",
+    "tags": [
+      "code-review",
+      "task-tracker",
+      "wiki",
+      "devtools"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "tuleap",
+    "name": "Tuleap",
+    "tagline": "Enterprise-grade ALM platform with Scrum, Kanban, and Git hosting",
+    "descriptionMd": "Tuleap is a mature open-source Application Lifecycle Management platform offering trackers, Agile planning boards (Scrum and Kanban), Git/SVN hosting, CI integration, document management, and test management. It is used by large enterprises and government agencies in France and Europe.",
+    "repoUrl": "https://github.com/Enalean/tuleap",
+    "websiteUrl": "https://www.tuleap.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "project-management",
+    "replaces": [
+      "jira",
+      "gitlab",
+      "asana"
+    ],
+    "license": "GPL-2.0",
+    "language": "PHP",
+    "githubStars": 1000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Complex initial setup; enterprise focus means steep learning curve\n- Some advanced features (portfolio management, SAFe) require paid Enterprise Edition\n- UI is dense and dated compared to modern SaaS alternatives",
+    "tags": [
+      "alm",
+      "scrum",
+      "kanban",
+      "enterprise",
+      "git-hosting"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "fossil-scm",
+    "name": "Fossil SCM",
+    "tagline": "Self-contained DVCS with integrated bug tracker, wiki, and forum",
+    "descriptionMd": "Fossil is a distributed version control system by the SQLite author that bundles a bug tracker, wiki, forum, and chat into a single self-contained executable. The entire repository including tickets is stored in a single SQLite file, making backup and migration trivial. Used by the SQLite project itself.",
+    "repoUrl": "https://github.com/drhsqlite/fossil-mirror",
+    "websiteUrl": "https://fossil-scm.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "project-management",
+    "replaces": [
+      "github",
+      "gitlab",
+      "jira"
+    ],
+    "license": "BSD-2-Clause",
+    "language": "C",
+    "githubStars": 2100,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 1,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Git compatibility requires bridge tools; not a drop-in replacement\n- No native CI/CD pipeline or container registry\n- Very small ecosystem of third-party integrations",
+    "tags": [
+      "vcs",
+      "bug-tracker",
+      "wiki",
+      "sqlite",
+      "lightweight"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "tracks",
+    "name": "Tracks",
+    "tagline": "GTD-based task manager implementing Getting Things Done methodology",
+    "descriptionMd": "Tracks is a Ruby on Rails web application implementing David Allen's Getting Things Done (GTD) methodology. It supports contexts, projects, next actions, someday/maybe lists, and tickler dates. Designed for personal productivity but can be hosted for a small team.",
+    "repoUrl": "https://github.com/TracksApp/tracks",
+    "websiteUrl": "https://www.getontracks.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "project-management",
+    "replaces": [
+      "asana",
+      "trello",
+      "basecamp"
+    ],
+    "license": "GPL-2.0",
+    "language": "Ruby",
+    "githubStars": 1100,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Single-user focused; collaboration features are minimal\n- No Kanban board or Gantt chart view\n- Development pace is slow; community is small",
+    "tags": [
+      "gtd",
+      "task-management",
+      "ruby",
+      "productivity"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "projectsend",
+    "name": "ProjectSend",
+    "tagline": "Self-hosted file sharing and client collaboration platform for agencies",
+    "descriptionMd": "ProjectSend is a PHP application that lets agencies and freelancers share files with clients in a branded portal. Clients get their own login to download assigned files, leave comments, and track project deliverables. It is simple to deploy and fills the gap between raw file storage and full project management.",
+    "repoUrl": "https://github.com/projectsend/projectsend",
+    "websiteUrl": "https://www.projectsend.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "project-management",
+    "replaces": [
+      "basecamp",
+      "trello"
+    ],
+    "license": "GPL-2.0",
+    "language": "PHP",
+    "githubStars": 1500,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Focused on file delivery, not full task or sprint management\n- No native Kanban, time tracking, or roadmap features\n- UI is functional but basic",
+    "tags": [
+      "file-sharing",
+      "client-portal",
+      "agency",
+      "php"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "itflow",
+    "name": "ITFlow",
+    "tagline": "Open-source IT documentation and ticketing for MSPs and IT teams",
+    "descriptionMd": "ITFlow is a PHP-based platform designed for managed service providers and internal IT teams, combining client documentation, asset inventory, ticketing, billing, and project tracking in one tool. It stores passwords, network diagrams, contacts, and SOPs alongside tickets and project tasks.",
+    "repoUrl": "https://github.com/itflow-org/itflow",
+    "websiteUrl": "https://itflow.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "project-management",
+    "replaces": [
+      "jira",
+      "asana",
+      "monday"
+    ],
+    "license": "GPL-3.0",
+    "language": "PHP",
+    "githubStars": 900,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Heavily MSP-focused; less suited for pure software development teams\n- No Agile sprint planning or velocity tracking\n- Still maturing; some features are incomplete",
+    "tags": [
+      "msp",
+      "itil",
+      "ticketing",
+      "documentation",
+      "php"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "orangescrum",
+    "name": "OrangeScrum",
+    "tagline": "Agile project management tool with Scrum and Kanban boards",
+    "descriptionMd": "OrangeScrum is a web-based project management application built on CakePHP that provides Scrum boards, Kanban boards, task management, time tracking, and team collaboration. The community edition is open source and self-hostable; a paid cloud and enterprise edition offers additional integrations.",
+    "repoUrl": "https://github.com/Orangescrum/orangescrum",
+    "websiteUrl": "https://www.orangescrum.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "project-management",
+    "replaces": [
+      "jira",
+      "trello",
+      "asana"
+    ],
+    "license": "GPL-3.0",
+    "language": "PHP",
+    "githubStars": 800,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Many premium features locked behind paid plans\n- Gantt charts only available in paid tiers\n- Community edition sees slower feature updates than cloud version",
+    "tags": [
+      "scrum",
+      "kanban",
+      "agile",
+      "php",
+      "time-tracking"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "garage",
+    "name": "Garage",
+    "tagline": "Lightweight S3-compatible distributed object storage for self-hosters",
+    "descriptionMd": "Garage is a lightweight, S3-compatible distributed object storage system designed to run on commodity hardware across multiple geographic locations. It focuses on high availability and resilience rather than raw performance, making it ideal for small clusters and home labs. Configuration is minimal and the binary is statically compiled, keeping operational overhead low.",
+    "repoUrl": "https://git.deuxfleurs.fr/Deuxfleurs/garage",
+    "websiteUrl": "https://garagehq.deuxfleurs.fr",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "file-storage",
+    "replaces": [
+      "dropbox",
+      "google-drive",
+      "box"
+    ],
+    "license": "AGPL-3.0",
+    "language": "Rust",
+    "githubStars": 1800,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No built-in web UI for browsing files; relies on external S3 clients\n- Lacks advanced IAM policies compared to AWS S3\n- No built-in CDN or edge caching layer",
+    "tags": [
+      "s3-compatible",
+      "distributed",
+      "object-storage",
+      "rust",
+      "self-hosted"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "ceph",
+    "name": "Ceph",
+    "tagline": "Massively scalable distributed storage system with block, object, and file interfaces",
+    "descriptionMd": "Ceph is a battle-tested open-source distributed storage platform providing object storage (via RADOS Gateway), block storage (RBD), and POSIX-compliant file storage (CephFS) from a single unified cluster. It is designed to be self-healing and self-managing, with no single point of failure. Many cloud providers and private clouds use Ceph as their storage backbone.",
+    "repoUrl": "https://github.com/ceph/ceph",
+    "websiteUrl": "https://ceph.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "file-storage",
+    "replaces": [
+      "dropbox",
+      "box",
+      "google-drive"
+    ],
+    "license": "LGPL-2.1",
+    "language": "C++",
+    "githubStars": 14000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 5,
+    "deployOptions": [
+      "Kubernetes",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Extremely complex to deploy and tune; requires dedicated cluster expertise\n- High minimum hardware requirements (multiple nodes recommended)\n- No consumer-facing web UI out of the box; administration is CLI-heavy",
+    "tags": [
+      "distributed-storage",
+      "object-storage",
+      "block-storage",
+      "cephfs",
+      "enterprise"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "woodpecker-ci",
+    "name": "Woodpecker CI",
+    "tagline": "Simple yet powerful self-hosted CI/CD pipeline engine",
+    "descriptionMd": "Woodpecker CI is a community fork of Drone CI that provides a lightweight, container-native continuous integration and deployment system. Pipelines are defined in YAML files stored alongside your code and run in Docker containers, making them reproducible and easy to reason about. It integrates with Gitea, GitHub, GitLab, and Forgejo out of the box.",
+    "repoUrl": "https://github.com/woodpecker-ci/woodpecker",
+    "websiteUrl": "https://woodpecker-ci.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "file-storage",
+    "replaces": [
+      "dropbox",
+      "google-drive"
+    ],
+    "license": "Apache-2.0",
+    "language": "Go",
+    "githubStars": 4500,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No built-in artifact storage; needs external S3 or similar\n- Plugin ecosystem smaller than GitHub Actions\n- Limited matrix build support compared to enterprise CI systems",
+    "tags": [
+      "ci-cd",
+      "pipelines",
+      "docker",
+      "gitea",
+      "self-hosted"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "perkeep",
+    "name": "Perkeep",
+    "tagline": "Personal archival system that stores, syncs, and finds your data forever",
+    "descriptionMd": "Perkeep (formerly Camlistore) is a personal archival and storage system focused on content-addressable storage, giving every piece of data an immutable, permanent identifier. It supports importing from Google Photos, Twitter, Flickr, and other sources, and provides a searchable web UI and a FUSE filesystem mount. All data is stored as blobs, making it inherently deduplication-friendly.",
+    "repoUrl": "https://github.com/perkeep/perkeep",
+    "websiteUrl": "https://perkeep.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "file-storage",
+    "replaces": [
+      "google-drive",
+      "dropbox"
+    ],
+    "license": "Apache-2.0",
+    "language": "Go",
+    "githubStars": 6400,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Manual",
+      "Docker"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Steep learning curve; content-addressable model is unfamiliar to most users\n- Web UI is functional but dated compared to modern alternatives\n- Limited active maintenance since Google engineers left the project",
+    "tags": [
+      "archival",
+      "content-addressable",
+      "personal-cloud",
+      "backup",
+      "search"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "storj",
+    "name": "Storj (Uplink / Storj Node)",
+    "tagline": "Decentralized, end-to-end encrypted cloud object storage network",
+    "descriptionMd": "Storj provides a decentralized S3-compatible object storage network where data is encrypted client-side, erasure-coded, and distributed across thousands of independent storage nodes worldwide. You can run your own storage node to contribute capacity, or use the Storj network as a highly available backend for your applications. The open-source satellite software lets organizations run private Storj networks.",
+    "repoUrl": "https://github.com/storj/storj",
+    "websiteUrl": "https://storj.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "file-storage",
+    "replaces": [
+      "dropbox",
+      "google-drive",
+      "box"
+    ],
+    "license": "AGPL-3.0",
+    "language": "Go",
+    "githubStars": 8000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Running a private satellite requires significant operational infrastructure\n- Native web UI for end-users is minimal; mostly developer-focused tools\n- Token/payment complexity for node operators on the public network",
+    "tags": [
+      "decentralized",
+      "s3-compatible",
+      "encrypted",
+      "distributed",
+      "object-storage"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "dufs",
+    "name": "Dufs",
+    "tagline": "Distinctive utility file server with WebDAV, upload, and sharing support",
+    "descriptionMd": "Dufs is a single-binary file server written in Rust that supports WebDAV, directory listing, file uploads, downloads, and password protection out of the box. It requires zero configuration beyond a single command line invocation, making it ideal for quick file sharing or as a lightweight WebDAV backend. TLS is supported natively without an external reverse proxy.",
+    "repoUrl": "https://github.com/sigoden/dufs",
+    "websiteUrl": null,
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "file-storage",
+    "replaces": [
+      "dropbox",
+      "google-drive"
+    ],
+    "license": "MIT",
+    "language": "Rust",
+    "githubStars": 7000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 1,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No user management beyond a single shared password\n- No file sync client; WebDAV must be mounted manually\n- No thumbnail preview for images or media",
+    "tags": [
+      "webdav",
+      "file-server",
+      "rust",
+      "single-binary",
+      "sharing"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "minio-operator",
+    "name": "JuiceFS",
+    "tagline": "Cloud-native distributed file system built on object storage backends",
+    "descriptionMd": "JuiceFS is a POSIX-compatible distributed file system that uses object storage (S3, MinIO, etc.) as its data layer and a metadata engine (Redis, TiKV, MySQL, etc.) for the namespace. Applications can mount JuiceFS via FUSE and interact with it like a local filesystem while benefiting from infinite object storage scalability. It is widely used as persistent storage for Kubernetes workloads.",
+    "repoUrl": "https://github.com/juicedata/juicefs",
+    "websiteUrl": "https://juicefs.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "file-storage",
+    "replaces": [
+      "dropbox",
+      "google-drive",
+      "box"
+    ],
+    "license": "Apache-2.0",
+    "language": "Go",
+    "githubStars": 11000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Kubernetes",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Requires a separate metadata service (Redis or database), adding operational complexity\n- POSIX semantics may have edge cases for high-concurrency workloads\n- No built-in web file manager UI",
+    "tags": [
+      "distributed-filesystem",
+      "posix",
+      "kubernetes",
+      "object-storage",
+      "fuse"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "headscale",
+    "name": "Gokapi",
+    "tagline": "Lightweight self-hosted file sharing with expiry links and password protection",
+    "descriptionMd": "Gokapi is a self-hosted file-sharing server similar to Firefox Send that allows uploading files and generating shareable download links that expire after a set number of downloads or a time limit. It stores files locally or on S3-compatible backends and provides a clean admin web interface. No user accounts are needed for recipients, making sharing friction-free.",
+    "repoUrl": "https://github.com/Forceu/Gokapi",
+    "websiteUrl": null,
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "file-storage",
+    "replaces": [
+      "dropbox",
+      "google-drive"
+    ],
+    "license": "AGPL-3.0",
+    "language": "Go",
+    "githubStars": 1900,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 1,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Not designed for persistent cloud storage; files are meant to be temporary\n- No mobile sync client\n- Single admin account only; no per-user quotas or teams",
+    "tags": [
+      "file-sharing",
+      "expiry-links",
+      "s3-backend",
+      "temporary-upload",
+      "privacy"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "matrix-conduit",
+    "name": "Conduit",
+    "tagline": "Blazing fast Matrix homeserver written in Rust for small communities",
+    "descriptionMd": "Conduit is a lightweight, resource-efficient Matrix homeserver implemented in Rust that is designed for small to medium communities wanting Matrix federation without the heavy resource requirements of Synapse. It uses a sled or rocksdb embedded database, requiring no external PostgreSQL server. A single binary with minimal configuration is sufficient to join the federated Matrix network.",
+    "repoUrl": "https://gitlab.com/famedly/conduit",
+    "websiteUrl": "https://conduit.rs",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "team-chat",
+    "replaces": [
+      "slack",
+      "discord",
+      "microsoft-teams"
+    ],
+    "license": "Apache-2.0",
+    "language": "Rust",
+    "githubStars": 3200,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Does not yet support all Matrix room versions or advanced federation features\n- No built-in web client; needs Element or another client\n- Bridges to other networks (Slack, Discord) require separate bridge services",
+    "tags": [
+      "matrix",
+      "chat",
+      "federation",
+      "rust",
+      "homeserver"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "dendrite",
+    "name": "Dendrite",
+    "tagline": "Second-generation Matrix homeserver by the Matrix.org Foundation",
+    "descriptionMd": "Dendrite is the official next-generation Matrix homeserver written in Go by the Matrix.org Foundation, designed as a scalable alternative to Synapse. It can run as a monolith on a single server or as a polylith across multiple microservices, making it adaptable from single-user installs to larger deployments. Dendrite supports the full Matrix specification including E2E encryption, federation, and VoIP signalling.",
+    "repoUrl": "https://github.com/matrix-org/dendrite",
+    "websiteUrl": "https://matrix.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "team-chat",
+    "replaces": [
+      "slack",
+      "discord",
+      "microsoft-teams"
+    ],
+    "license": "Apache-2.0",
+    "language": "Go",
+    "githubStars": 5400,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Still behind Synapse in feature completeness for some advanced room types\n- Performance at scale is less battle-tested than Synapse\n- Web client (Element) must be deployed separately",
+    "tags": [
+      "matrix",
+      "chat",
+      "federation",
+      "go",
+      "homeserver"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "revolt",
+    "name": "Revolt",
+    "tagline": "Open-source Discord-like chat platform with a modern, polished interface",
+    "descriptionMd": "Revolt is a feature-rich, Discord-like group chat and community platform that can be entirely self-hosted. It offers servers, channels, direct messages, voice channels (via Vortex), roles, permissions, and a modern web and desktop client. The backend is written in Rust for performance, and the frontend in React, both being fully open source under AGPL.",
+    "repoUrl": "https://github.com/revoltchat/backend",
+    "websiteUrl": "https://revolt.chat",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "team-chat",
+    "replaces": [
+      "discord",
+      "slack"
+    ],
+    "license": "AGPL-3.0",
+    "language": "Rust",
+    "githubStars": 3800,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Voice and video require separately deploying the Vortex server\n- No official mobile apps for self-hosted instances yet\n- Bot ecosystem and community integrations significantly smaller than Discord",
+    "tags": [
+      "discord-alternative",
+      "community-chat",
+      "rust",
+      "react",
+      "servers"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "snikket",
+    "name": "Snikket",
+    "tagline": "XMPP-based private messenger server with easy one-command setup",
+    "descriptionMd": "Snikket is a self-hosted instant messaging platform built on the XMPP standard, designed to make setting up a private family or team messenger as simple as possible. It bundles Prosody XMPP server with a curated set of modules and provides polished iOS and Android apps. Invitations, automatic TLS, and push notifications are handled out of the box.",
+    "repoUrl": "https://github.com/snikket-im/snikket-server",
+    "websiteUrl": "https://snikket.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "team-chat",
+    "replaces": [
+      "slack",
+      "discord",
+      "microsoft-teams"
+    ],
+    "license": "Apache-2.0",
+    "language": "Lua",
+    "githubStars": 700,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 1,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No public channels or community servers; designed for private groups only\n- Federation with other XMPP servers has occasional compatibility edge cases\n- Limited bot or integration support compared to Slack or Matrix",
+    "tags": [
+      "xmpp",
+      "private-messenger",
+      "mobile-apps",
+      "family-chat",
+      "encrypted"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "neko",
+    "name": "neko",
+    "tagline": "Self-hosted virtual browser and screen share room for remote collaboration",
+    "descriptionMd": "neko is a self-hosted application that runs a full browser or desktop environment inside a Docker container and streams it to multiple participants in real time via WebRTC. It is designed for collaborative browsing, watch parties, and remote pair programming where everyone sees and can interact with the same screen. Access control and room management are handled through a simple web interface.",
+    "repoUrl": "https://github.com/m1k1o/neko",
+    "websiteUrl": "https://neko.m1k1o.net",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "team-chat",
+    "replaces": [
+      "discord",
+      "microsoft-teams"
+    ],
+    "license": "Apache-2.0",
+    "language": "Go",
+    "githubStars": 8700,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Primarily a screen-sharing tool; lacks persistent text chat or channels\n- WebRTC requires open UDP ports, complicating setups behind strict firewalls\n- No persistent user accounts or roles beyond admin/participant",
+    "tags": [
+      "screen-sharing",
+      "webrtc",
+      "virtual-browser",
+      "watch-party",
+      "collaboration"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "rallly-chat",
+    "name": "Jam",
+    "tagline": "Open-source audio/video room server with no account required",
+    "descriptionMd": "Jam is a lightweight, Clubhouse-style audio and video room server that runs entirely in the browser with no downloads or accounts required for participants. Rooms can be created instantly with a shareable link and support screen sharing, chat, and speaker queues. It is built on WebRTC and can be self-hosted with a single Docker command.",
+    "repoUrl": "https://github.com/jam-systems/jam",
+    "websiteUrl": "https://jam.systems",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "team-chat",
+    "replaces": [
+      "slack",
+      "discord",
+      "microsoft-teams"
+    ],
+    "license": "AGPL-3.0",
+    "language": "JavaScript",
+    "githubStars": 1600,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No persistent channels, history, or message storage\n- No authentication or access control by default\n- Limited scalability beyond small groups without custom TURN/SFU configuration",
+    "tags": [
+      "audio-rooms",
+      "webrtc",
+      "no-account",
+      "screen-sharing",
+      "clubhouse-alternative"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "matrix-sliding-sync",
+    "name": "Stalwart XMPP",
+    "tagline": "Modern all-in-one XMPP server with web admin panel written in Rust",
+    "descriptionMd": "Stalwart XMPP is a modern, standards-compliant XMPP server written in Rust that bundles an admin web interface, HTTP file upload, push notifications, and TURN relay into a single binary. It supports the latest XMPP extensions required for feature-rich mobile clients and emphasizes security with built-in rate limiting and abuse prevention. Configuration can be done through the web UI without editing config files.",
+    "repoUrl": "https://github.com/stalwartlabs/xmpp-server",
+    "websiteUrl": "https://stalw.art",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "team-chat",
+    "replaces": [
+      "slack",
+      "microsoft-teams"
+    ],
+    "license": "AGPL-3.0",
+    "language": "Rust",
+    "githubStars": 800,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Younger project with a smaller community and less battle-tested than Prosody or Ejabberd\n- No native web chat client included; users need a third-party XMPP app\n- Clustering and high-availability support is still maturing",
+    "tags": [
+      "xmpp",
+      "rust",
+      "all-in-one",
+      "admin-ui",
+      "instant-messaging"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "survey-solutions",
+    "name": "Survey Solutions",
+    "tagline": "World Bank's free self-hosted CAPI/CAWI survey platform for large-scale data collection",
+    "descriptionMd": "Survey Solutions is an open-source survey management system developed by the World Bank, designed for large-scale field surveys using computer-assisted personal interviewing (CAPI) and web-based (CAWI) modes. It features a Designer tool for building complex questionnaires with skip logic and validation, a Headquarters server for managing interviewers and synchronizing data, and native Android tablet apps for offline data collection. The system is widely used by national statistics offices and research institutions worldwide.",
+    "repoUrl": "https://github.com/surveysolutions/surveysolutions",
+    "websiteUrl": "https://mysurvey.solutions",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "forms-surveys",
+    "replaces": [
+      "surveymonkey",
+      "typeform"
+    ],
+    "license": "GPL-3.0",
+    "language": "C#",
+    "githubStars": 300,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No native SaaS managed option; requires your own server infrastructure\n- Android interviewer app not on Google Play without sideloading in some regions\n- Complex initial setup compared to simpler form tools",
+    "tags": [
+      "survey",
+      "capi",
+      "data-collection",
+      "field-research",
+      "world-bank"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "formio",
+    "name": "Form.io",
+    "tagline": "Open-source form and data management platform with drag-and-drop builder and REST API",
+    "descriptionMd": "Form.io is a combined form builder and data management platform that provides a drag-and-drop form designer alongside auto-generated REST APIs for every form. It supports complex field types including nested forms, data grids, and conditional logic, and ships with SDKs for Angular, React, and Vue. The community edition is fully self-hostable with Node.js and MongoDB, making it suitable for enterprise applications that need programmatic form management.",
+    "repoUrl": "https://github.com/formio/formio",
+    "websiteUrl": "https://form.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "forms-surveys",
+    "replaces": [
+      "typeform",
+      "jotform",
+      "google-forms"
+    ],
+    "license": "MIT",
+    "language": "JavaScript",
+    "githubStars": 7200,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Advanced enterprise features (PDF forms, multi-tenancy, SSO) locked behind paid plans\n- Requires MongoDB; not suitable for SQL-only environments\n- Documentation for self-hosted setup is less polished than hosted offering",
+    "tags": [
+      "forms",
+      "api",
+      "drag-and-drop",
+      "nodejs",
+      "enterprise"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "kobotoolbox",
+    "name": "KoboToolbox",
+    "tagline": "Humanitarian-grade data collection platform for surveys in offline and low-bandwidth settings",
+    "descriptionMd": "KoboToolbox is a free open-source tool for field data collection built for humanitarian organizations, researchers, and development practitioners. It supports XLSForm standard for form design, offline data collection on Android via KoboCollect, and a web interface for form building and data analysis. Originally developed for use in conflict and disaster zones, it handles unreliable connectivity gracefully and is deployed by organizations like UNHCR and MSF at massive scale.",
+    "repoUrl": "https://github.com/kobotoolbox/kobocat",
+    "websiteUrl": "https://www.kobotoolbox.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "forms-surveys",
+    "replaces": [
+      "surveymonkey",
+      "google-forms",
+      "typeform"
+    ],
+    "license": "AGPL-3.0",
+    "language": "Python",
+    "githubStars": 420,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Self-hosted setup requires coordinating multiple Docker services (kobocat, kpi, enketo)\n- Less polished UI compared to commercial alternatives\n- Limited built-in statistical analysis; data export to external tools is the expected workflow",
+    "tags": [
+      "humanitarian",
+      "offline",
+      "xlsform",
+      "field-research",
+      "python"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "rallly-forms",
+    "name": "Nextcloud Forms",
+    "tagline": "Privacy-respecting form and survey builder integrated directly into your Nextcloud instance",
+    "descriptionMd": "Nextcloud Forms is an official Nextcloud app that allows users to create surveys, polls, and questionnaires stored entirely on their own Nextcloud server. Forms support multiple question types, share links without requiring login, and store all responses in the Nextcloud database with CSV export. As a native Nextcloud app, it benefits from Nextcloud's authentication, permissions, and file integration with no additional infrastructure.",
+    "repoUrl": "https://github.com/nextcloud/forms",
+    "websiteUrl": "https://apps.nextcloud.com/apps/forms",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "forms-surveys",
+    "replaces": [
+      "google-forms",
+      "typeform",
+      "surveymonkey"
+    ],
+    "license": "AGPL-3.0",
+    "language": "PHP",
+    "githubStars": 790,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "One-Click",
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Requires an existing Nextcloud installation; cannot be used standalone\n- Lacks advanced logic like conditional branching or calculated fields\n- Response analytics are minimal; users need to export CSV for deeper analysis",
+    "tags": [
+      "nextcloud",
+      "privacy",
+      "self-hosted",
+      "surveys",
+      "php"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "odk-central",
+    "name": "ODK Central",
+    "tagline": "Open Data Kit server for managing mobile data collection forms and submissions",
+    "descriptionMd": "ODK Central is the server component of the Open Data Kit ecosystem, managing forms built with XLSForm and submissions collected by ODK Collect on Android. It provides a web interface for form management, user administration, and data viewing, plus a REST API and OData endpoint for connecting to tools like Excel and Power BI. ODK is widely used by public health agencies, NGOs, and research institutions for rigorous mobile data collection.",
+    "repoUrl": "https://github.com/getodk/central",
+    "websiteUrl": "https://getodk.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "forms-surveys",
+    "replaces": [
+      "surveymonkey",
+      "google-forms"
+    ],
+    "license": "Apache-2.0",
+    "language": "JavaScript",
+    "githubStars": 540,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Primarily designed for mobile collection; web-based form filling is a secondary workflow\n- No built-in charting or dashboards; OData export to external tools is recommended\n- Encryption and advanced authentication add configuration complexity",
+    "tags": [
+      "xlsform",
+      "mobile",
+      "public-health",
+      "ngo",
+      "odata"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "tally",
+    "name": "Getform",
+    "tagline": "Lightweight form backend that receives HTML form submissions without backend code",
+    "descriptionMd": "Getform is an open-source form backend service you can self-host to collect HTML form submissions from any static website without writing server-side code. It receives POST requests from standard HTML forms, stores responses, and can forward them via email or webhook. It is ideal for JAMstack and static site setups where the developer wants a simple managed endpoint rather than a full form-builder application.",
+    "repoUrl": "https://github.com/getform/getform-io",
+    "websiteUrl": "https://getform.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "forms-surveys",
+    "replaces": [
+      "jotform",
+      "typeform"
+    ],
+    "license": "MIT",
+    "language": "Python",
+    "githubStars": 180,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- No built-in form builder; developers must write their own HTML forms\n- Limited response analytics compared to full-featured form platforms\n- Community self-hosted version lacks some features of the commercial cloud product",
+    "tags": [
+      "form-backend",
+      "static-sites",
+      "jamstack",
+      "webhooks",
+      "python"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "modoboa-forms",
+    "name": "Webforms",
+    "tagline": "Simple Python/Django open-source form builder for self-hosted data collection",
+    "descriptionMd": "Webforms (django-webforms) is a lightweight Django application for creating and managing web forms with an admin-driven builder. It stores responses in a relational database, supports file uploads, and sends email notifications on submission. Designed for organizations that already run Django applications and want to add simple contact or data-collection forms without adopting a heavy external platform.",
+    "repoUrl": "https://github.com/simonkrauter/django-webforms",
+    "websiteUrl": null,
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "forms-surveys",
+    "replaces": [
+      "google-forms",
+      "typeform"
+    ],
+    "license": "MIT",
+    "language": "Python",
+    "githubStars": 95,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No visual drag-and-drop builder; form creation done via Django admin\n- Minimal built-in analytics or export features\n- Requires existing Django project knowledge to integrate",
+    "tags": [
+      "django",
+      "python",
+      "forms",
+      "lightweight",
+      "self-hosted"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "trudesk",
+    "name": "Trudesk",
+    "tagline": "Open-source help desk and ticketing system with a clean UI and real-time updates",
+    "descriptionMd": "Trudesk is a self-hosted help desk solution built with Node.js and MongoDB that provides ticket management, team collaboration, and customer communication in a clean single-page interface. It features real-time updates via WebSockets, priority queues, tagging, groups, and a built-in reporting dashboard. Trudesk is designed for small to medium IT teams that want a straightforward ticketing system without the complexity of enterprise platforms.",
+    "repoUrl": "https://github.com/polonel/trudesk",
+    "websiteUrl": "https://trudesk.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "helpdesk",
+    "replaces": [
+      "zendesk",
+      "freshdesk"
+    ],
+    "license": "Apache-2.0",
+    "language": "JavaScript",
+    "githubStars": 1300,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No live chat widget for customer-facing sites; email-in only\n- Lacks SLA management and automated escalation rules\n- Limited integrations compared to commercial help desk platforms",
+    "tags": [
+      "helpdesk",
+      "ticketing",
+      "nodejs",
+      "real-time",
+      "mongodb"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "faveo-helpdesk",
+    "name": "Faveo Helpdesk",
+    "tagline": "Laravel-based self-hosted ticketing system with email integration and SLA management",
+    "descriptionMd": "Faveo Helpdesk is an open-source ticket management system built on Laravel that supports multi-channel ticket creation via email, web portal, and API. It includes SLA policies, canned responses, agent roles, custom email templates, and a knowledge base module. The community edition is free and self-hostable on standard LAMP/LEMP stacks, making it accessible for organizations with existing PHP hosting infrastructure.",
+    "repoUrl": "https://github.com/ladybirdweb/faveo-helpdesk",
+    "websiteUrl": "https://www.faveohelpdesk.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "helpdesk",
+    "replaces": [
+      "zendesk",
+      "freshdesk",
+      "intercom"
+    ],
+    "license": "LGPL-3.0",
+    "language": "PHP",
+    "githubStars": 1100,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Live chat and advanced reporting only in paid editions\n- UI feels dated compared to modern SaaS alternatives\n- Community edition support is forum-only with slow response times",
+    "tags": [
+      "helpdesk",
+      "laravel",
+      "php",
+      "sla",
+      "ticketing"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "otobo",
+    "name": "OTOBO",
+    "tagline": "Modern open-source ITSM help desk and ticket system forked from OTRS Community Edition",
+    "descriptionMd": "OTOBO is a community-driven fork of OTRS Community Edition, providing a full-featured ITSM and customer service ticketing platform. It supports multi-channel intake (email, web, phone), ITIL-aligned workflows, SLA management, a customer self-service portal, and extensive automation through ACLs and process management. Built with Perl and maintained by an active community after OTRS went fully commercial.",
+    "repoUrl": "https://github.com/RotherOSS/otobo",
+    "websiteUrl": "https://otobo.de",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "helpdesk",
+    "replaces": [
+      "zendesk",
+      "freshdesk"
+    ],
+    "license": "GPL-3.0",
+    "language": "Perl",
+    "githubStars": 270,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Perl stack is unfamiliar to most modern developers, complicating customization\n- Initial configuration and ITSM process setup has a steep learning curve\n- UI is functional but less modern than newer Node.js or React-based alternatives",
+    "tags": [
+      "itsm",
+      "itil",
+      "ticketing",
+      "perl",
+      "enterprise"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "hesk",
+    "name": "HESK",
+    "tagline": "Simple PHP help desk with built-in knowledge base for small teams and solo operators",
+    "descriptionMd": "HESK is a lightweight PHP help desk application designed for simplicity, offering ticket submission via web form or email, a built-in knowledge base, spam filtering, and email notifications. It runs on any shared LAMP hosting with minimal configuration and is a popular choice for freelancers, small businesses, and anyone who wants a no-frills support system without server management overhead.",
+    "repoUrl": "https://github.com/hesk/hesk",
+    "websiteUrl": "https://www.hesk.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "helpdesk",
+    "replaces": [
+      "zendesk",
+      "freshdesk"
+    ],
+    "license": "Other",
+    "language": "PHP",
+    "githubStars": 340,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 1,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No multi-agent collaboration features or internal notes visible across teams\n- No REST API; integrations must be built against the database directly\n- License is source-available for free use but prohibits redistribution",
+    "tags": [
+      "helpdesk",
+      "php",
+      "knowledge-base",
+      "lightweight",
+      "shared-hosting"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "glpi",
+    "name": "GLPI",
+    "tagline": "Full-featured open-source IT asset management and service desk with ITIL support",
+    "descriptionMd": "GLPI is a mature open-source IT service management platform combining a help desk, ticketing system, and IT asset inventory in one application. It supports change management, problem management, CMDB, contract tracking, and SLA management following ITIL best practices. With a large ecosystem of plugins and active development since 2003, GLPI is widely deployed in enterprise IT departments and managed service providers.",
+    "repoUrl": "https://github.com/glpi-project/glpi",
+    "websiteUrl": "https://glpi-project.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "helpdesk",
+    "replaces": [
+      "zendesk",
+      "freshdesk",
+      "intercom"
+    ],
+    "license": "GPL-3.0",
+    "language": "PHP",
+    "githubStars": 4200,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- UI is complex and can overwhelm users who only need basic ticketing\n- Asset management and ITSM workflows require significant initial configuration\n- Plugin quality varies widely; some community plugins are unmaintained",
+    "tags": [
+      "itsm",
+      "asset-management",
+      "itil",
+      "php",
+      "enterprise"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "erxes-helpdesk",
+    "name": "Tiledesk",
+    "tagline": "Open-source live chat and chatbot platform for customer support with omnichannel inbox",
+    "descriptionMd": "Tiledesk is a self-hostable open-source customer engagement platform that combines live chat, AI chatbots, and a multi-channel shared inbox into one system. It supports real-time web chat, WhatsApp, Facebook Messenger, and email channels, with a visual chatbot designer for automated flows. The platform is built on Node.js and Angular and designed for support teams that need modern omnichannel capabilities without a per-agent SaaS fee.",
+    "repoUrl": "https://github.com/Tiledesk/tiledesk",
+    "websiteUrl": "https://tiledesk.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "helpdesk",
+    "replaces": [
+      "intercom",
+      "zendesk",
+      "freshdesk"
+    ],
+    "license": "MIT",
+    "language": "JavaScript",
+    "githubStars": 780,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker Compose",
+      "Kubernetes",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- WhatsApp and other channel integrations require additional configuration and third-party API keys\n- Advanced AI features need external LLM API keys not included in self-hosted setup\n- Documentation for Kubernetes deployment is incomplete",
+    "tags": [
+      "live-chat",
+      "chatbot",
+      "omnichannel",
+      "nodejs",
+      "customer-support"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "requesttracker",
+    "name": "Request Tracker (RT)",
+    "tagline": "Battle-tested enterprise-grade ticketing system used by universities and government agencies",
+    "descriptionMd": "Request Tracker (RT) is one of the oldest and most mature open-source ticketing systems, with a development history dating to 1996. It provides a powerful email-driven workflow, flexible queue management, custom fields, full-text search, scripted automation via Scrips, and extensive REST and CLI APIs. RT is widely deployed in higher education, government, and large enterprises that need a highly customizable and reliable support system.",
+    "repoUrl": "https://github.com/bestpractical/rt",
+    "websiteUrl": "https://bestpractical.com/rt",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "helpdesk",
+    "replaces": [
+      "zendesk",
+      "freshdesk"
+    ],
+    "license": "GPL-2.0",
+    "language": "Perl",
+    "githubStars": 920,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Perl stack and configuration via flat files is unfamiliar to modern web developers\n- UI is functional but dated; requires theming effort to modernize\n- Setup and initial customization have a significant learning curve",
+    "tags": [
+      "ticketing",
+      "perl",
+      "enterprise",
+      "email-driven",
+      "government"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "django-helpdesk",
+    "name": "django-helpdesk",
+    "tagline": "Pluggable Django ticketing app for adding support desk functionality to existing projects",
+    "descriptionMd": "django-helpdesk is a reusable Django application that adds a full-featured ticketing system to any Django project. It supports email-to-ticket creation via IMAP/POP3, public and staff-facing portals, file attachments, ticket queues, due dates, and a built-in knowledge base. Because it integrates as a Django app rather than a standalone system, it is ideal for organizations that already run Django and want to embed support functionality directly into their platform.",
+    "repoUrl": "https://github.com/django-helpdesk/django-helpdesk",
+    "websiteUrl": "https://django-helpdesk.readthedocs.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "helpdesk",
+    "replaces": [
+      "zendesk",
+      "freshdesk"
+    ],
+    "license": "BSD-3-Clause",
+    "language": "Python",
+    "githubStars": 1700,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Requires integration into an existing Django project; not a turnkey standalone app\n- No built-in live chat or real-time features\n- UI styling is minimal and requires additional CSS work to match modern designs",
+    "tags": [
+      "django",
+      "python",
+      "ticketing",
+      "pluggable",
+      "email"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "apache-echarts",
+    "name": "Apache ECharts",
+    "tagline": "Powerful, declarative charting library for embedding interactive visualizations",
+    "descriptionMd": "Apache ECharts is a free, powerful charting and visualization library backed by the Apache Software Foundation. It supports dozens of chart types including scatter, heatmap, graph, tree, and geo maps, all driven by a declarative JSON config. Teams embed it directly in web apps or wire it to custom data backends without needing a full BI platform.",
+    "repoUrl": "https://github.com/apache/echarts",
+    "websiteUrl": "https://echarts.apache.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "bi-dashboards",
+    "replaces": [
+      "tableau",
+      "power-bi"
+    ],
+    "license": "Apache-2.0",
+    "language": "TypeScript",
+    "githubStars": 60000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Manual",
+      "Docker"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Library only; no built-in query layer or data connector UI\n- Requires custom development to build a full dashboard application\n- No user management or saved-dashboard persistence out of the box",
+    "tags": [
+      "charts",
+      "visualization",
+      "javascript",
+      "embedding",
+      "apache"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "tremor",
+    "name": "Tremor",
+    "tagline": "React component library for building analytics dashboards fast",
+    "descriptionMd": "Tremor is an open-source React library of dashboard-oriented components—charts, KPI cards, tables, and layouts—styled with Tailwind CSS. Developers drop Tremor into any Next.js or React app to build internal analytics UIs without designing from scratch. It pairs naturally with any data API or ORM.",
+    "repoUrl": "https://github.com/tremorlabs/tremor",
+    "websiteUrl": "https://tremor.so",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "bi-dashboards",
+    "replaces": [
+      "tableau",
+      "power-bi"
+    ],
+    "license": "Apache-2.0",
+    "language": "TypeScript",
+    "githubStars": 16000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Manual",
+      "Docker"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Component library only; no data layer, auth, or persistence included\n- Requires a React/Next.js developer to build usable dashboards\n- No drag-and-drop or no-code configuration for non-developers",
+    "tags": [
+      "react",
+      "components",
+      "tailwind",
+      "ui-library",
+      "analytics"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "nocodb-dashboard",
+    "name": "Grafana Loki + Faro",
+    "tagline": "Open-source frontend observability stack with real user monitoring",
+    "descriptionMd": "Grafana Faro is the open-source SDK for real user monitoring (RUM) that feeds session traces, errors, and performance metrics into Grafana dashboards backed by Loki or Tempo. It captures Web Vitals, JS errors, and custom events from browsers, giving teams visibility into user-facing performance without Datadog RUM. The stack is fully self-hostable alongside existing Grafana deployments.",
+    "repoUrl": "https://github.com/grafana/faro-web-sdk",
+    "websiteUrl": "https://grafana.com/oss/faro/",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "bi-dashboards",
+    "replaces": [
+      "tableau",
+      "looker"
+    ],
+    "license": "Apache-2.0",
+    "language": "TypeScript",
+    "githubStars": 2200,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker Compose",
+      "Kubernetes"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Requires a full Grafana stack (Loki/Tempo/Grafana) already running\n- Session replay feature is less mature than commercial RUM tools\n- Dashboard setup requires familiarity with PromQL/LogQL",
+    "tags": [
+      "rum",
+      "frontend-observability",
+      "grafana",
+      "web-vitals",
+      "loki"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "kibana",
+    "name": "Kibana",
+    "tagline": "Visualize and explore Elasticsearch data with powerful BI dashboards",
+    "descriptionMd": "Kibana is the official visualization front-end for Elasticsearch, offering rich time-series dashboards, geo-maps, and log-exploration UIs. It ships as open-source under the Elastic License 2.0 and can be self-hosted alongside an Elasticsearch cluster. Teams use it for observability, security analytics, and operational BI on log and event data.",
+    "repoUrl": "https://github.com/elastic/kibana",
+    "websiteUrl": "https://www.elastic.co/kibana",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "bi-dashboards",
+    "replaces": [
+      "tableau",
+      "looker",
+      "power-bi"
+    ],
+    "license": "Elastic-2.0",
+    "language": "TypeScript",
+    "githubStars": 20000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Kubernetes",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Tightly coupled to Elasticsearch; not useful without an ES cluster\n- License changed from Apache-2.0 to Elastic-2.0 in 2021, limiting some redistributions\n- Resource-heavy; full ELK stack demands significant RAM and storage",
+    "tags": [
+      "elasticsearch",
+      "log-analysis",
+      "time-series",
+      "apm",
+      "search"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "openobserve",
+    "name": "OpenObserve",
+    "tagline": "Cloud-native observability platform for logs, metrics, and traces with built-in dashboards",
+    "descriptionMd": "OpenObserve (O2) is an open-source observability platform written in Rust that ingests logs, metrics, and traces at high throughput with very low storage cost compared to Elasticsearch. It includes a built-in dashboard and query UI with SQL support, making it viable for both operational monitoring and BI-style exploration of event data. Single-binary deployment makes self-hosting straightforward.",
+    "repoUrl": "https://github.com/openobserve/openobserve",
+    "websiteUrl": "https://openobserve.ai",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "bi-dashboards",
+    "replaces": [
+      "tableau",
+      "looker"
+    ],
+    "license": "AGPL-3.0",
+    "language": "Rust",
+    "githubStars": 13000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Kubernetes",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Primarily oriented toward observability data, not transactional BI\n- Connector ecosystem for relational databases is limited compared to Superset\n- Alerting and anomaly detection features are still maturing",
+    "tags": [
+      "observability",
+      "logs",
+      "metrics",
+      "rust",
+      "sql-query"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "grafana-oncall",
+    "name": "Grafana OnCall",
+    "tagline": "Open-source on-call scheduling and incident alerting for engineering teams",
+    "descriptionMd": "Grafana OnCall is an open-source incident management and on-call scheduling tool that integrates with Grafana alerts, PagerDuty-compatible webhooks, and Slack. It provides escalation policies, rotation schedules, and an alert grouping engine to reduce notification noise. Teams self-host it as a Docker Compose stack alongside their Grafana instance.",
+    "repoUrl": "https://github.com/grafana/oncall",
+    "websiteUrl": "https://grafana.com/products/oncall/",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "monitoring",
+    "replaces": [
+      "datadog",
+      "pingdom"
+    ],
+    "license": "AGPL-3.0",
+    "language": "Python",
+    "githubStars": 4000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker Compose",
+      "Kubernetes"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Requires Grafana instance for alerts; not standalone\n- Mobile app push notifications require Grafana Cloud relay\n- Less mature than PagerDuty for complex multi-team routing",
+    "tags": [
+      "on-call",
+      "alerting",
+      "incident-management",
+      "grafana",
+      "pagerduty-alternative"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "alertmanager",
+    "name": "Alertmanager",
+    "tagline": "Handle Prometheus alerts with deduplication, grouping, silencing, and routing",
+    "descriptionMd": "Alertmanager is the official alert-routing component of the Prometheus ecosystem. It receives alerts from Prometheus servers, deduplicates and groups them, applies silences, and routes notifications to receivers like email, Slack, PagerDuty, and webhooks. It is a single Go binary and an essential complement to any Prometheus deployment.",
+    "repoUrl": "https://github.com/prometheus/alertmanager",
+    "websiteUrl": "https://prometheus.io/docs/alerting/latest/alertmanager/",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "monitoring",
+    "replaces": [
+      "datadog",
+      "pingdom"
+    ],
+    "license": "Apache-2.0",
+    "language": "Go",
+    "githubStars": 6600,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Kubernetes",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No built-in dashboard; must pair with Grafana or a similar UI\n- Configuration is file-based YAML with no graphical editor\n- High-availability clustering requires careful setup",
+    "tags": [
+      "alerting",
+      "prometheus",
+      "deduplication",
+      "routing",
+      "go"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "opentelemetry-collector",
+    "name": "OpenTelemetry Collector",
+    "tagline": "Vendor-agnostic agent for collecting, processing, and exporting telemetry data",
+    "descriptionMd": "The OpenTelemetry Collector is an open-source, vendor-neutral pipeline for receiving traces, metrics, and logs from any OTLP-compatible source and exporting them to any backend (Jaeger, Prometheus, Loki, Datadog, etc.). It acts as the universal telemetry glue layer in modern observability stacks and is deployed as a sidecar or gateway.",
+    "repoUrl": "https://github.com/open-telemetry/opentelemetry-collector",
+    "websiteUrl": "https://opentelemetry.io/docs/collector/",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "monitoring",
+    "replaces": [
+      "datadog",
+      "statuspage"
+    ],
+    "license": "Apache-2.0",
+    "language": "Go",
+    "githubStars": 5000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Kubernetes",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Requires additional backends (Jaeger, Prometheus) for storage and querying\n- Configuration via YAML pipelines has a steep learning curve\n- No visualization layer; solely a data collection and routing component",
+    "tags": [
+      "otel",
+      "tracing",
+      "metrics",
+      "logs",
+      "vendor-neutral"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "jaeger",
+    "name": "Jaeger",
+    "tagline": "Distributed tracing system for monitoring microservice latency and dependencies",
+    "descriptionMd": "Jaeger is a CNCF open-source distributed tracing platform originally built by Uber. It collects OpenTelemetry/Zipkin traces, stores them in Cassandra, Elasticsearch, or Badger, and provides a UI for visualizing request flows, latency hotspots, and service dependency graphs. It is the go-to self-hosted alternative to Datadog APM's tracing UI.",
+    "repoUrl": "https://github.com/jaegertracing/jaeger",
+    "websiteUrl": "https://www.jaegertracing.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "monitoring",
+    "replaces": [
+      "datadog",
+      "pingdom"
+    ],
+    "license": "Apache-2.0",
+    "language": "Go",
+    "githubStars": 20000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Kubernetes"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Tracing only; no metrics or log aggregation built in\n- Production deployments require Cassandra or Elasticsearch for storage at scale\n- UI is functional but less polished than commercial APM products",
+    "tags": [
+      "tracing",
+      "apm",
+      "microservices",
+      "cncf",
+      "distributed-systems"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "netdata-parent",
+    "name": "Checkmk",
+    "tagline": "Enterprise-grade infrastructure monitoring for servers, networks, and cloud",
+    "descriptionMd": "Checkmk is a mature open-source IT monitoring system with auto-discovery, agent-based and agentless checks, and a built-in web UI. The Raw edition (fully open-source) covers server health, network devices, cloud services, and applications out of the box with over 2,000 check plugins. It is a strong self-hosted alternative to Zabbix with a more modern interface.",
+    "repoUrl": "https://github.com/Checkmk/checkmk",
+    "websiteUrl": "https://checkmk.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "monitoring",
+    "replaces": [
+      "datadog",
+      "uptimerobot",
+      "pingdom"
+    ],
+    "license": "GPL-2.0",
+    "language": "Python",
+    "githubStars": 1500,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Raw (open-source) edition lacks distributed monitoring available in commercial tiers\n- Setup requires agent installation on monitored hosts\n- Steeper initial configuration compared to lighter tools like Gatus",
+    "tags": [
+      "infrastructure",
+      "network-monitoring",
+      "auto-discovery",
+      "plugins",
+      "it-ops"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "loki",
+    "name": "Grafana Loki",
+    "tagline": "Horizontally scalable log aggregation system designed to work with Grafana",
+    "descriptionMd": "Grafana Loki is an open-source log aggregation system inspired by Prometheus. Unlike Elasticsearch, it indexes only metadata labels rather than full log content, making it dramatically cheaper to operate at scale. Promtail or the OpenTelemetry Collector ships logs to Loki, and Grafana queries them with LogQL for correlated log-and-metrics dashboards.",
+    "repoUrl": "https://github.com/grafana/loki",
+    "websiteUrl": "https://grafana.com/oss/loki/",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "monitoring",
+    "replaces": [
+      "datadog",
+      "statuspage"
+    ],
+    "license": "AGPL-3.0",
+    "language": "Go",
+    "githubStars": 24000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Kubernetes"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Full-text search is not supported; only label-based log filtering\n- Requires Grafana for a usable query UI (no standalone dashboard)\n- Scalable distributed mode requires object storage (S3/GCS) and careful tuning",
+    "tags": [
+      "logs",
+      "log-aggregation",
+      "grafana",
+      "promtail",
+      "logql"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "statsd",
+    "name": "Beszel",
+    "tagline": "Lightweight server monitoring hub with SSH-based agents and beautiful UI",
+    "descriptionMd": "Beszel is a minimal self-hosted server monitoring solution that uses SSH tunnels instead of open ports, making it firewall-friendly and simple to deploy on homelabs and VPS fleets. The hub collects CPU, memory, disk, and network metrics from lightweight Go agents and displays them in a clean real-time web interface with alerting support.",
+    "repoUrl": "https://github.com/henrygd/beszel",
+    "websiteUrl": "https://beszel.dev",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "monitoring",
+    "replaces": [
+      "uptimerobot",
+      "pingdom",
+      "datadog"
+    ],
+    "license": "MIT",
+    "language": "Go",
+    "githubStars": 9000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 1,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No network device or SNMP monitoring\n- Alerting options are basic compared to Zabbix or Checkmk\n- No long-term data retention tuning or downsampling for historical data",
+    "tags": [
+      "homelab",
+      "server-monitoring",
+      "ssh",
+      "lightweight",
+      "go"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "pagerduty-alternative-keep",
+    "name": "Keep",
+    "tagline": "Open-source alert management platform to correlate and deduplicate noisy alerts",
+    "descriptionMd": "Keep is an open-source AIOps-style alert management platform that ingests alerts from Grafana, Prometheus, PagerDuty, Datadog, and dozens of other sources, then deduplicates and correlates them using rule-based or AI-assisted workflows. Teams use it to reduce alert fatigue across heterogeneous monitoring stacks without switching to a fully commercial observability platform.",
+    "repoUrl": "https://github.com/keephq/keep",
+    "websiteUrl": "https://www.keephq.dev",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "monitoring",
+    "replaces": [
+      "datadog",
+      "statuspage",
+      "pingdom"
+    ],
+    "license": "MIT",
+    "language": "Python",
+    "githubStars": 6500,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Kubernetes"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- AI correlation features require OpenAI API key (not fully self-contained)\n- Relatively young project; some integrations are still alpha quality\n- No built-in on-call scheduling; must integrate with external tools",
+    "tags": [
+      "alert-management",
+      "aiops",
+      "deduplication",
+      "correlation",
+      "multi-source"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "cal-dav-server",
+    "name": "Nextcloud Calendar",
+    "tagline": "Full-featured CalDAV calendar server built into Nextcloud with sharing and scheduling",
+    "descriptionMd": "Nextcloud Calendar is a CalDAV-based scheduling application that runs as a Nextcloud app, providing event creation, invitations, resource booking, and free/busy lookups. It supports iCal feeds, attendee management, and integrates tightly with Nextcloud Contacts for people-aware scheduling. A solid self-hosted replacement for Google Calendar with familiar UX.",
+    "repoUrl": "https://github.com/nextcloud/calendar",
+    "websiteUrl": "https://nextcloud.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "scheduling",
+    "replaces": [
+      "calendly",
+      "acuity"
+    ],
+    "license": "AGPL-3.0",
+    "language": "PHP",
+    "githubStars": 3000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- No native public booking-page flow (requires a third-party plugin)\n- Video conferencing integration is limited compared to Calendly\n- Mobile app experience is less polished than hosted alternatives",
+    "tags": [
+      "caldav",
+      "calendar",
+      "nextcloud",
+      "scheduling",
+      "ical"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "zcal",
+    "name": "Zcal",
+    "tagline": "Beautiful open-source scheduling page and availability management tool",
+    "descriptionMd": "Zcal is an open-source scheduling link tool that lets users share a public availability page and accept bookings without back-and-forth emails. It connects to Google Calendar or CalDAV backends to respect existing events, and supports custom event types and durations. The self-hosted version gives full control over data and branding.",
+    "repoUrl": "https://github.com/zcal-me/zcal",
+    "websiteUrl": "https://zcal.co",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "scheduling",
+    "replaces": [
+      "calendly",
+      "acuity"
+    ],
+    "license": "MIT",
+    "language": "TypeScript",
+    "githubStars": 1200,
+    "lastCommitAt": "2026-03-10",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Fewer calendar integrations than Cal.com\n- No team scheduling or round-robin features\n- Limited workflow automation (no reminders or follow-ups)",
+    "tags": [
+      "scheduling",
+      "booking",
+      "calendar",
+      "availability"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "pretix",
+    "name": "pretix",
+    "tagline": "Open-source ticket sales and event registration platform for any scale",
+    "descriptionMd": "pretix is a comprehensive event ticketing and registration system written in Python/Django, used by conferences, concerts, and workshops worldwide. It handles ticket sales, seating plans, check-in apps, invoicing, and attendee management with a plugin architecture for extensibility. The hosted service and self-hosted paths are both well-documented and production-grade.",
+    "repoUrl": "https://github.com/pretix/pretix",
+    "websiteUrl": "https://pretix.eu",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "scheduling",
+    "replaces": [
+      "calendly",
+      "acuity"
+    ],
+    "license": "Apache-2.0",
+    "language": "Python",
+    "githubStars": 5200,
+    "lastCommitAt": "2026-05-20",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Steeper setup curve than simple booking tools\n- No built-in one-on-one appointment scheduling workflow\n- Mobile app for organizers is Android/iOS only, not PWA",
+    "tags": [
+      "ticketing",
+      "events",
+      "registration",
+      "scheduling",
+      "conference"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "mosparo",
+    "name": "OpenSlots",
+    "tagline": "Minimalist appointment slot booking system with email confirmation",
+    "descriptionMd": "OpenSlots is a lightweight self-hosted appointment slot manager that allows service providers to define available time blocks which clients can claim directly from a public URL. It sends email confirmations and supports basic calendar export. Designed for small clinics, tutors, and individual professionals who need a no-frills booking page without SaaS subscription costs.",
+    "repoUrl": "https://github.com/nicedoc/openslots",
+    "websiteUrl": null,
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "scheduling",
+    "replaces": [
+      "calendly",
+      "acuity"
+    ],
+    "license": "MIT",
+    "language": "PHP",
+    "githubStars": 400,
+    "lastCommitAt": "2025-11-01",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Manual",
+      "Docker"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No recurring appointment or subscription booking support\n- Email notifications only — no SMS or push\n- No calendar sync (Google/Apple/Outlook)",
+    "tags": [
+      "appointments",
+      "booking",
+      "slots",
+      "scheduling"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "agenda",
+    "name": "Agenda",
+    "tagline": "Node.js job scheduling library with persistent MongoDB-backed queue",
+    "descriptionMd": "Agenda is a lightweight job-scheduling library for Node.js that stores scheduled jobs in MongoDB, making it resilient to restarts. It supports cron expressions, human-readable intervals, and priority queues, and is widely used to power background task scheduling in self-hosted Node applications. Although it is a library rather than a standalone service, it is deployable as part of a scheduling microservice.",
+    "repoUrl": "https://github.com/agenda/agenda",
+    "websiteUrl": null,
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "scheduling",
+    "replaces": [
+      "calendly"
+    ],
+    "license": "MIT",
+    "language": "TypeScript",
+    "githubStars": 9200,
+    "lastCommitAt": "2025-12-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Manual",
+      "Docker"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Library only — no UI for managing or viewing scheduled jobs without additional tooling\n- Requires MongoDB; not suitable for simple SQLite/Postgres-only stacks\n- No native support for distributed locking at high scale",
+    "tags": [
+      "job-scheduler",
+      "cron",
+      "nodejs",
+      "mongodb",
+      "background-jobs"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "indico",
+    "name": "Indico",
+    "tagline": "CERN's open-source event and conference management platform",
+    "descriptionMd": "Indico is a full-featured conference and meeting management system developed at CERN and widely adopted by scientific institutions. It handles abstract submission, paper review, scheduling of multi-track programs, room booking, registration, and participant management. Trusted by large-scale international events, it is mature, actively maintained, and ships as a Docker image.",
+    "repoUrl": "https://github.com/indico/indico",
+    "websiteUrl": "https://getindico.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "scheduling",
+    "replaces": [
+      "calendly",
+      "acuity"
+    ],
+    "license": "MIT",
+    "language": "Python",
+    "githubStars": 1800,
+    "lastCommitAt": "2026-04-28",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Overpowered for simple one-on-one appointment booking\n- Setup involves multiple services (Redis, PostgreSQL, Celery) and is complex\n- UI design is functional but dated compared to modern booking tools",
+    "tags": [
+      "conference",
+      "events",
+      "scheduling",
+      "room-booking",
+      "academic"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "schej",
+    "name": "Schej",
+    "tagline": "When2meet-style group availability finder you can self-host",
+    "descriptionMd": "Schej is an open-source group scheduling tool inspired by When2Meet that lets participants mark their availability on a grid and highlights the best overlap times. It stores data in MongoDB and is deployable as a single Docker Compose stack. Particularly useful for teams in the same organization who want to keep scheduling data off third-party SaaS.",
+    "repoUrl": "https://github.com/schej-it/schej.it",
+    "websiteUrl": "https://schej.it",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "scheduling",
+    "replaces": [
+      "calendly",
+      "acuity"
+    ],
+    "license": "MIT",
+    "language": "Vue",
+    "githubStars": 700,
+    "lastCommitAt": "2025-10-10",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- No calendar integration — availability is marked manually\n- No booking confirmation or email reminders\n- Limited to group poll-style scheduling, not one-on-one booking pages",
+    "tags": [
+      "group-scheduling",
+      "availability",
+      "polls",
+      "scheduling"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "flynn",
+    "name": "Flynn",
+    "tagline": "Open-source PaaS that deploys and scales 12-factor apps on your own servers",
+    "descriptionMd": "Flynn is a self-hosted PaaS inspired by Heroku that lets you git-push deploy apps to your own infrastructure. It handles containerisation, routing, process scaling, database provisioning, and SSL automatically. While Flynn's development has slowed, it remains a solid reference implementation of a Heroku-compatible open-source PaaS.",
+    "repoUrl": "https://github.com/flynn/flynn",
+    "websiteUrl": "https://flynn.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "paas-deploy",
+    "replaces": [
+      "heroku",
+      "render"
+    ],
+    "license": "BSD-3-Clause",
+    "language": "Go",
+    "githubStars": 8100,
+    "lastCommitAt": "2023-06-01",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Project is largely unmaintained as of 2023\n- No Kubernetes backend; scaling is limited to a bespoke cluster model\n- Smaller ecosystem and community compared to Dokku or CapRover",
+    "tags": [
+      "paas",
+      "heroku-alternative",
+      "git-deploy",
+      "12-factor"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "tsuru",
+    "name": "Tsuru",
+    "tagline": "Extensible open-source PaaS built by Globo for multi-tenant app deployment",
+    "descriptionMd": "Tsuru is an open-source PaaS developed and used in production by Globo (Brazil's largest broadcaster) to run thousands of applications. It supports multiple deployment backends including Docker Swarm and Kubernetes, offers a CLI-driven workflow similar to Heroku, and provides multi-tenant isolation, service provisioning, and routing out of the box. It is production-battle-tested at scale.",
+    "repoUrl": "https://github.com/tsuru/tsuru",
+    "websiteUrl": "https://tsuru.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "paas-deploy",
+    "replaces": [
+      "heroku",
+      "render",
+      "netlify"
+    ],
+    "license": "BSD-3-Clause",
+    "language": "Go",
+    "githubStars": 4500,
+    "lastCommitAt": "2026-02-14",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Docker",
+      "Kubernetes",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Documentation is sparse for newcomers outside the Globo ecosystem\n- UI dashboard is minimal; most operations require the CLI\n- Community support is smaller than Dokku or CapRover",
+    "tags": [
+      "paas",
+      "kubernetes",
+      "multi-tenant",
+      "git-deploy",
+      "go"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "piku",
+    "name": "piku",
+    "tagline": "Nano-PaaS for tiny servers — git push to deploy on a single Pi or VPS",
+    "descriptionMd": "piku is a minimalist Heroku-like PaaS designed to run on single-board computers like Raspberry Pi or small VPS instances. A single Python script manages git-based deployments, process supervision via uWSGI, and nginx routing with zero containers needed. It is ideal for hobbyists and small teams who want simple git-push deployments without container overhead.",
+    "repoUrl": "https://github.com/piku/piku",
+    "websiteUrl": null,
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "paas-deploy",
+    "replaces": [
+      "heroku",
+      "render"
+    ],
+    "license": "MIT",
+    "language": "Python",
+    "githubStars": 6300,
+    "lastCommitAt": "2026-04-10",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No Docker support — apps must run as native processes\n- No built-in secrets management or environment vault\n- No web UI; all management is via SSH and CLI",
+    "tags": [
+      "paas",
+      "raspberry-pi",
+      "git-deploy",
+      "nano-paas",
+      "uwsgi"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "porter",
+    "name": "Porter",
+    "tagline": "Kubernetes-native PaaS with a Heroku-like developer experience",
+    "descriptionMd": "Porter is an open-source application platform that provides a Heroku-style developer experience on top of existing Kubernetes clusters. It offers a dashboard for deploying web services, workers, and cron jobs; manages Helm chart releases under the hood; and integrates with GitHub Actions for CI/CD. Teams can run Porter on their own AWS, GCP, or on-premise Kubernetes without vendor lock-in.",
+    "repoUrl": "https://github.com/porter-dev/porter",
+    "websiteUrl": "https://porter.run",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "paas-deploy",
+    "replaces": [
+      "heroku",
+      "render",
+      "vercel"
+    ],
+    "license": "Apache-2.0",
+    "language": "Go",
+    "githubStars": 4100,
+    "lastCommitAt": "2025-09-20",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Kubernetes",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Requires an existing Kubernetes cluster — not suitable for bare-metal without k8s experience\n- Self-hosted version lacks some features available on the managed cloud\n- Active development has shifted focus toward the managed offering",
+    "tags": [
+      "kubernetes",
+      "paas",
+      "helm",
+      "github-actions",
+      "heroku-alternative"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "easypanel",
+    "name": "Easypanel",
+    "tagline": "Modern server control panel to deploy apps, databases, and SSL in one click",
+    "descriptionMd": "Easypanel is a lightweight server control panel built on Docker that lets you deploy web applications, databases (PostgreSQL, MySQL, Redis, MongoDB), and static sites with a clean UI. It handles SSL certificates via Let's Encrypt, environment variables, domain routing, and rolling deployments without any Kubernetes complexity. A solid middle ground between raw Docker management and full PaaS.",
+    "repoUrl": "https://github.com/easypanel-io/easypanel",
+    "websiteUrl": "https://easypanel.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "paas-deploy",
+    "replaces": [
+      "heroku",
+      "render",
+      "netlify"
+    ],
+    "license": "Apache-2.0",
+    "language": "TypeScript",
+    "githubStars": 4800,
+    "lastCommitAt": "2026-05-25",
+    "selfHostDifficulty": 1,
+    "deployOptions": [
+      "One-Click",
+      "Docker"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No multi-server / cluster support in the community edition\n- Build caching and CI integration require manual setup\n- Less mature than Coolify with a smaller plugin ecosystem",
+    "tags": [
+      "paas",
+      "docker",
+      "control-panel",
+      "ssl",
+      "one-click"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "caprover-community",
+    "name": "CapRover Apps",
+    "tagline": "100+ one-click deployable apps for CapRover via the community app store",
+    "descriptionMd": "The CapRover community app store is a curated repository of ready-to-deploy application templates (caprover-one-click-apps) that extends CapRover's built-in catalog. Users can deploy databases, tools, and web apps with a single form submission. It is a critical complement to the CapRover platform and is referenced by the main CapRover documentation.",
+    "repoUrl": "https://github.com/caprover/one-click-apps",
+    "websiteUrl": "https://caprover.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "paas-deploy",
+    "replaces": [
+      "heroku",
+      "render"
+    ],
+    "license": "MIT",
+    "language": "JSON",
+    "githubStars": 1600,
+    "lastCommitAt": "2026-05-01",
+    "selfHostDifficulty": 1,
+    "deployOptions": [
+      "One-Click",
+      "Docker"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Templates are not apps by themselves — CapRover must already be running\n- App templates can become stale if community contributors do not update them\n- No built-in health checks or rollback within the template layer",
+    "tags": [
+      "caprover",
+      "one-click",
+      "docker",
+      "app-store",
+      "templates"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "rancher",
+    "name": "Rancher",
+    "tagline": "Enterprise-grade open-source Kubernetes management platform by SUSE",
+    "descriptionMd": "Rancher by SUSE is a complete Kubernetes management platform that provisions, upgrades, and manages multi-cluster Kubernetes environments across on-premise, cloud, and edge. It offers a rich UI for workload management, RBAC, monitoring integration (Prometheus/Grafana), and a built-in app catalog via Helm. Rancher is production-grade, CNCF-aligned, and freely available under Apache 2.0.",
+    "repoUrl": "https://github.com/rancher/rancher",
+    "websiteUrl": "https://rancher.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "paas-deploy",
+    "replaces": [
+      "heroku",
+      "render",
+      "vercel"
+    ],
+    "license": "Apache-2.0",
+    "language": "Go",
+    "githubStars": 23000,
+    "lastCommitAt": "2026-05-30",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Docker",
+      "Kubernetes",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Significant operational overhead; requires Kubernetes expertise\n- Resource-heavy: not suitable for small VPS or single-node setups\n- Enterprise features (fleet management at scale) need Rancher Prime subscription",
+    "tags": [
+      "kubernetes",
+      "multi-cluster",
+      "paas",
+      "enterprise",
+      "helm"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "koyeb-engine",
+    "name": "Space Cloud",
+    "tagline": "Open-source serverless backend for deploying microservices with GraphQL and REST",
+    "descriptionMd": "Space Cloud is an open-source serverless platform that gives teams a GraphQL and REST API layer over databases while also handling service deployment, event triggers, and file storage. It lets you deploy backends to your own Kubernetes cluster with built-in auth, caching, and routing, positioning itself as a Hasura-plus-deployment-platform hybrid.",
+    "repoUrl": "https://github.com/spaceuptech/space-cloud",
+    "websiteUrl": "https://spaceuptech.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "paas-deploy",
+    "replaces": [
+      "heroku",
+      "netlify",
+      "vercel"
+    ],
+    "license": "Apache-2.0",
+    "language": "Go",
+    "githubStars": 3900,
+    "lastCommitAt": "2024-08-20",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker Compose",
+      "Kubernetes",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Development activity has slowed significantly since 2023\n- GraphQL engine feature set lags behind dedicated tools like Hasura\n- Documentation and community support are limited",
+    "tags": [
+      "serverless",
+      "graphql",
+      "microservices",
+      "kubernetes",
+      "backend"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "emby",
+    "name": "Emby",
+    "tagline": "Personal media server for streaming video, music, and live TV",
+    "descriptionMd": "Emby organizes and streams your personal media collection to any device, with support for live TV and DVR, parental controls, and multi-user management. It features a polished web UI and native apps for most platforms. The server core is open-source (GPL-2.0) while some premium features require an Emby Premiere subscription.",
+    "repoUrl": "https://github.com/MediaBrowser/Emby",
+    "websiteUrl": "https://emby.media",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "media-server",
+    "replaces": [
+      "plex",
+      "netflix"
+    ],
+    "license": "GPL-2.0",
+    "language": "C#",
+    "githubStars": 3800,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Some advanced features (hardware transcoding, mobile sync) locked behind paid Emby Premiere\n- Live TV tuner support requires additional setup and compatible hardware\n- Mobile apps are not fully open-source",
+    "tags": [
+      "media-streaming",
+      "video",
+      "music",
+      "live-tv",
+      "dlna"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "funkwhale",
+    "name": "Funkwhale",
+    "tagline": "Federated music streaming and sharing platform built on ActivityPub",
+    "descriptionMd": "Funkwhale is a self-hosted music server that federates with the ActivityPub network, allowing users to follow and share music across instances. It supports podcast hosting, playlists, and a rich REST API. Users can stream audio from their own libraries and discover content on other Funkwhale pods.",
+    "repoUrl": "https://dev.funkwhale.audio/funkwhale/funkwhale",
+    "websiteUrl": "https://funkwhale.audio",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "media-server",
+    "replaces": [
+      "spotify"
+    ],
+    "license": "AGPL-3.0",
+    "language": "Python",
+    "githubStars": 1300,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No native mobile apps (relies on third-party Subsonic-compatible clients)\n- Federation can be complex to configure correctly\n- Limited podcast discovery compared to dedicated platforms",
+    "tags": [
+      "music",
+      "federation",
+      "activitypub",
+      "podcast",
+      "streaming"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "ampache",
+    "name": "Ampache",
+    "tagline": "Web-based audio and video streaming server with multi-catalog support",
+    "descriptionMd": "Ampache is a mature self-hosted streaming server that supports audio, video, and podcast catalogs served over a web interface or the Subsonic/Ampache API. It handles large libraries well with robust transcoding, playlist management, and scrobbling to Last.fm. The project has been active since 2001 and supports a wide ecosystem of compatible clients.",
+    "repoUrl": "https://github.com/ampache/ampache",
+    "websiteUrl": "https://ampache.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "media-server",
+    "replaces": [
+      "spotify",
+      "plex"
+    ],
+    "license": "AGPL-3.0",
+    "language": "PHP",
+    "githubStars": 3400,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Web UI looks dated compared to modern alternatives\n- PHP stack can be harder to maintain on newer server environments\n- No built-in video metadata scraping",
+    "tags": [
+      "music",
+      "video",
+      "subsonic",
+      "podcast",
+      "transcoding"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "kavita",
+    "name": "Kavita",
+    "tagline": "Self-hosted digital library server for manga, comics, and ebooks",
+    "descriptionMd": "Kavita is a fast, feature-rich reading server that organizes and serves manga, comics (CBR/CBZ), and ebooks (EPUB, PDF) with a clean web reader and OPDS support. It includes reading progress sync, user management, and email-based reading notifications. The project is actively developed with frequent releases.",
+    "repoUrl": "https://github.com/Kareadita/Kavita",
+    "websiteUrl": "https://www.kavitareader.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "media-server",
+    "replaces": [
+      "plex"
+    ],
+    "license": "GPL-3.0",
+    "language": "C#",
+    "githubStars": 6800,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Focused only on reading content; no video or audio support\n- Mobile apps are third-party only via OPDS or Tachiyomi extension\n- Metadata scraping relies on community-provided scrapers",
+    "tags": [
+      "manga",
+      "comics",
+      "ebooks",
+      "opds",
+      "reading"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "lidarr",
+    "name": "Lidarr",
+    "tagline": "Music collection manager that automates downloading and organizing albums",
+    "descriptionMd": "Lidarr is a music collection manager in the *arr suite that monitors for new album releases and automates downloading via Usenet and BitTorrent. It integrates with MusicBrainz for accurate metadata and works alongside Navidrome or Jellyfin for a complete music pipeline. Quality profiles and release upgrade logic keep your library current.",
+    "repoUrl": "https://github.com/Lidarr/Lidarr",
+    "websiteUrl": "https://lidarr.audio",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "media-server",
+    "replaces": [
+      "spotify"
+    ],
+    "license": "GPL-3.0",
+    "language": "C#",
+    "githubStars": 3500,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Requires external download client (SABnzbd, qBittorrent, etc.) to function\n- Indexer configuration can be complex for newcomers\n- Not a streaming server itself; must pair with a music server",
+    "tags": [
+      "music",
+      "automation",
+      "arr-stack",
+      "musicbrainz",
+      "usenet"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "readarr",
+    "name": "Readarr",
+    "tagline": "Ebook and audiobook collection manager with automated downloading",
+    "descriptionMd": "Readarr is an *arr-ecosystem manager for ebooks and audiobooks that monitors author releases and automates acquisition from Usenet and torrent indexers. It uses Goodreads and BookInfo for metadata, supports quality profiles, and integrates with Calibre for library management. Readarr pairs naturally with Kavita or Audiobookshelf for serving content.",
+    "repoUrl": "https://github.com/Readarr/Readarr",
+    "websiteUrl": "https://readarr.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "media-server",
+    "replaces": [
+      "plex"
+    ],
+    "license": "GPL-3.0",
+    "language": "C#",
+    "githubStars": 3100,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Still considered beta; metadata matching can be unreliable for some editions\n- Requires Calibre or Calibre-web for full library management features\n- No built-in reader; content serving requires a separate ebook server",
+    "tags": [
+      "ebooks",
+      "audiobooks",
+      "automation",
+      "arr-stack",
+      "calibre"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "gonic",
+    "name": "gonic",
+    "tagline": "Lightweight Subsonic-compatible music streaming server written in Go",
+    "descriptionMd": "Gonic is a minimal, high-performance Subsonic API server that lets you stream your music library using any Subsonic-compatible client (DSub, Symfonium, Ultrasonic, etc.). It supports scrobbling, Internet Radio, podcast management, and jukebox mode. Being written in Go it compiles to a single binary with very low resource usage.",
+    "repoUrl": "https://github.com/sentriz/gonic",
+    "websiteUrl": null,
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "media-server",
+    "replaces": [
+      "spotify"
+    ],
+    "license": "GPL-3.0",
+    "language": "Go",
+    "githubStars": 1600,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No web player; requires a Subsonic client app\n- Video streaming not supported\n- Transcoding setup requires external ffmpeg binary",
+    "tags": [
+      "music",
+      "subsonic",
+      "go",
+      "lightweight",
+      "streaming"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "calibre-web",
+    "name": "Calibre-Web",
+    "tagline": "Web app for browsing and reading your Calibre ebook library",
+    "descriptionMd": "Calibre-Web provides a clean browser-based interface to your existing Calibre library database, allowing users to browse, search, download, and read ebooks online without running the Calibre desktop app. It supports OPDS for e-reader apps, Kobo sync, user accounts, and optional Goodreads integration. It is one of the most popular self-hosted ebook solutions.",
+    "repoUrl": "https://github.com/janeczku/calibre-web",
+    "websiteUrl": null,
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "media-server",
+    "replaces": [
+      "plex"
+    ],
+    "license": "GPL-3.0",
+    "language": "Python",
+    "githubStars": 13000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Requires an existing Calibre library (calibre-web does not manage metadata itself)\n- No audiobook support\n- Read-in-browser experience is basic compared to dedicated e-readers",
+    "tags": [
+      "ebooks",
+      "calibre",
+      "opds",
+      "kobo",
+      "library"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "photostructure",
+    "name": "PhotoStructure",
+    "tagline": "Automatically organize and browse your entire photo and video library",
+    "descriptionMd": "PhotoStructure scans your existing photo directories and external drives, de-duplicates images, and presents them in a timeline-based web gallery with automatic organization by date and location. It supports RAW files, videos, and metadata-rich EXIF browsing without moving or re-encoding your originals. The core is free for personal use with a paid license for teams.",
+    "repoUrl": "https://github.com/photostructure/photostructure-for-servers",
+    "websiteUrl": "https://photostructure.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "photos",
+    "replaces": [
+      "google-photos",
+      "icloud-photos"
+    ],
+    "license": "MIT",
+    "language": "TypeScript",
+    "githubStars": 800,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Advanced features (multi-user, team libraries) require a paid license\n- No mobile backup client; relies on your existing photo sync solution\n- Initial library scan on large collections can take many hours",
+    "tags": [
+      "photos",
+      "video",
+      "deduplication",
+      "raw",
+      "timeline"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "coppermine",
+    "name": "Coppermine Photo Gallery",
+    "tagline": "Feature-rich PHP photo gallery with albums, user management, and comments",
+    "descriptionMd": "Coppermine is a long-running self-hosted photo gallery application built in PHP that supports albums, nested categories, user registration, comments, and e-cards. It provides a traditional web gallery experience with thumbnail generation, watermarking, and extensive admin controls. Suitable for photographers wanting a public-facing portfolio site.",
+    "repoUrl": "https://github.com/coppermine-gallery/cpg1.6.x",
+    "websiteUrl": "https://coppermine-gallery.net",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "photos",
+    "replaces": [
+      "google-photos"
+    ],
+    "license": "GPL-3.0",
+    "language": "PHP",
+    "githubStars": 130,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- UI is dated and not mobile-first\n- No automatic organization or AI tagging\n- No Docker image; requires manual LAMP stack setup",
+    "tags": [
+      "photos",
+      "gallery",
+      "php",
+      "albums",
+      "portfolio"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "mediagoblin",
+    "name": "MediaGoblin",
+    "tagline": "Federated media publishing platform for photos, video, and audio",
+    "descriptionMd": "MediaGoblin is a decentralized media hosting platform that lets individuals and communities run their own media publishing sites for images, video, audio, and documents. It federates with GNU Social and the broader Fediverse. The project prioritizes user freedom and data ownership as an ethical alternative to commercial media silos.",
+    "repoUrl": "https://github.com/mediagoblin/mediagoblin",
+    "websiteUrl": "https://mediagoblin.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "photos",
+    "replaces": [
+      "google-photos",
+      "icloud-photos"
+    ],
+    "license": "AGPL-3.0",
+    "language": "Python",
+    "githubStars": 820,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 4,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Development is slow and the project is not actively maintained\n- No Docker image available; setup is complex\n- No face recognition or AI-based organization features",
+    "tags": [
+      "photos",
+      "federation",
+      "video",
+      "fediverse",
+      "media"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "chevereto",
+    "name": "Chevereto Free",
+    "tagline": "Self-hosted image hosting and sharing platform with public/private albums",
+    "descriptionMd": "Chevereto Free is the open-source edition of the Chevereto image hosting platform, offering unlimited image uploads, public and private albums, user registration, and an embed API for sharing images across the web. It supports multiple storage backends including local, Amazon S3, and compatible services. The free version is a solid choice for running a community image board.",
+    "repoUrl": "https://github.com/chevereto/chevereto-free",
+    "websiteUrl": "https://chevereto.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "photos",
+    "replaces": [
+      "google-photos"
+    ],
+    "license": "MIT",
+    "language": "PHP",
+    "githubStars": 4200,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Free version is behind several major versions of the commercial product\n- No timeline view or automatic organization\n- No mobile backup apps",
+    "tags": [
+      "photos",
+      "image-hosting",
+      "albums",
+      "php",
+      "s3"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "sigal",
+    "name": "sigal",
+    "tagline": "Static photo gallery generator from directories of images",
+    "descriptionMd": "Sigal is a Python-based static site generator specifically for photo and video galleries. You point it at a directory of images, it generates a complete static HTML gallery with thumbnails, Colorbox lightbox, and optional video support via ffmpeg. The result is a zero-maintenance, CDN-friendly gallery with no server-side runtime required.",
+    "repoUrl": "https://github.com/saimn/sigal",
+    "websiteUrl": "https://sigal.saimon.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "photos",
+    "replaces": [
+      "google-photos"
+    ],
+    "license": "MIT",
+    "language": "Python",
+    "githubStars": 860,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Static output only; no user uploads, comments, or sharing features\n- No face recognition or metadata-based organization\n- Requires rebuilding and redeploying when adding new photos",
+    "tags": [
+      "photos",
+      "static-site",
+      "gallery",
+      "python",
+      "lightweight"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "zenphoto",
+    "name": "Zenphoto",
+    "tagline": "CMS built specifically for self-hosted photo and video portfolios",
+    "descriptionMd": "Zenphoto is a dedicated gallery CMS built for photographers who want full control over their online portfolio. It organizes images into albums, supports video and audio, provides a theming engine, and includes a plugin architecture for extending functionality. Zenphoto is a popular choice for professional photographers running their own websites.",
+    "repoUrl": "https://github.com/zenphoto/zenphoto",
+    "websiteUrl": "https://www.zenphoto.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "photos",
+    "replaces": [
+      "google-photos",
+      "icloud-photos"
+    ],
+    "license": "GPL-2.0",
+    "language": "PHP",
+    "githubStars": 370,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No mobile backup client or automatic import\n- UI themes feel dated without customization\n- No AI-based tagging or face recognition",
+    "tags": [
+      "photos",
+      "portfolio",
+      "gallery",
+      "php",
+      "cms"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "photoview-alt",
+    "name": "HomeGallery",
+    "tagline": "Self-hosted photo gallery with automatic face and object recognition",
+    "descriptionMd": "HomeGallery is a lightweight self-hosted photo and video gallery that runs entirely in the browser after a one-time index build. It uses local AI models for face clustering and object tagging, supports geo-location browsing, and keeps all processing on your own hardware. The single-binary design makes it easy to run on a NAS or Raspberry Pi.",
+    "repoUrl": "https://github.com/xemle/home-gallery",
+    "websiteUrl": "https://home-gallery.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "photos",
+    "replaces": [
+      "google-photos",
+      "icloud-photos"
+    ],
+    "license": "MIT",
+    "language": "JavaScript",
+    "githubStars": 1000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Initial indexing and AI processing of large libraries is CPU-intensive\n- No multi-user support with individual photo collections\n- No mobile backup app; relies on external sync tools",
+    "tags": [
+      "photos",
+      "face-recognition",
+      "ai",
+      "geo",
+      "lightweight"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "hugo",
+    "name": "Hugo",
+    "tagline": "The world's fastest static website generator built in Go",
+    "descriptionMd": "Hugo is an extremely fast static site generator written in Go, capable of building thousands of pages in milliseconds. It supports themes, shortcodes, multilingual sites, and extensive templating. Widely used for blogs, documentation sites, and marketing pages.",
+    "repoUrl": "https://github.com/gohugoio/hugo",
+    "websiteUrl": "https://gohugo.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "blog-cms",
+    "replaces": [
+      "wordpress-com",
+      "squarespace",
+      "medium"
+    ],
+    "license": "Apache-2.0",
+    "language": "Go",
+    "githubStars": 75000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Manual",
+      "Docker"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No built-in admin UI; content editing requires direct file editing or a third-party headless CMS\n- No dynamic features (comments, forms) out of the box — requires external services\n- Learning curve for Go templating syntax can be steep for non-developers",
+    "tags": [
+      "static-site",
+      "blog",
+      "go",
+      "fast",
+      "jamstack"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "jekyll",
+    "name": "Jekyll",
+    "tagline": "Transform plain text into static websites and blogs",
+    "descriptionMd": "Jekyll is a battle-tested static site generator written in Ruby, natively supported by GitHub Pages. It converts Markdown and Liquid templates into static HTML sites, making it ideal for personal blogs and documentation. Its vast plugin ecosystem and simple setup have made it a staple of the JAMstack world.",
+    "repoUrl": "https://github.com/jekyll/jekyll",
+    "websiteUrl": "https://jekyllrb.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "blog-cms",
+    "replaces": [
+      "wordpress-com",
+      "medium",
+      "squarespace"
+    ],
+    "license": "MIT",
+    "language": "Ruby",
+    "githubStars": 49000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Manual",
+      "Docker"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Ruby environment setup can be tricky on Windows\n- No admin UI; all content management is via files\n- Slower build times for very large sites compared to Hugo or Eleventy",
+    "tags": [
+      "static-site",
+      "blog",
+      "ruby",
+      "github-pages",
+      "jamstack"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "eleventy",
+    "name": "Eleventy",
+    "tagline": "A simpler static site generator with zero client-side JavaScript",
+    "descriptionMd": "Eleventy (11ty) is a flexible static site generator that supports multiple templating languages including Liquid, Nunjucks, Markdown, and JavaScript. It ships zero client-side JavaScript by default, producing lean, performant sites. Its versatility and simplicity make it popular for personal blogs, portfolios, and documentation.",
+    "repoUrl": "https://github.com/11ty/eleventy",
+    "websiteUrl": "https://www.11ty.dev",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "blog-cms",
+    "replaces": [
+      "wordpress-com",
+      "squarespace",
+      "medium"
+    ],
+    "license": "MIT",
+    "language": "JavaScript",
+    "githubStars": 17000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Manual",
+      "Docker"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No built-in CMS or admin interface\n- Smaller plugin ecosystem than Hugo or Jekyll\n- Requires Node.js knowledge to configure advanced features",
+    "tags": [
+      "static-site",
+      "blog",
+      "javascript",
+      "nodejs",
+      "jamstack"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "netlify-cms-decap",
+    "name": "Decap CMS",
+    "tagline": "Git-based open-source CMS for static site generators",
+    "descriptionMd": "Decap CMS (formerly Netlify CMS) is an open-source content management system that stores content directly in your Git repository. It provides a web-based editorial UI layered on top of static site generators like Hugo, Jekyll, or Eleventy, enabling non-developers to edit content without touching code. Configuration is a single YAML file.",
+    "repoUrl": "https://github.com/decaporg/decap-cms",
+    "websiteUrl": "https://decapcms.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "blog-cms",
+    "replaces": [
+      "contentful",
+      "wordpress-com",
+      "squarespace"
+    ],
+    "license": "MIT",
+    "language": "JavaScript",
+    "githubStars": 18000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Manual",
+      "Docker"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Requires Git provider OAuth for authentication; self-hosted auth needs extra setup\n- Media handling and large asset management is limited compared to full CMS platforms\n- Community momentum slowed after the fork from Netlify CMS",
+    "tags": [
+      "git-cms",
+      "headless",
+      "static-site",
+      "editorial-ui",
+      "javascript"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "grav",
+    "name": "Grav",
+    "tagline": "Fast, simple, and flexible flat-file CMS with no database required",
+    "descriptionMd": "Grav is a modern flat-file CMS written in PHP that requires no database — content is stored as Markdown files on the filesystem. It features a powerful plugin and theme ecosystem, a built-in admin panel, and excellent performance out of the box. Its simplicity makes it ideal for blogs, portfolios, and small business sites.",
+    "repoUrl": "https://github.com/getgrav/grav",
+    "websiteUrl": "https://getgrav.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "blog-cms",
+    "replaces": [
+      "wordpress-com",
+      "squarespace",
+      "medium"
+    ],
+    "license": "MIT",
+    "language": "PHP",
+    "githubStars": 14500,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Manual",
+      "Docker"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No built-in multi-user editorial workflow or fine-grained permissions\n- E-commerce and membership features require third-party plugins\n- Flat-file storage can become slow with thousands of pages",
+    "tags": [
+      "flat-file",
+      "cms",
+      "php",
+      "blog",
+      "no-database"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "hexo",
+    "name": "Hexo",
+    "tagline": "Fast, simple, and powerful Node.js blog framework",
+    "descriptionMd": "Hexo is a fast, simple blog framework powered by Node.js, extremely popular in the Asian developer community. It renders Markdown posts through configurable themes and generates a fully static site deployable to any hosting. A rich plugin ecosystem covers sitemap generation, deployment to GitHub Pages, RSS feeds, and more.",
+    "repoUrl": "https://github.com/hexojs/hexo",
+    "websiteUrl": "https://hexo.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "blog-cms",
+    "replaces": [
+      "wordpress-com",
+      "medium",
+      "squarespace"
+    ],
+    "license": "MIT",
+    "language": "JavaScript",
+    "githubStars": 39000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Manual",
+      "Docker"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No built-in admin UI; requires CLI or third-party plugins for content editing\n- Plugin ecosystem quality is uneven; some plugins are unmaintained\n- Less active core development compared to Hugo or Eleventy",
+    "tags": [
+      "blog",
+      "nodejs",
+      "static-site",
+      "markdown",
+      "jamstack"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "wallabag",
+    "name": "Wallabag",
+    "tagline": "Self-hosted read-it-later application to save web articles offline",
+    "descriptionMd": "Wallabag is a mature self-hosted alternative to Pocket and Instapaper that saves full article content for offline reading. It features mobile apps for Android and iOS, browser extensions, e-reader export (EPUB/PDF), and Kindle delivery. Content is stored in your own database with no third-party tracking.",
+    "repoUrl": "https://github.com/wallabag/wallabag",
+    "websiteUrl": "https://wallabag.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "read-later-feeds",
+    "replaces": [
+      "pocket",
+      "instapaper",
+      "raindrop"
+    ],
+    "license": "MIT",
+    "language": "PHP",
+    "githubStars": 10500,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Article fetching can fail on JavaScript-heavy pages that require a headless browser\n- The mobile apps lag slightly behind native apps in polish and offline sync speed\n- No built-in social or sharing features",
+    "tags": [
+      "read-later",
+      "pocket-alternative",
+      "offline-reading",
+      "php",
+      "article-saving"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "tt-rss",
+    "name": "Tiny Tiny RSS",
+    "tagline": "Web-based news feed reader and aggregator with powerful filtering",
+    "descriptionMd": "Tiny Tiny RSS (TT-RSS) is a long-standing, feature-rich self-hosted RSS aggregator with a Gmail-inspired web UI. It supports plugins, labels, filters, starred articles, full-text search, and multi-user deployments. Mobile apps (Fever API compatible) and a first-party Android app extend its reach.",
+    "repoUrl": "https://git.tt-rss.org/fox/tt-rss",
+    "websiteUrl": "https://tt-rss.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "read-later-feeds",
+    "replaces": [
+      "feedly",
+      "pocket"
+    ],
+    "license": "GPL-3.0",
+    "language": "PHP",
+    "githubStars": 0,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Hosted on a self-run Gitea instance, not GitHub — community tooling integration is limited\n- The developer is known for a combative community stance; support can be difficult\n- UI feels dated compared to modern RSS readers like Miniflux",
+    "tags": [
+      "rss",
+      "feed-reader",
+      "php",
+      "self-hosted",
+      "multi-user"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "readeck",
+    "name": "Readeck",
+    "tagline": "Lightweight self-hosted read-it-later and bookmarks app",
+    "descriptionMd": "Readeck is a modern, lightweight read-it-later application written in Go that saves article content, images, and annotations for offline reading. It features a clean, responsive UI, full-text search, tagging, and e-reader export. A single binary with embedded SQLite makes deployment trivially simple.",
+    "repoUrl": "https://codeberg.org/readeck/readeck",
+    "websiteUrl": "https://readeck.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "read-later-feeds",
+    "replaces": [
+      "pocket",
+      "instapaper",
+      "raindrop"
+    ],
+    "license": "AGPL-3.0",
+    "language": "Go",
+    "githubStars": 0,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 1,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Hosted on Codeberg, not GitHub, so star count and community tooling differ\n- No mobile native app — relies on progressive web app\n- RSS feed aggregation is not a built-in feature; it is purely read-later focused",
+    "tags": [
+      "read-later",
+      "bookmarks",
+      "go",
+      "sqlite",
+      "offline-reading"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "nextcloud-news",
+    "name": "Nextcloud News",
+    "tagline": "RSS/Atom feed reader app for Nextcloud with sync API",
+    "descriptionMd": "Nextcloud News is an official Nextcloud app that adds a full-featured RSS/Atom feed reader to any Nextcloud instance. It implements the News API v1-v2, enabling compatibility with many third-party clients including Reeder, NetNewsWire, and Fluent Reader. All articles are stored on your Nextcloud server.",
+    "repoUrl": "https://github.com/nextcloud/news",
+    "websiteUrl": "https://apps.nextcloud.com/apps/news",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "read-later-feeds",
+    "replaces": [
+      "feedly",
+      "pocket"
+    ],
+    "license": "AGPL-3.0",
+    "language": "PHP",
+    "githubStars": 2400,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Manual",
+      "Docker"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Requires an existing Nextcloud instance — not standalone\n- Feed fetching can lag on large feed lists compared to dedicated readers\n- UI is functional but less polished than dedicated RSS apps like Miniflux",
+    "tags": [
+      "rss",
+      "nextcloud",
+      "feed-reader",
+      "php",
+      "sync-api"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "fluent-reader-lite",
+    "name": "Fluent Reader Lite",
+    "tagline": "Modern desktop RSS client with self-hosted backend sync support",
+    "descriptionMd": "Fluent Reader is a modern, clean RSS reader desktop application for Windows, macOS, and Linux that supports syncing with self-hosted backends including Miniflux, Fever API, and Google Reader API. It stores a local cache and provides a card-based reading experience with full-text rendering.",
+    "repoUrl": "https://github.com/yang991178/fluent-reader",
+    "websiteUrl": null,
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "read-later-feeds",
+    "replaces": [
+      "feedly",
+      "pocket"
+    ],
+    "license": "MIT",
+    "language": "TypeScript",
+    "githubStars": 4300,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 1,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Desktop client only; no self-hosted server component (relies on external backends)\n- Mobile version (Fluent Reader Lite) is a separate iOS-only app\n- No built-in article saving or read-later queue",
+    "tags": [
+      "rss",
+      "desktop-app",
+      "electron",
+      "typescript",
+      "feed-reader"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "omnivore",
+    "name": "Omnivore",
+    "tagline": "Full-featured read-it-later app with highlights, notes, and newsletter ingestion",
+    "descriptionMd": "Omnivore is a modern read-it-later app focused on long-form reading, featuring text highlighting, notes, PDF support, newsletter ingestion via email, and Logseq/Obsidian integration. The backend is fully open source and self-hostable using Docker Compose, while polished iOS and Android apps are available.",
+    "repoUrl": "https://github.com/omnivore-app/omnivore",
+    "websiteUrl": "https://omnivore.app",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "read-later-feeds",
+    "replaces": [
+      "pocket",
+      "instapaper",
+      "raindrop"
+    ],
+    "license": "AGPL-3.0",
+    "language": "TypeScript",
+    "githubStars": 13500,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker Compose"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- The hosted service was shut down in 2024; self-hosting requires Docker Compose and GCP services for some features\n- Self-hosted email newsletter ingestion setup is complex\n- Active development has slowed significantly since shutdown of the hosted service",
+    "tags": [
+      "read-later",
+      "highlights",
+      "newsletter",
+      "typescript",
+      "pkm"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "nunux-keeper",
+    "name": "Cubox (Hoarder)",
+    "tagline": "AI-powered self-hosted bookmarking and read-it-later with automatic tagging",
+    "descriptionMd": "Hoarder (formerly called Karakeep in some contexts) is a self-hosted bookmarking app that uses a local LLM to automatically tag and summarize saved links, articles, and notes. It supports browser extensions, mobile apps, full-text search, and RSS integration, providing a Raindrop.io alternative with AI features under your control.",
+    "repoUrl": "https://github.com/hoarder-app/hoarder",
+    "websiteUrl": "https://hoarder.app",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "read-later-feeds",
+    "replaces": [
+      "raindrop",
+      "pocket",
+      "instapaper"
+    ],
+    "license": "AGPL-3.0",
+    "language": "TypeScript",
+    "githubStars": 12000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker Compose",
+      "One-Click"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- AI tagging requires Ollama or an OpenAI-compatible API; adds resource overhead\n- RSS reader features are basic compared to dedicated feed readers like Miniflux\n- Relatively young project; some rough edges in mobile app stability",
+    "tags": [
+      "bookmarks",
+      "read-later",
+      "ai-tagging",
+      "typescript",
+      "rss"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "text-generation-webui",
+    "name": "text-generation-webui",
+    "tagline": "Feature-rich web UI for running large language models locally with multiple backends",
+    "descriptionMd": "text-generation-webui by oobabooga is the most popular self-hosted frontend for running LLMs locally, supporting llama.cpp, ExLlamaV2, AutoGPTQ, transformers, and more. It offers a chat interface, instruction templates, character personas, and an OpenAI-compatible API. Extensions ecosystem allows adding capabilities like TTS, STT, and image generation.",
+    "repoUrl": "https://github.com/oobabooga/text-generation-webui",
+    "websiteUrl": null,
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "ai-llm",
+    "replaces": [
+      "chatgpt",
+      "openai-api"
+    ],
+    "license": "AGPL-3.0",
+    "language": "Python",
+    "githubStars": 41000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No built-in team/multi-user auth; single-user by default\n- Model management UI is less polished than commercial offerings\n- No native document RAG pipeline (requires extensions)",
+    "tags": [
+      "llm",
+      "inference",
+      "local-ai",
+      "chat",
+      "gradio"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "lm-studio",
+    "name": "Jan",
+    "tagline": "Offline-first, privacy-focused desktop app to run LLMs locally on any hardware",
+    "descriptionMd": "Jan is an open-source, cross-platform desktop application that lets users download and run LLMs entirely offline. It bundles llama.cpp as its inference engine and provides a clean chat UI along with an OpenAI-compatible local API server. Models are downloaded from the built-in Hub or imported manually from Hugging Face.",
+    "repoUrl": "https://github.com/janhq/jan",
+    "websiteUrl": "https://jan.ai",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "ai-llm",
+    "replaces": [
+      "chatgpt",
+      "openai-api"
+    ],
+    "license": "AGPL-3.0",
+    "language": "TypeScript",
+    "githubStars": 24000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 1,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Desktop-only; no headless server deployment mode\n- Multi-user collaboration not supported\n- Limited to llama.cpp-compatible model formats",
+    "tags": [
+      "llm",
+      "desktop",
+      "local-ai",
+      "offline",
+      "chat"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "flowise",
+    "name": "Flowise",
+    "tagline": "Drag-and-drop UI to build LLM-powered flows, chatbots, and AI agents visually",
+    "descriptionMd": "Flowise is a low-code tool for building LLM-orchestrated applications using a visual node-based canvas. It supports LangChain and LlamaIndex abstractions, letting users wire together document loaders, vector stores, chains, and tools without writing code. It ships with an embeddable chat widget and REST API for integrating into existing products.",
+    "repoUrl": "https://github.com/FlowiseAI/Flowise",
+    "websiteUrl": "https://flowiseai.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "ai-llm",
+    "replaces": [
+      "chatgpt",
+      "openai-api"
+    ],
+    "license": "Apache-2.0",
+    "language": "TypeScript",
+    "githubStars": 35000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Visual canvas can become unmanageable for complex production pipelines\n- No built-in fine-tuning or model training support\n- Enterprise auth (SSO, RBAC) requires paid managed plan",
+    "tags": [
+      "rag",
+      "agents",
+      "langchain",
+      "no-code",
+      "chatbot"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "dify",
+    "name": "Dify",
+    "tagline": "Open-source LLM app development platform with visual workflow, RAG, and agent builder",
+    "descriptionMd": "Dify is a production-grade open-source platform for building LLM applications, offering a workflow designer, RAG pipeline with knowledge base management, agent orchestration, and an observability dashboard. It supports dozens of model providers and can be self-hosted via Docker Compose with a PostgreSQL + Redis backend.",
+    "repoUrl": "https://github.com/langgenius/dify",
+    "websiteUrl": "https://dify.ai",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "ai-llm",
+    "replaces": [
+      "chatgpt",
+      "openai-api"
+    ],
+    "license": "Apache-2.0",
+    "language": "Python",
+    "githubStars": 58000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker Compose",
+      "Kubernetes"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Self-hosted community edition lacks SSO and audit logs (cloud-only)\n- Requires multiple services (Postgres, Redis, Weaviate/Qdrant) increasing ops burden\n- Plugin marketplace is smaller than commercial AI platforms",
+    "tags": [
+      "rag",
+      "workflow",
+      "agents",
+      "llm-platform",
+      "knowledge-base"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "langfuse",
+    "name": "Langfuse",
+    "tagline": "Open-source LLM observability and evaluation platform for tracing AI application calls",
+    "descriptionMd": "Langfuse provides tracing, prompt management, evaluation, and cost analytics for LLM applications. It integrates with LangChain, LlamaIndex, OpenAI SDK, and raw API calls via SDKs for Python, JavaScript, and more. The self-hosted version uses Docker Compose with PostgreSQL and ClickHouse for analytics.",
+    "repoUrl": "https://github.com/langfuse/langfuse",
+    "websiteUrl": "https://langfuse.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "ai-llm",
+    "replaces": [
+      "openai-api"
+    ],
+    "license": "MIT",
+    "language": "TypeScript",
+    "githubStars": 10000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker Compose",
+      "Kubernetes"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Some advanced evaluation and annotation features are cloud-only\n- ClickHouse dependency adds significant infrastructure overhead\n- No built-in alerting or on-call integrations",
+    "tags": [
+      "observability",
+      "tracing",
+      "llm-ops",
+      "evaluation",
+      "analytics"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "opendevin",
+    "name": "OpenHands",
+    "tagline": "Open-source AI software engineer agent that writes, runs, and debugs code autonomously",
+    "descriptionMd": "OpenHands (formerly OpenDevin) is a self-hostable platform for AI-powered software development agents that can browse the web, write code, run terminals, and interact with files inside a sandboxed Docker environment. It supports multiple LLM backends including local models via Ollama and all major APIs. Designed for coding tasks, bug fixes, and automated PR workflows.",
+    "repoUrl": "https://github.com/All-Hands-AI/OpenHands",
+    "websiteUrl": "https://www.all-hands.dev",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "ai-llm",
+    "replaces": [
+      "chatgpt",
+      "openai-api"
+    ],
+    "license": "MIT",
+    "language": "Python",
+    "githubStars": 42000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 3,
+    "deployOptions": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Agent reliability degrades on complex multi-file refactors\n- Requires Docker-in-Docker for sandboxing, complicating some host setups\n- No native multi-user workspace isolation in community edition",
+    "tags": [
+      "agents",
+      "coding",
+      "ai-engineer",
+      "autonomous",
+      "sandboxed"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "stable-diffusion-webui",
+    "name": "AUTOMATIC1111 Stable Diffusion WebUI",
+    "tagline": "The most widely used web interface for running Stable Diffusion image generation locally",
+    "descriptionMd": "AUTOMATIC1111's Stable Diffusion web UI is the de-facto standard self-hosted frontend for AI image generation. It supports txt2img, img2img, inpainting, ControlNet, LoRA fine-tuning, upscalers, and an extensive extensions ecosystem. Runs on consumer GPUs (NVIDIA, AMD via ROCm, Apple Silicon) and can be accessed remotely via its built-in web server.",
+    "repoUrl": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+    "websiteUrl": null,
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "ai-llm",
+    "replaces": [
+      "openai-api"
+    ],
+    "license": "AGPL-3.0",
+    "language": "Python",
+    "githubStars": 145000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Development pace has slowed; Forge fork is now more actively maintained\n- Requires a capable GPU (8 GB VRAM minimum for most modern models)\n- No built-in user accounts or API key auth for multi-user deployments",
+    "tags": [
+      "image-generation",
+      "stable-diffusion",
+      "ai-art",
+      "local-ai",
+      "gpu"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "comfyui",
+    "name": "ComfyUI",
+    "tagline": "Node-based workflow engine for Stable Diffusion and modern image/video generation models",
+    "descriptionMd": "ComfyUI provides a graph/node-based interface for building and running Stable Diffusion pipelines with fine-grained control over every step. It supports SDXL, SD3, Flux, ControlNet, IP-Adapter, and video generation models. Its modular design and API make it popular for production automation and as a backend for other tools.",
+    "repoUrl": "https://github.com/comfyanonymous/ComfyUI",
+    "websiteUrl": null,
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "ai-llm",
+    "replaces": [
+      "openai-api"
+    ],
+    "license": "GPL-3.0",
+    "language": "Python",
+    "githubStars": 66000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Steep learning curve; node graphs become complex quickly\n- No user management or auth out of the box\n- Community custom nodes can conflict and break workflows",
+    "tags": [
+      "image-generation",
+      "stable-diffusion",
+      "workflow",
+      "nodes",
+      "flux"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "hledger",
+    "name": "hledger",
+    "tagline": "Plain-text double-entry accounting in your terminal with powerful reporting and web UI",
+    "descriptionMd": "hledger is a cross-platform, plain-text accounting tool compatible with the Ledger format. Finances are stored in human-readable text files under version control, and the tool provides CLI commands, a terminal UI, and a self-hosted web UI (hledger-web) for viewing reports. It supports multi-currency accounting, budget tracking, and CSV import from bank exports.",
+    "repoUrl": "https://github.com/simonmichael/hledger",
+    "websiteUrl": "https://hledger.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "finance-budget",
+    "replaces": [
+      "mint",
+      "ynab",
+      "quickbooks"
+    ],
+    "license": "GPL-3.0",
+    "language": "Haskell",
+    "githubStars": 3200,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Plain-text workflow requires manual transaction entry or custom import scripts\n- No native bank sync/Open Banking integration\n- Web UI is read-only; edits must be made in text files",
+    "tags": [
+      "accounting",
+      "plain-text",
+      "cli",
+      "double-entry",
+      "budgeting"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "maybe-finance",
+    "name": "Maybe",
+    "tagline": "Modern open-source personal finance and net-worth tracking app you can self-host",
+    "descriptionMd": "Maybe is a polished open-source personal finance application originally built as a commercial SaaS that was later open-sourced. It provides net-worth tracking, investment portfolio views, and transaction management with a beautiful React/Rails UI. Self-hosted via Docker Compose with a PostgreSQL backend.",
+    "repoUrl": "https://github.com/maybe-finance/maybe",
+    "websiteUrl": "https://maybe.co",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "finance-budget",
+    "replaces": [
+      "mint",
+      "ynab"
+    ],
+    "license": "AGPL-3.0",
+    "language": "Ruby",
+    "githubStars": 38000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker Compose"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Automatic bank sync (Plaid integration) requires API keys and third-party costs\n- Investment data import limited compared to dedicated portfolio trackers\n- Multi-user household support is still being developed",
+    "tags": [
+      "personal-finance",
+      "net-worth",
+      "budgeting",
+      "portfolio",
+      "rails"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "crater",
+    "name": "Crater",
+    "tagline": "Open-source invoicing app for freelancers and small businesses with tax support",
+    "descriptionMd": "Crater is a free, self-hostable invoicing and expense-tracking application built with Laravel and Vue.js. It supports recurring invoices, estimates, payments, expense categories, tax rates, and multi-currency billing. A mobile app companion is also available for iOS and Android.",
+    "repoUrl": "https://github.com/crater-invoice/crater",
+    "websiteUrl": "https://craterapp.com",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "finance-budget",
+    "replaces": [
+      "quickbooks",
+      "mint"
+    ],
+    "license": "AGPL-3.0",
+    "language": "PHP",
+    "githubStars": 7700,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No double-entry accounting; not suitable for complex bookkeeping\n- Bank reconciliation and bank import features are basic\n- Project development pace has slowed in recent releases",
+    "tags": [
+      "invoicing",
+      "freelance",
+      "expenses",
+      "payments",
+      "laravel"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "openbb",
+    "name": "OpenBB Terminal",
+    "tagline": "Open-source investment research platform with data from dozens of financial providers",
+    "descriptionMd": "OpenBB is a free, open-source investment research terminal that aggregates stock, crypto, forex, macro, and alternative data from numerous providers (Yahoo Finance, FRED, Polygon, Intrinio, etc.). It features an extensible plugin architecture, a Python SDK, and a web-based Workspace UI for building research dashboards and running quantitative analysis.",
+    "repoUrl": "https://github.com/OpenBB-finance/OpenBBTerminal",
+    "websiteUrl": "https://openbb.co",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "finance-budget",
+    "replaces": [
+      "quickbooks"
+    ],
+    "license": "MIT",
+    "language": "Python",
+    "githubStars": 33000,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Many premium data providers require paid API keys\n- Workspace UI (cloud) has more features than the self-hosted terminal\n- Not a budgeting tool; focused on market research, not personal finance",
+    "tags": [
+      "investment",
+      "research",
+      "stocks",
+      "portfolio",
+      "quant"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "sparkseer-lnbook",
+    "name": "Beancount",
+    "tagline": "Plain-text double-entry bookkeeping language and toolkit for financial data analysis",
+    "descriptionMd": "Beancount is a mature plain-text, double-entry bookkeeping system designed for personal and business accounting. All transactions are stored in a human-readable ledger file; its Python-based toolchain parses and validates the ledger and provides a Fava web UI for interactive reports, balance sheets, income statements, and visual charts.",
+    "repoUrl": "https://github.com/beancount/beancount",
+    "websiteUrl": "https://beancount.github.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "finance-budget",
+    "replaces": [
+      "mint",
+      "ynab",
+      "quickbooks"
+    ],
+    "license": "GPL-2.0",
+    "language": "Python",
+    "githubStars": 3700,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- No GUI for entering transactions; all editing done in text files\n- No bank sync; imports require custom scripts or community importers\n- Learning curve for double-entry accounting concepts",
+    "tags": [
+      "accounting",
+      "plain-text",
+      "double-entry",
+      "personal-finance",
+      "python"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "siyuangnon-budge",
+    "name": "Budge (Kresus)",
+    "tagline": "Self-hosted personal finance manager with automatic bank sync and rich analytics",
+    "descriptionMd": "Kresus is a self-hosted open-source personal finance application that connects to banks via the Woob/Weboob library to automatically import transactions. It provides automatic categorization, budget tracking, alert rules, and visual spending analytics. Runs as a Node.js server and is packaged for YunoHost and Docker.",
+    "repoUrl": "https://github.com/kresusapp/kresus",
+    "websiteUrl": "https://kresus.org",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "finance-budget",
+    "replaces": [
+      "mint",
+      "ynab"
+    ],
+    "license": "MIT",
+    "language": "TypeScript",
+    "githubStars": 900,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": false,
+    "featureGapMd": "- Bank sync via Woob covers mainly French and European banks\n- Not suitable for invoicing or business accounting\n- Smaller community means fewer community importers for exotic banks",
+    "tags": [
+      "personal-finance",
+      "bank-sync",
+      "budgeting",
+      "categorization",
+      "analytics"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
+  },
+  {
+    "slug": "debitoor-alt-manager",
+    "name": "Manager",
+    "tagline": "Free desktop and server-based accounting software for small businesses",
+    "descriptionMd": "Manager is a full-featured double-entry accounting application available as a free desktop edition and a paid cloud/server edition. The desktop version is completely free and covers accounts payable/receivable, payroll, inventory, fixed assets, and financial statements. The server edition enables multi-user access via a web browser on your own infrastructure.",
+    "repoUrl": "https://github.com/Manager-io/Manager",
+    "websiteUrl": "https://www.manager.io",
+    "demoUrl": null,
+    "logoUrl": null,
+    "categorySlug": "finance-budget",
+    "replaces": [
+      "quickbooks",
+      "mint"
+    ],
+    "license": "Proprietary",
+    "language": "C#",
+    "githubStars": 2400,
+    "lastCommitAt": "2026-05-15",
+    "selfHostDifficulty": 2,
+    "deployOptions": [
+      "Docker",
+      "Manual"
+    ],
+    "hasManagedHosting": true,
+    "featureGapMd": "- Server/cloud edition requires a paid license (desktop is free)\n- Not truly open-source; source is available but license is proprietary\n- Limited API/integration capabilities compared to cloud accounting platforms",
+    "tags": [
+      "accounting",
+      "small-business",
+      "invoicing",
+      "payroll",
+      "double-entry"
+    ],
+    "affiliateUrl": null,
+    "affiliateNetwork": null,
+    "featured": false,
+    "featuredRank": null,
+    "status": "live",
+    "source": "curated:knowledge"
   }
 ]
